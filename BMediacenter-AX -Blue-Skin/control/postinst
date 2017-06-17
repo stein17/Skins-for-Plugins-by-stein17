@@ -1,0 +1,25 @@
+#!/bin/sh
+
+bmcpath=/usr/lib/enigma2/python/Plugins/Extensions/BMediaCenter
+
+echo "Restart enigma2..." 
+
+init 4
+sleep 2
+
+# remove BMC pyo's
+( cd $bmcpath
+rm -f MC_PictureViewer.pyo MC_AudioPlayer.pyo MC_WeatherInfo.pyo MC_Settings.pyo \
+MC_VideoPlayer.pyo GlobalFunctions.pyo MC_VLCPlayer.pyo plugin.pyo __init__.pyo )
+
+sleep 1
+
+# replace orig BMC files
+cp -Raf /bmc-ax-blue-skin/* /
+
+mv /do_not_delete_BMCbackup.tar.gz /bmc-ax-blue-skin/
+rm -rf /bmc-ax-blue-skin/usr
+
+init 3
+
+

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+backuppath=/usr/lib/enigma2/python
+
+# BMC full backup
+tar -czf /do_not_delete_BMCbackup.tar.gz $backuppath/Components/Converter/LizExtraNumText.pyo \
+$backuppath/Components/Renderer/LizWatches.pyo \
+$backuppath/Plugins/Extensions/BMediaCenter
+
+

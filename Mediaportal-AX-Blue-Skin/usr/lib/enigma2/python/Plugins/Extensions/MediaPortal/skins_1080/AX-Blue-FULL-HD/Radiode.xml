@@ -1,0 +1,32 @@
+<!-- Radiode -->
+<screen name="Radio.de" position="center,center" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+  <ePixmap name="back" position="0,0" size="1920,1080" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/Browser.png" zPosition="-75" />
+  <widget source="global.CurrentTime" render="Label" position="1173,30" size="600,40" font="mediaportal; 32" halign="right" foregroundColor="foregroundClock" backgroundColor="black" transparent="1">
+    <convert type="ClockToText">Format:%a, %d.%m.%Y   %H:%M</convert>
+  </widget>
+  <eLabel text="MediaPortal" position="10,25" size="800,50" font="mediaportal; 36" halign="left" valign="center" foregroundColor="bluetitle" backgroundColor="black" transparent="1" zPosition="1" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_red.png" position="23,1018" size="35,35" alphatest="blend" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_green.png" position="325,1018" size="35,35" alphatest="blend" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_yellow.png" position="629,1018" size="35,35" alphatest="blend" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_blue.png" position="936,1018" size="35,35" alphatest="blend" />
+  <widget name="F1" position="67,1000" size="240,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
+  <widget name="F2" position="370,1000" size="240,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
+  <widget name="F3" position="675,1000" size="240,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
+  <widget name="F4" position="983,1000" size="240,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_ok.png" position="1237,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_exit.png" position="1316,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <eLabel text="Play" position="30,120" size="200,50" backgroundColor="background" transparent="1" font="mediaportal;40" valign="top" />
+  <widget name="stationInfo" position="220,120" size="1480,90" backgroundColor="background" transparent="1" font="mediaportal;40" valign="top" halign="center" />
+  <widget source="session.CurrentService" render="Label" position="1700,120" size="200,50" font="mediaportal;40" backgroundColor="background" halign="right" valign="top" transparent="1">
+    <convert type="MPServicePosition">Position</convert>
+  </widget>
+  <eLabel text="Info" position="30,230" size="200,50" backgroundColor="background" transparent="1" font="mediaportal;40" valign="top" />
+  <widget name="stationDesc" position="220,230" zPosition="1" size="1480,90" backgroundColor="background" transparent="1" font="mediaportal;30" halign="left" valign="top" />
+  <widget name="leftContentTitle" position="30,340" size="925,50" backgroundColor="black" zPosition="0" foregroundColor="white" font="mediaportal;30" halign="center" transparent="1" />
+  <widget name="liste" itemHeight="35" position="30,400" size="925,560" backgroundColor="black" scrollbarMode="showOnDemand" transparent="1" foregroundColorSelected="white" font="mediaportal; 22" />
+  <widget name="rightContentTitle" position="975,340" size="925,50" backgroundColor="black" zPosition="0" foregroundColor="white" font="mediaportal;30" halign="center" transparent="1" />
+  <widget name="playlist" itemHeight="35" position="975,400" size="925,560" backgroundColor="black" scrollbarMode="showOnDemand" transparent="1" foregroundColorSelected="white" />
+  <eLabel name="button bouq" position="1391,1022" size="70,30" backgroundColor="black" text="BOUQ" font="mediaportal; 19" transparent="1" foregroundColor="white" halign="center" valign="center" shadowColor="black" shadowOffset="-3,-3" zPosition="12" />
+  <eLabel name="button bouq bg" position="1400,1025" size="52,22" backgroundColor="black" zPosition="11" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_exit.png" position="1396,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+</screen>

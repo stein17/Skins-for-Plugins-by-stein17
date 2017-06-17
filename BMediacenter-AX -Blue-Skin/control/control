@@ -1,0 +1,12 @@
+Package: enigma2-plugin-skins-bmediacenter-ax-blue-skin
+Version: 2.5
+Section: base
+OE: enigma2-plugin-skins-bmediacenter-ax-blue-skin
+License: open
+Priority: optional
+Architecture: all
+Depends: enigma2-plugin-extensions-bmediacenter
+Maintainer: stein17
+Description: BMediacenter-AX-Blue-Skin-by-stein17
+Source: https://axforum.de/
+Homepage: https://axforum.de/

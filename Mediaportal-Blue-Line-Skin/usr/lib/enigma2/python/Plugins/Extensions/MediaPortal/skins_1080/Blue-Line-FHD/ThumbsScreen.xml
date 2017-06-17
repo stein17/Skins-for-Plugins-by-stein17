@@ -1,0 +1,26 @@
+<!-- ThumbsScreen -->
+<screen name="MediaPortal_Thumbs" position="0,0" size="1920,1080" title="MediaPortal" flags="wfNoBorder" backgroundColor="transparent">
+  <ePixmap name="back" position="0,0" size="1920,1080" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/images/bg1920.png" zPosition="-75" />
+  <widget source="global.CurrentTime" render="Label" position="1090,30" size="600,40" font="mediaportal; 32" halign="right" foregroundColor="foregroundClock" backgroundColor="black" transparent="1">
+    <convert type="ClockToText">Format:%a, %d.%m.%Y   %H:%M</convert>
+  </widget>
+  <eLabel text="MediaPortal" position="10,25" size="800,50" font="mediaportal; 36" halign="left" valign="center" foregroundColor="bluetitle" backgroundColor="black" transparent="1" zPosition="1" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/images/key_red.png" position="23,1018" size="35,35" alphatest="blend" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/images/key_green.png" position="325,1018" size="35,35" alphatest="blend" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/images/key_yellow.png" position="629,1018" size="35,35" alphatest="blend" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/images/key_blue.png" position="936,1018" size="35,35" alphatest="blend" />
+  <widget name="F1" position="67,1000" size="240,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left"  transparent="1" />
+  <widget name="F2" position="370,1000" size="240,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left"  transparent="1" />
+  <widget name="F3" position="675,1000" size="240,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left"  transparent="1" />
+  <widget name="F4" position="983,1000" size="240,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left"  transparent="1" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/images/key_help.png" position="1394,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/images/key_exit.png" position="1316,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/images/key_ok.png" position="1237,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/images/key_pvr.png" position="1472,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <widget name="Thumb" position="30,120" size="200,60" halign="right"  font="mediaportal;40" transparent="1" />
+  <widget name="thumb" position="230,120" size="200,60" halign="left"  font="mediaportal;40" transparent="1" />
+  <widget name="Page" position="750,120" size="450,60" halign="right"  foregroundColor="white" font="mediaportal;40" transparent="1" />
+  <widget name="page" position="1000,120" size="900,60" halign="left"  foregroundColor="white" font="mediaportal;40" transparent="1" />
+  <widget  font="mediaportal;50"  halign="right" name="title" position="222,19"   size="1200,60" transparent="1" />
+   
+

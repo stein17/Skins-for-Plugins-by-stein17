@@ -1,0 +1,6 @@
+<screen position="622,390" size="675,300" title="" backgroundColor="black" flags="wfNoBorder" name="SimplePlayerMenu">
+    <widget name="menu" position="10,70" size="655,220" backgroundColor="black" transparent="1" foregroundColorSelected="white" scrollbarMode="showOnDemand" zPosition="1" itemHeight="35" />
+    <eLabel name="bg conf" position="2,65" size="671,233" backgroundColor="black" />
+    <eLabel name="bg title" position="2,2" size="671,60" backgroundColor="black" />
+    <widget name="title" position="2,2" size="671,60" font="mediaportal;40" backgroundColor="black" foregroundColor="white" zPosition="1" halign="center" valign="center" />
+</screen>

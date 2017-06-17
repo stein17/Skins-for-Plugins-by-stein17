@@ -1,0 +1,72 @@
+<screen backgroundColor="transparent" flags="wfNoBorder" name="SimplePlayer" position="0,780" size="1920,300">
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/simpleplayer/Infobar.png" position="0,0" zPosition="-1" size="1920,300" />
+  <widget alphatest="on" name="Icon" position="157,106" scale="1" size="195,106" zPosition="1" />
+  <widget alphatest="on" name="Cover" position="-5,63" size="160,240" zPosition="1" />
+  <widget backgroundColor="background" font="Regular;30" halign="center" name="seekbartime" position="981,183" size="300,40" transparent="1" foregroundColor="white" zPosition="1" />
+  <widget backgroundColor="dark" font="Regular;30" foregroundColor="white" halign="left" position="436,183" render="Label" size="140,40" source="session.CurrentService" transparent="1" zPosition="1">
+  <convert type="MPServicePosition">Position</convert>
+  </widget>
+<widget name="seekbarcursor" position="366,157" size="7,7" zPosition="4" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/simpleplayer/seekbutton.png" alphatest="on" />
+  <widget position="366,154" progress_pointer="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/simpleplayer/00ffffff.png:18,4" render="PositionGauge" size="1202,12" source="session.CurrentService" transparent="1" zPosition="1">
+  <convert type="MPServicePosition">Gauge</convert>
+  </widget>
+<widget backgroundColor="dark" font="Regular;30" foregroundColor="white" halign="left" position="1399,183" render="Label" size="140,40" source="session.CurrentService" transparent="1" zPosition="1">
+    <convert type="MPServicePosition">Remaining,Negate</convert>
+  </widget>
+  <widget backgroundColor="dark" font="Regular;30" foregroundColor="white" halign="center" position="680,183" render="Label" size="300,40" source="session.CurrentService" transparent="1" zPosition="1">
+    <convert type="MPServicePosition">Length,ShowHours</convert>
+  </widget>
+  <widget backgroundColor="background" font="Regular; 34" foregroundColor="white" halign="center" position="2,10" render="Label" size="950,40" source="session.CurrentService" transparent="1" zPosition="1">
+    <convert type="MPServiceName">Name</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="1611,34" size="280,100" font="LCD; 90" halign="center" backgroundColor="black" transparent="1" valign="center" foregroundColor="lightblue">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="1614,136" size="280,50" font="LCD; 40" halign="center" backgroundColor="black" transparent="1" foregroundColor="darkgrey">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="1614,185" size="280,50" font="LCD; 40" halign="center" backgroundColor="black" transparent="1" foregroundColor="darkgrey">
+  <convert type="ClockToText">Format:%e. %B</convert>
+</widget>
+<widget backgroundColor="black" font="LCD; 48" halign="center" position="1845,31" render="Label" size="70,70" source="global.CurrentTime" transparent="1" valign="bottom" zPosition="1" foregroundColor="lightblue">
+  <convert type="ClockToText">Format:%S</convert>
+</widget>
+  <widget name="noCover" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/simpleplayer/spbar_nocover.png" position="-5,63" size="160,240" zPosition="0" alphatest="blend" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/simpleplayer/clock.png" position="396,97" size="40,40" zPosition="1" alphatest="blend" />
+  <widget source="global.CurrentTime" render="Label" position="436,97" size="120,40" font="Regular;35" transparent="1" backgroundColor="background" halign="right" foregroundColor="white" zPosition="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/simpleplayer/clockend.png" position="1380,97" size="40,40" zPosition="1" alphatest="blend" />
+  <widget source="session.CurrentService" render="Label" position="1421,97" size="120,40" font="Regular;35" halign="right" backgroundColor="background" transparent="1" foregroundColor="white" zPosition="1">
+    <convert type="MPServicePosition">EndTime,ShowNoSeconds</convert>
+  </widget>
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/simpleplayer/resicon.png" position="827,97" size="40,40" zPosition="1" alphatest="blend" />
+  <widget source="session.CurrentService" render="Label" position="868,97" size="100,40" backgroundColor="dark" transparent="1" font="Regular; 35" halign="right" foregroundColor="white">
+    <convert type="ServiceInfo">VideoWidth</convert>
+  </widget>
+  <eLabel position="969,97" size="40,40" backgroundColor="dark" transparent="1" text="x" font="Regular; 35" halign="center" foregroundColor="white" />
+  <widget source="session.CurrentService" render="Label" position="1010,97" size="100,40" backgroundColor="dark" transparent="1" font="Regular; 35" halign="left" foregroundColor="white">
+    <convert type="ServiceInfo">VideoHeight</convert>
+  </widget>
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/simpleplayer/ico_format_off.png" position="1474,250" size="80,35" zPosition="1" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/simpleplayer/ico_format_on.png" position="1474,250" size="80,35" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/simpleplayer/ico_hd_off.png" position="1353,250" size="86,35" zPosition="1" alphatest="blend">
+    <convert type="ServiceInfo">VideoWidth</convert>
+    <convert type="ValueRange">0,1279</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/simpleplayer/ico_hd_on.png" position="1353,250" size="86,35" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">VideoWidth</convert>
+    <convert type="ValueRange">1280,1980</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="mp_AudioIcon" position="1235,250" zPosition="1" path="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/simpleplayer" size="80,35" alphatest="blend">
+    <convert type="mp_audioinfo">AudioIcon</convert>
+  </widget>
+  <widget name="premiumoff" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/simpleplayer/premium_off.png" position="1117,250" size="80,35" zPosition="2" alphatest="blend" />
+  <widget name="premiumizemeon" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/simpleplayer/premiumize_on.png" position="1117,250" size="80,35" zPosition="2" alphatest="blend" />
+  <widget name="realdebridon" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD/simpleplayer/realdebrid_on.png" position="1117,250" size="80,35" zPosition="2" alphatest="blend" />
+</screen>

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# restore BMC
+rm -rf /usr/lib/enigma2/python/Plugins/Extensions/BMediaCenter
+tar xzf /bmc-ax-blue-skin/do_not_delete_BMCbackup.tar.gz -C /
+rm -rf /bmc-ax-blue-skin
