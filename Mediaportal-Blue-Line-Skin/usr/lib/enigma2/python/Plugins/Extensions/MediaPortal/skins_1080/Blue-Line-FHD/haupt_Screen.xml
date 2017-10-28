@@ -10,8 +10,8 @@
   <eLabel name="vertikalline" position="22,171" size="1875,2" foregroundColor="backgroundBlue" backgroundColor="backgroundBlue" />
   <widget name="Mediatheken" position="30,125" size="455,45"  font="mediaportal;39" valign="center" halign="center" transparent="1"  />
   <widget name="mediatheken" position="30,180" size="455,770"  transparent="1"  itemHeight="56"  />
-  <widget name="Grauzone" position="497,125" size="455,45"  font="mediaportal;39" valign="center" halign="center" transparent="1"  />
-  <widget name="grauzone" position="497,180" size="455,770"  transparent="1"  itemHeight="56"  />
+  <widget name="User-additions" position="497,125" size="455,45"  font="mediaportal;39" valign="center" halign="center" transparent="1"  />
+  <widget name="useradditions" position="497,180" size="455,770"  transparent="1"  itemHeight="56"  />
   <widget name="Funsport" position="964,125" size="455,45"  font="mediaportal;39" valign="center" halign="center" transparent="1"  />
   <widget name="funsport" position="964,180" size="455,770"  transparent="1"  itemHeight="56"  />
   <widget name="Porn" position="1430,125" size="455,45"  font="mediaportal;39" valign="center" halign="center" transparent="1"  />
