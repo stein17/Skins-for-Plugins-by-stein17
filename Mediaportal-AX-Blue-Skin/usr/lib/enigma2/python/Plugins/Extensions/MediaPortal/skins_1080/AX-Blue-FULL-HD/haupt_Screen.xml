@@ -9,8 +9,8 @@
   <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/line1880.png" position="22,171" size="1875,2" alphatest="blend" zPosition="1" />
   <widget name="Mediatheken" position="30,125" size="455,45" backgroundColor="background" font="mediaportal;39" valign="center" halign="center" transparent="1" foregroundColor="white" />
   <widget name="mediatheken" position="30,180" size="455,770" backgroundColor="background" transparent="1" foregroundColorSelected="white" itemHeight="56" foregroundColor="lightblue" />
-  <widget name="Grauzone" position="497,125" size="455,45" backgroundColor="background" font="mediaportal;39" valign="center" halign="center" transparent="1" foregroundColor="white" />
-  <widget name="grauzone" position="497,180" size="455,770" backgroundColor="background" transparent="1" foregroundColorSelected="white" itemHeight="56" foregroundColor="lightblue" />
+  <widget name="User-additions" position="497,125" size="455,45" backgroundColor="background" font="mediaportal;39" valign="center" halign="center" transparent="1" foregroundColor="white" />
+  <widget name="useradditions" position="497,180" size="455,770" backgroundColor="background" transparent="1" foregroundColorSelected="white" itemHeight="56" foregroundColor="lightblue" />
   <widget name="Funsport" position="964,125" size="455,45" backgroundColor="background" font="mediaportal;39" valign="center" halign="center" transparent="1" foregroundColor="white" />
   <widget name="funsport" position="964,180" size="455,770" backgroundColor="background" transparent="1" foregroundColorSelected="white" itemHeight="56" foregroundColor="lightblue" />
   <widget name="Porn" position="1430,125" size="455,45" backgroundColor="background" font="mediaportal;39" valign="center" halign="center" transparent="1" foregroundColor="white" />
