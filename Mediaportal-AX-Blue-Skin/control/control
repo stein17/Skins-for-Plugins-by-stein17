@@ -1,12 +1,12 @@
 Package: enigma2-plugin-skin-mediaportal-ax-blue-full-hd
-Version: 2.2
+Version: 3.0
 Section: base
 OE: enigma2-plugins
 License: open
 Priority: optional
 Architecture: all
 Maintainer: stein17
-Description: FHD Skin for Mediaportal by stein17
+Description: Skin for Mediaportal by stein17
 Source: https://axforum.de/
 Homepage: https://axforum.de/
 

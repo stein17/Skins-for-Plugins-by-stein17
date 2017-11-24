@@ -1,3 +1,0 @@
-﻿<widget name="hdpic" position="1290,300" size="340,35" pixmap="~/clean_fhd/images/coverpic_hd.png" zPosition="0" transparent="1" alphatest="blend" backgroundColor="#20000000" />
-<widget name="rating10" position="1290,625" size="340,35" pixmap="~/clean_fhd/images/stars-full10.png" zPosition="4" transparent="1" backgroundColor="#20000000" />
-<widget name="rating0" position="1290,625" size="340,35" pixmap="~/clean_fhd/images/stars-empty10.png" zPosition="3" transparent="1" alphatest="blend" backgroundColor="#20000000" />

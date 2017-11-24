@@ -1,0 +1,22 @@
+<!-- category_selector -->
+<screen name="CategorySelector" position="320,0" size="1280,1080" flags="wfNoBorder" backgroundColor="transparent">
+  <eLabel text="CategorySelector" render="Label" position="486,165" size="310,30" font="mediaportal; 27" halign="center" valign="center" backgroundColor="black" foregroundColor="white" borderColor="blue" borderWidth="2" transparent="1" zPosition="1" />
+<!--   <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/menu_tvs.png" position="463,0" zPosition="-10" size="1920,1080" /> -->
+<widget source="global.CurrentTime" render="Label" position="563,573" size="150,30" font="mediaportal; 27" halign="center" backgroundColor="black" foregroundColor="white" borderColor="blue" borderWidth="2" transparent="1" zPosition="3">
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+<!-- <ePixmap position="513,674" size="256,256" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/ax_blue_skin_icon.png" /> -->
+  <widget name="F1" position="531,197" size="218,38" transparent="1" font="mediaportal; 18" backgroundColor="background" valign="center" halign="center" zPosition="2" foregroundColor="#ffffff" />
+  <widget name="F2" position="531,245" size="218,38" transparent="1" font="mediaportal; 18" backgroundColor="background" foregroundColor="white" valign="center" halign="center" zPosition="2" />
+  <widget name="F3" position="531,293" size="218,38" transparent="1" font="mediaportal; 18" backgroundColor="background" foregroundColor="white" valign="center" halign="center" zPosition="2" />
+  <widget name="F4" position="531,341" size="218,38" transparent="1" font="mediaportal; 18" backgroundColor="background" foregroundColor="white" valign="center" halign="center" zPosition="2" />
+  <widget name="F5" position="531,389" size="218,38" transparent="1" font="mediaportal; 18" backgroundColor="background" foregroundColor="white" valign="center" halign="center" zPosition="2" />
+  <widget name="F6" position="531,437" size="218,38" transparent="1" font="mediaportal; 18" backgroundColor="background" foregroundColor="white" valign="center" halign="center" zPosition="2" />
+  <widget name="F7" position="531,485" size="218,38" transparent="1" font="mediaportal; 18" backgroundColor="background" foregroundColor="white" valign="center" halign="center" zPosition="2" />
+  <widget name="F8" position="531,533" size="218,38" transparent="1" font="mediaportal; 18" backgroundColor="background" foregroundColor="white" valign="center" halign="center" zPosition="2" />
+  <eLabel name="" position="490,165" size="300,438" />
+
+  
+
+
+
