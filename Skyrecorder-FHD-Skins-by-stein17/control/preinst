@@ -1,0 +1,27 @@
+#!/bin/sh
+rm -rf /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/ax_blue_fhd
+rm -rf /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd
+rm -rf /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/universal_fhd
+
+mv /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyAddedEdit.py /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyAddedEdit.py_orig
+mv /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyChannelEditor.py /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyChannelEditor.py_orig
+mv /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyChannelSelect.py /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyChannelSelect.py_orig
+mv /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyGenreSelect.py /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyGenreSelect.py_orig
+mv /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyRecorderArchiv.py /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyRecorderArchiv.py_orig
+mv /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyRecorderMainScreen.py /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyRecorderMainScreen.py_orig
+mv /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyRecorderSettings.py /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyRecorderSettings.py_orig
+mv /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkySkipWordsSelect.py /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkySkipWordsSelect.py_orig
+mv /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyWhitelist.py /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyWhitelist.py_orig
+
+echo "                                                                           "
+echo "                                                                           "
+echo "                                                                           "
+echo "                                                                           "
+echo "                                                                           "
+echo "                                                                           "
+echo "                                                                           "
+echo "  The Skyrecorder-FHD-Skins-by-stein17 is now being installed...           "
+echo "                                                                           " 
+echo "                                                                           "
+echo "                                                                           "
+exit 0

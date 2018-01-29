@@ -1,0 +1,71 @@
+<!-- ###Mainscreen### -->
+<screen name="skyrecorder_MainScreen_v05" title="SkyRecorder" position="0,0" size="1920,1080" flags="wfNoBorder">
+    <widget source="global.CurrentTime" render="Label" position="1257,30" size="642,40" font="Regular; 36" halign="center" foregroundColor="#00cccccc" backgroundColor="#00000000" transparent="1">
+  <convert type="ClockToText">Format:%A, %d.%m.%Y   %H:%M</convert>
+  </widget>
+ <eLabel name="vertikalline" position="1240,126" size="2,840" foregroundColor="#00003366" backgroundColor="#00003366" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/bg1920.png" position="0,0" zPosition="-20" size="1920,1080" />
+    <widget source="Title" render="Label" position="20,15" size="900,60" font="Regular; 50" halign="left" valign="center" foregroundColor="#00ffffff" backgroundColor="#00000000" borderColor="#000066cc" borderWidth="3" transparent="1" zPosition="1" />     <widget source="session.VideoPicture" render="Pig" position="1257,127" size="648,367" zPosition="3" backgroundColor="#df0b1300" />
+
+<eLabel position="1256,126" size="650,369" backgroundColor="white" zPosition="0" name="Videoback" />
+    <eLabel position="1257,127" size="648,367" backgroundColor="#00000000" zPosition="1" name="Videofill" />
+    <widget name="filmliste" position="30,505" size="1200,470" backgroundColor="#00000000" foregroundColor="#00cccccc" backgroundColorSelected="#00003399" foregroundColorSelected="#00ffffff" scrollbarMode="showOnDemand" transparent="1" itemHeight="45" font="Regular;33" zPosition="1" />
+    
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/ico_hd_off.png" position="1550,1020" size="63,35" zPosition="1" alphatest="blend" />
+    <widget name="hd" position="1550,1020" size="63,35" transparent="1" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/ico_hd_on.png" zPosition="2" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/ico_format_off.png" position="1730,1020" size="65,35" zPosition="1" alphatest="blend" />
+    <widget name="169" position="1730,1020" size="65,35" transparent="1" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/ico_format_on.png" zPosition="2" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/ico_dolby_off.png" position="1640,1020" size="63,35" zPosition="1" alphatest="blend" />
+    <widget name="dolby" position="1640,1020" size="63,35" transparent="1" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/ico_dolby_on.png" zPosition="2" />
+    
+    <widget name="dualch" position="1674,1079" size="63,35" transparent="1" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/ico_dolby_off.png" zPosition="1" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/subtitle_off.png" position="1820,1020" size="63,35" zPosition="1" alphatest="blend" />
+    <widget name="sub" position="1820,1020" size="63,35" transparent="1" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/subtitle_on.png" zPosition="2" />
+<!--   <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/up.png" position="1065,110" zPosition="1" size="32,32" alphatest="on" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/down.png" position="1065,440" zPosition="1" size="32,32" alphatest="on" /> -->
+  <widget name="image" position="1435,599" size="281,380" transparent="1" alphatest="blend" zPosition="2" halign="center" />
+    <widget name="name" position="1256,496" size="648,70" backgroundColor="#00000000" transparent="1" font="Regular; 32" valign="center" zPosition="1" halign="center" />
+    <widget name="handlung" position="30,110" size="1200,375" backgroundColor="#00000000" transparent="1" itemHeight="42" font="Regular;32" valign="top" halign="left" zPosition="1" />
+    
+    <widget name="filmliste_event_bg" position="30,110" size="1200,860" backgroundColor="black" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/bg1280.png" transparent="0" zPosition="4" />
+  <widget name="filmliste_event" position="30,219" size="1200,750" backgroundColor="black" foregroundColor="grey" backgroundColorSelected="#00003399" foregroundColorSelected="#00ffffff" scrollbarMode="showOnDemand" transparent="1" itemHeight="42" font="Regular;30" zPosition="5" />
+  <widget name="movieinfo_bg" position="30,110" size="1200,860" backgroundColor="black" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/bg1280.png" transparent="0" zPosition="4" />
+  <widget name="movieinfo" position="30,219" size="1200,750" backgroundColor="black" foregroundColor="grey" backgroundColorSelected="#00003399" foregroundColorSelected="#00ffffff" scrollbarMode="showOnDemand" transparent="1" itemHeight="42" font="Regular;30" zPosition="5" />
+  <widget name="movieinfo_red" backgroundColor="black" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/red.png" position="710,918" zPosition="4" size="35,35" alphatest="on" />
+  <widget name="movieinfo_green" backgroundColor="black" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/green.png" position="960,918" zPosition="4" size="35,35" alphatest="on" />
+  <widget name="movieinfo_red_label" position="750,922" size="200,30" backgroundColor="black" transparent="1" zPosition="4" font="Regular; 27" valign="center" halign="left" />
+  <widget name="movieinfo_green_label" position="1000,922" size="200,30" backgroundColor="black" transparent="1" zPosition="4" font="Regular; 27" valign="center" halign="left" />
+    
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/red.png" position="30,1020" zPosition="1" size="35,35" alphatest="on" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/green.png" position="380,1020" zPosition="1" size="35,35" alphatest="on" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/yellow.png" position="730,1020" zPosition="1" size="35,35" alphatest="on" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/blue.png" position="1080,1020" zPosition="1" size="35,35" alphatest="on" />
+    <eLabel text="Blacklist" position="70,1022" size="310,30" zPosition="1" font="Regular; 27" halign="left" backgroundColor="#00000000" transparent="1" />
+    <eLabel text="Whitelist" position="420,1022" size="310,30" zPosition="1" font="Regular; 27" halign="left" backgroundColor="#00000000" transparent="1" />
+    <eLabel text="Ansicht" position="770,1022" size="310,30" zPosition="1" font="Regular; 27" halign="left" backgroundColor="#00000000" transparent="1" />
+    <eLabel text="Archiv" position="1120,1022" size="310,30" zPosition="1" font="Regular; 27" halign="left" backgroundColor="#00000000" transparent="1" />
+    <eLabel name="vertical" position="30,495" size="1200,2" zPosition="2" foregroundColor="#00003366" backgroundColor="#00003366" />
+    
+    <widget name="star0" transparent="1" zPosition="3" position="1678,567" size="24,24" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/Star.png" alphatest="on" />
+    <widget name="star1" transparent="1" zPosition="3" position="1653,567" size="24,24" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/Star.png" alphatest="on" />
+    <widget name="star2" transparent="1" zPosition="3" position="1628,567" size="24,24" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/Star.png" alphatest="on" />
+    <widget name="star3" transparent="1" zPosition="3" position="1578,567" size="24,24" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/Star.png" alphatest="on" />
+    <widget name="star4" transparent="1" zPosition="3" position="1603,567" size="24,24" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/Star.png" alphatest="on" />
+    <widget name="star5" transparent="1" zPosition="3" position="1553,567" size="24,24" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/Star.png" alphatest="on" />
+    <widget name="star6" transparent="1" zPosition="3" position="1528,567" size="24,24" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/Star.png" alphatest="on" />
+    <widget name="star7" transparent="1" zPosition="3" position="1503,567" size="24,24" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/Star.png" alphatest="on" />
+    <widget name="star8" transparent="1" zPosition="3" position="1478,567" size="24,24" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/Star.png" alphatest="on" />
+    <widget name="star9" transparent="1" zPosition="3" position="1453,567" size="24,24" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/Star.png" alphatest="on" />
+    <ePixmap name="nostar0" transparent="1" zPosition="2" position="1453,567" size="24,24" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/NoStar2.png" alphatest="on" />
+    <ePixmap name="nostar1" transparent="1" zPosition="2" position="1503,567" size="24,24" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/NoStar2.png" alphatest="on" />
+    <ePixmap name="nostar2" transparent="1" zPosition="2" position="1478,567" size="24,24" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/NoStar2.png" alphatest="on" />
+    <ePixmap name="nostar3" transparent="1" zPosition="2" position="1603,567" size="24,24" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/NoStar2.png" alphatest="on" />
+    <ePixmap name="nostar4" transparent="1" zPosition="2" position="1628,567" size="24,24" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/NoStar2.png" alphatest="on" />
+    <ePixmap name="nostar5" transparent="1" zPosition="2" position="1578,567" size="24,24" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/NoStar2.png" alphatest="on" />
+    <ePixmap name="nostar6" transparent="1" zPosition="2" position="1528,567" size="24,24" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/NoStar2.png" alphatest="on" />
+    <ePixmap name="nostar7" transparent="1" zPosition="2" position="1553,567" size="24,24" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/NoStar2.png" alphatest="on" />
+    <ePixmap name="nostar8" transparent="1" zPosition="2" position="1653,567" size="24,24" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/NoStar2.png" alphatest="on" />
+    <ePixmap name="nostar9" transparent="1" zPosition="2" position="1678,567" size="24,24" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/NoStar2.png" alphatest="on" />
+	<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd/images/key_menu.png" position="1431,1013" zPosition="1" size="60,50" alphatest="on" />
+
+  </screen>

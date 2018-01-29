@@ -1,0 +1,12 @@
+<!--   MP_VirtualKeyBoard  -->
+<screen name="VirtualKeyBoardExt" position="center,center" size="900,550" zPosition="9998" title="" flags="wfNoBorder">
+	<ePixmap pixmap="~/SmokeHD/images/vkey_text.png" position="10,60" zPosition="-4" size="880,40" alphatest="on" />
+	<widget source="country" render="Pixmap" position="830,10" size="60,40" alphatest="on" borderWidth="2" borderColor="yellow">
+     <convert type="ValueToPixmap">LanguageCode</convert>
+	</widget>
+	<widget name="header" position="10,22" size="815,28" font="mediaportal;24" transparent="1" noWrap="1" />
+	<widget name="text" position="12,59" size="876,40" font="mediaportal;32" transparent="1" noWrap="1" halign="right" />
+	<widget name="list" position="12,115" size="878,225" selectionDisabled="1" transparent="1" itemHeight="45" />
+	<widget name="suggestionlist" position="10,350" size="520,175" selectionDisabled="1" transparent="1" scrollbarMode="showOnDemand" itemHeight="25" />
+	<widget name="captcha" position="540,350" size="300,200" transparent="1" alphatest="on" />
+</screen>

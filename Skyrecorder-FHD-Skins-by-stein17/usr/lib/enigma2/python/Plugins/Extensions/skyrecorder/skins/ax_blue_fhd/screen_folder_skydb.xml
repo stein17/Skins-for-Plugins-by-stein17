@@ -1,0 +1,18 @@
+  <!-- ###DB_Folder### -->
+<screen name="SkySelect_AnytimeFolder_v05" position="center,center" size="1920,1080" title="SkyRecorder" flags="wfNoBorder">
+  <widget source="global.CurrentTime" render="Label" position="1257,30" size="648,50" font="Regular; 36" halign="center" foregroundColor="#00cccccc" backgroundColor="#00000000" transparent="1">
+    <convert type="ClockToText">Format:%A, %d.%m.%Y   %H:%M</convert>
+    </widget>
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/ax_blue_fhd/images/bg1920.png" position="0,0" zPosition="-20" size="1920,1080" />
+  <widget source="Title" render="Label" position="20,15" size="900,60" font="Regular; 50" halign="left" valign="center" foregroundColor="#00ffffff" backgroundColor="#00000000" borderColor="#000066cc" borderWidth="3" transparent="1" zPosition="1" />    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/ax_blue_fhd/images/line648.png" position="1249,492" size="648,2" alphatest="blend" zPosition="6" />
+    <eLabel position="1252,126" size="642,361" backgroundColor="white" zPosition="0" name="Videoback" />
+    <eLabel position="1253,127" size="640,359" backgroundColor="#00000000" zPosition="1" name="Videofill" />
+    <widget source="session.VideoPicture" render="Pig" position="1253,127" size="640,359" zPosition="3" backgroundColor="#df0b1300" />
+   <widget name="name" position="1252,496" size="642,70" foregroundColor="#0050bbff" backgroundColor="#00000000" transparent="1" font="Regular; 32" valign="center" zPosition="1" halign="center" />    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/ax_blue_fhd/images/line1200.png" position="23,223" size="1180,2" alphatest="blend" zPosition="1" />
+    <widget name="folderlist" position="30,230" size="1160,730" backgroundColor="#00000000" foregroundColor="#00cccccc" backgroundColorSelected="#00003399" foregroundColorSelected="#00ffffff" scrollbarMode="showOnDemand" transparent="1" itemHeight="45" font="Regular;33" zPosition="1" />
+    <widget name="media" position="30,130" size="1160,90" zPosition="1" font="Regular; 32" halign="left" backgroundColor="#00000000" transparent="1" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/ax_blue_fhd/images/red.png" position="30,1020" size="35,35" alphatest="on" zPosition="1" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/ax_blue_fhd/images/green.png" position="380,1020" size="35,35" alphatest="on" zPosition="1" />
+    <eLabel text="Abbrechen" position="70,1022" size="310,30" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="#00000000" transparent="1" />
+    <eLabel text="Speichern" position="420,1022" size="310,30" zPosition="1" valign="center" font="Regular; 27" halign="left" backgroundColor="#00000000" transparent="1" />
+  </screen>

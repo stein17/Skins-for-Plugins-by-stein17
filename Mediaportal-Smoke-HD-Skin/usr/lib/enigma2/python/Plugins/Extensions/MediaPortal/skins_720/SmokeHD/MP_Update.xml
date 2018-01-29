@@ -1,0 +1,6 @@
+<!--   MP_Update  -->
+<screen name="MPUpdateScreen" position="center,center" size="1280,720" title="" backgroundColor="transparent">
+	<ePixmap pixmap="~/SmokeHD/images/MovieSelection.png" position="0,0" size="766,720" zPosition="-10" alphatest="blend" backgroundColor="black" />	
+	<widget name="mplog" position="25,75" size="712,580" backgroundColor="black" foregroundColor="grey" foregroundColorSelected="white" transparent="0" itemHeight="32" font="mediaportal;24" />
+	<eLabel text="MediaPortal - Update" zPosition="1" position="15,5" size="400,44" valign="center" font="mediaportal; 32" foregroundColor="#0000deff" backgroundColor="background" transparent="1" halign="left" />
+</screen>

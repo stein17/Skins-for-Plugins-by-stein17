@@ -1,0 +1,7 @@
+<!-- MP_PluginSetup -->
+<screen position="center,center" size="550,197" title="" backgroundColor="background" flags="wfNoBorder" name="PluginUserDefault">
+    <widget name="config" position="15,80" size="520,80" scrollbarMode="showOnDemand" backgroundColor="black" foregroundColor="grey" itemHeight="28" zPosition="1" transparent="1" />
+    <widget name="title" position="2,2" size="546,60" font="mediaportal;22" foregroundColor="#0000deff" backgroundColor="background" zPosition="1" halign="center" valign="center" />
+	<ePixmap pixmap="~/SmokeHD/images/buttonblue.png" position="358,168" size="25,25" alphatest="blend" />
+	<widget name="F4" position="385,170" size="150,20" transparent="1" font="mediaportal; 16" backgroundColor="background"  valign="center" halign="center" zPosition="1" /> 	
+</screen>

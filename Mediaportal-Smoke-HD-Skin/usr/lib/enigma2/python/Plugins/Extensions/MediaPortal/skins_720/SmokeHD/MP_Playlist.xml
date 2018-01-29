@@ -1,0 +1,42 @@
+<!-- MP_Playlist -->
+<screen name="defaultPlaylist" position="center,center" size="1280,720" backgroundColor="background" flags="wfNoBorder">
+	<widget name="title" position="15,5" size="600,44" valign="center" font="mediaportal; 32" foregroundColor="#0000deff" backgroundColor="background" transparent="1" halign="left" />
+	<widget source="global.CurrentTime" render="Label" position="850,5" size="370,44" valign="center" font="mediaportal; 32" foregroundColor="#0000deff" backgroundColor="background" halign="right" transparent="1">
+	<convert type="ClockToText">Format:%a, %d.%m.%Y   %H:%M</convert>
+	</widget>
+	<ePixmap pixmap="~/SmokeHD/images/menu-setup.png" position="0,0" size="1280,720" zPosition="-10" alphatest="blend" backgroundColor="black" />
+  <widget name="liste" position="25,115" size="713,540" backgroundColor="black" foregroundColor="grey" foregroundColorSelected="white" scrollbarMode="showOnDemand" transparent="0" itemHeight="25" />
+  <widget name="songtitle" position="766,390" size="510,30" foregroundColor="cyan1" backgroundColor="background" transparent="1" font="Regular;24" valign="top" />
+  <widget source="session.CurrentService" render="Label" position="1192,488" size="85,25" font="Regular; 22" foregroundColor="cyan1" backgroundColor="background" halign="center" transparent="1">
+    <convert type="MPServicePosition">Length</convert>
+  </widget>
+  <widget name="coverArt" pixmap="~/SmokeHD/images/no_coverArt.png" position="785,70" size="473,297" transparent="1" alphatest="blend" />
+  <eLabel text="Artist" position="766,424" size="90,25" font="Regular;22" foregroundColor="cyan1" backgroundColor="background" transparent="1" valign="center" halign="left" />
+  <widget name="artist" position="860,424" size="420,25" font="Regular;22" foregroundColor="grey" backgroundColor="background" transparent="1" valign="center" halign="left" />
+  <eLabel text="Album" position="766,456" size="90,25" font="Regular;22" foregroundColor="cyan1" backgroundColor="background" transparent="1" valign="center" halign="left" />
+  <widget name="album" position="860,456" size="420,25" font="Regular;22" foregroundColor="grey" backgroundColor="background" transparent="1" valign="center" halign="left" />
+  <eLabel text="Info" position="765,488" size="80,25" font="Regular;22" foregroundColor="cyan1" backgroundColor="background" transparent="1" valign="center" halign="left" />
+  <widget source="session.CurrentService" render="Progress" pixmap="~/SmokeHD/images/00ffffff.png" position="946,496" size="140,10" backgroundColor="black" borderWidth="1" borderColor="#0000deff" zPosition="1" transparent="1">
+  <convert type="MPServicePosition">Position</convert>
+</widget>
+  <widget source="session.CurrentService" render="Label" position="849,488" size="90,25" font="Regular;22" foregroundColor="grey" backgroundColor="background" transparent="1" valign="center" halign="left">
+    <convert type="MPServicePosition">Position</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="1096,488" size="90,25" font="Regular;22" foregroundColor="grey" backgroundColor="background" transparent="1" valign="center" halign="right">
+    <convert type="MPServicePosition">Remaining</convert>
+  </widget>
+  <eLabel text="Playmode" position="765,521" size="110,25" font="Regular;20" foregroundColor="grey" backgroundColor="background" valign="center" halign="center" transparent="1" />
+  <widget name="playmode" position="876,521" size="400,25" font="Regular;20" foregroundColor="grey" backgroundColor="background" valign="center" halign="center" transparent="1" />
+   <eLabel position="30,107" size="700,1" backgroundColor="grey" />
+	<ePixmap pixmap="~/SmokeHD/images/buttonred.png" position="10,689" size="25,25" alphatest="blend" />
+	<ePixmap pixmap="~/SmokeHD/images/buttongreen.png" position="218,689" size="25,25" alphatest="blend" />
+	<ePixmap pixmap="~/SmokeHD/images/buttonyellow.png" position="426,689" size="25,25" alphatest="blend" />
+	<ePixmap pixmap="~/SmokeHD/images/buttonblue.png" position="684,689" size="25,25" alphatest="blend" />
+	<widget name="F1" position="40,686" size="170,30" zPosition="1" font="mediaportal;20" backgroundColor="background" valign="center" halign="left" transparent="1" />
+	<widget name="F2" position="248,686" size="170,30" zPosition="1" font="mediaportal;20" backgroundColor="background" valign="center" halign="left" transparent="1" />
+	<widget name="F3" position="456,686" size="220,30" zPosition="1" font="mediaportal;20" backgroundColor="background" valign="center" halign="left" transparent="1" />
+	<widget name="F4" position="714,686" size="220,30" zPosition="1" font="mediaportal;20" backgroundColor="background" valign="center" halign="left" transparent="1" />
+	<eLabel position="30,107" size="580,1" backgroundColor="grey" />
+	
+</screen>
+

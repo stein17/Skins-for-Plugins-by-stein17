@@ -1,0 +1,3 @@
+﻿<widget name="suchtitel" position="375,200" size="150,25" backgroundColor="#00485052" transparent="0" font="mediaportal;23" valign="center" halign="center" zPosition="10" />
+<widget name="suche" position="375,225" size="150,60" foregroundColor="#00e5b243" backgroundColor="#00101214" transparent="0" font="mediaportal;50" valign="center" halign="center" zPosition="10" />
+<widget name="suchhinweis" position="720,360" size="150,25" backgroundColor="#00485052" transparent="0" font="mediaportal;23" valign="center" halign="center" zPosition="10" />

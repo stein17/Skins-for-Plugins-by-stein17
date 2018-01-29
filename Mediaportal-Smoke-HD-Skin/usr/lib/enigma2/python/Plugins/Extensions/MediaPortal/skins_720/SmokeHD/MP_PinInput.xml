@@ -1,0 +1,7 @@
+<!-- MP_PinInputExt -->
+<screen name="PinInputExt" position="center,center" size="500,170" title="">
+	<widget name="service" position="10,10" size="480,25" font="mediaportal;20" />
+	<widget name="text" position="10,40" size="480,25" font="mediaportal;20" halign="center" />
+	<widget name="tries" position="10,70" size="480,25" font="mediaportal;20" halign="center" />
+	<widget name="input" position="10,110" size="480,40" font="mediaportal;50" halign="center" />
+</screen>

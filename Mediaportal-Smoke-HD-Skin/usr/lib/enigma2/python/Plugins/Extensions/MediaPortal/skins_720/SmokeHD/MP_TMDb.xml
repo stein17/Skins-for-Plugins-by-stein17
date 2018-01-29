@@ -1,0 +1,38 @@
+  <!--   </MP_TMDb -->
+<screen  position="center,center" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" title="TMDb - The Movie Database">
+<!--   <screen name="TMDB" position="center,center" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" title="TMDb - The Movie Database"> -->
+	<widget name="searchinfo" zPosition="1" position="15,5" size="600,44" valign="center" font="mediaportal; 32" foregroundColor="#0000deff" backgroundColor="background" transparent="1" halign="left" />
+	<widget name="subtitle" position="25,75" size="400,25" zPosition="2" transparent="1" font="mediaportal;22" backgroundColor="black" foregroundColor="grey" />
+	<widget name="fulldescription" position="25,112" size="590,540" font="mediaportal;22" backgroundColor="black" foregroundColor="grey" foregroundColorSelected="white" transparent="0" />
+	<widget name="coverArt" position="799,75" size="425,305" alphatest="blend" />
+	<ePixmap position="690,267" size="100,75" zPosition="0" pixmap="~/SmokeHD/images/star.png" transparent="1" alphatest="blend" />
+	<widget name="rating" position="460,75" size="150,25" zPosition="2" transparent="1" font="mediaportal;22" foregroundColor="#0000deff" backgroundColor="background" halign="center" />
+	<widget name="fsk" position="820,390" size="150,25" zPosition="2" transparent="1" font="mediaportal;22" />
+	<widget name="fsk_txt" position="690,390" size="400,25" zPosition="2" transparent="1" font="mediaportal;22" foregroundColor="#0000deff" backgroundColor="background" />
+	<widget name="year_txt" position="690,420" size="400,25" zPosition="2" transparent="1" font="mediaportal;22" foregroundColor="#0000deff" backgroundColor="background" />
+	<widget name="year" position="820,420" size="400,25" zPosition="2" transparent="1" font="mediaportal;22" />
+	<widget name="country_txt" position="690,450" size="400,25" zPosition="2" transparent="1" font="mediaportal;22" foregroundColor="#0000deff" backgroundColor="background" />
+	<widget name="country" position="820,450" size="400,25" zPosition="2" transparent="1" font="mediaportal;22" />
+	<widget name="runtime_txt" position="690,480" size="400,25" zPosition="2" transparent="1" font="mediaportal;22" foregroundColor="#0000deff" backgroundColor="background" />
+	<widget name="runtime" position="820,480" size="400,25" zPosition="2" transparent="1" font="mediaportal;22" />
+	<widget name="votes_txt" position="690,510" size="400,25" zPosition="2" transparent="1" font="mediaportal;22" foregroundColor="#0000deff" backgroundColor="background" />
+	<widget name="votes" position="820,510" size="400,25" zPosition="2" transparent="1" font="mediaportal;22" />
+	<widget name="director_txt" position="690,540" size="400,25" zPosition="2" transparent="1" font="mediaportal;22" foregroundColor="#0000deff" backgroundColor="background" />
+	<widget name="director" position="820,540" size="400,25" zPosition="2" transparent="1" font="mediaportal;22" />
+	<widget name="author_txt" position="690,570" size="400,25" zPosition="2" transparent="1" font="mediaportal;22" foregroundColor="#0000deff" backgroundColor="background" />
+	<widget name="author" position="820,570" size="400,25" zPosition="2" transparent="1" font="mediaportal;22" />
+	<widget name="genre_txt" position="690,600" size="100,30" font="mediaportal; 22" transparent="1" foregroundColor="#0000deff" backgroundColor="background" />
+	<widget name="genre" position="820,600" size="400,25" zPosition="2" transparent="1" font="mediaportal;22" />
+	<widget name="studio_txt" position="690,630" size="100,30" font="mediaportal; 22" transparent="1" foregroundColor="#0000deff" backgroundColor="background" />
+	<widget name="studio" position="820,630" size="400,25" zPosition="2" transparent="1" font="mediaportal;22" />
+	<ePixmap pixmap="~/SmokeHD/images/second-infobar.png" position="0,0" size="1280,720" zPosition="-10" alphatest="blend" backgroundColor="black" />
+	<eLabel position="30,105" size="580,1" backgroundColor="grey" />
+	<ePixmap pixmap="~/SmokeHD/images/buttonred.png" position="10,689" size="25,25" alphatest="blend" />
+	<ePixmap pixmap="~/SmokeHD/images/buttongreen.png" position="218,689" size="25,25" alphatest="blend" />
+	<ePixmap pixmap="~/SmokeHD/images/buttonyellow.png" position="426,689" size="25,25" alphatest="blend" />
+	<ePixmap pixmap="~/SmokeHD/images/buttonblue.png" position="684,689" size="25,25" alphatest="blend" />
+	<widget name="F1" position="40,686" size="170,30" zPosition="1" font="mediaportal;20" backgroundColor="background" valign="center" halign="left" transparent="1" />
+	<widget name="F2" position="248,686" size="170,30" zPosition="1" font="mediaportal;20" backgroundColor="background" valign="center" halign="left" transparent="1" />
+	<widget name="F3" position="456,686" size="220,30" zPosition="1" font="mediaportal;20" backgroundColor="background" valign="center" halign="left" transparent="1" />
+	<widget name="F4" position="714,686" size="220,30" zPosition="1" font="mediaportal;20" backgroundColor="background" valign="center" halign="left" transparent="1" />
+</screen>

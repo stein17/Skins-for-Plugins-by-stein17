@@ -1,0 +1,26 @@
+ <!-- ###Settings### -->
+<screen name="skyrecorder_Settings_v05" position="center,center" size="1920,1080" title="SkyRecorder" flags="wfNoBorder">
+  <widget source="global.CurrentTime" render="Label" position="1257,30" size="642,40" font="Regular; 32" halign="center" foregroundColor="#00cccccc" backgroundColor="#00000000" transparent="1">
+  <convert type="ClockToText">Format:%A, %d.%m.%Y   %H:%M</convert>
+  </widget>
+  <eLabel name="vertikalline" position="1240,126" size="2,840" foregroundColor="#00999999" backgroundColor="#00999999" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/universal_fhd/images/bg1920.png" position="0,0" zPosition="-20" size="1920,1080" />
+   <widget source="Title" render="Label" position="20,15" size="900,60" font="Regular; 50" halign="left" valign="center" foregroundColor="#00ffffff" backgroundColor="#00000000" borderColor="#000066cc" borderWidth="3" transparent="1" zPosition="1" /> <eLabel position="1256,126" size="650,369" backgroundColor="white" zPosition="0" name="Videoback" />
+  <eLabel position="1257,127" size="648,367" backgroundColor="#00000000" zPosition="1" name="Videofill" />
+  <widget source="session.VideoPicture" render="Pig" position="1257,127" size="648,367" zPosition="3" backgroundColor="#df0b1300" />
+  <widget name="name" position="1258,496" size="648,70" backgroundColor="#00000000" transparent="1" font="Regular; 32" valign="center" zPosition="1" halign="center" />
+  <widget name="config" position="30,510" size="1200,450" backgroundColor="#00000000" foregroundColor="#00cccccc" backgroundColorSelected="#00003399" foregroundColorSelected="#00ffffff" scrollbarMode="showOnDemand" transparent="1" itemHeight="45" font="Regular;33" />
+ <eLabel name="vertikalline" position="30,491" size="1200,2" foregroundColor="#00999999" backgroundColor="#00999999" />
+<widget name="log" position="30,130" size="1200,340" backgroundColor="#00000000" foregroundColor="#00cccccc" backgroundColorSelected="#00003399" foregroundColorSelected="#00ffffff" scrollbarMode="showOnDemand" transparent="1" itemHeight="45" font="Regular;33" zPosition="1" />
+ <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/universal_fhd/images/red.png" position="30,1020" zPosition="1" size="35,35" alphatest="on" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/universal_fhd/images/green.png" position="380,1020" zPosition="1" size="35,35" alphatest="on" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/universal_fhd/images/yellow.png" position="730,1020" zPosition="1" size="35,35" alphatest="on" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/universal_fhd/images/blue.png" position="1080,1020" zPosition="1" size="35,35" alphatest="on" />
+    <eLabel text="Datenbank aufräumen" position="70,1022" size="310,30" zPosition="1" font="Regular; 27" halign="left" backgroundColor="#00000000" transparent="1" />
+    <eLabel text="Speichern" position="420,1022" size="310,30"  zPosition="1" font="Regular; 27" halign="left" backgroundColor="#00000000" transparent="1" />
+    <eLabel text="Timerverlauf" position="770,1022" size="310,30" zPosition="1" font="Regular; 27" halign="left" backgroundColor="#00000000" transparent="1" />
+    <eLabel text="Timer hinzufügen" position="1120,1022" size="310,30" zPosition="1" font="Regular; 27" halign="left" backgroundColor="#00000000" transparent="1" />
+
+
+	<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/skins/universal_fhd/images/info.png" position="1612,1023" zPosition="1" size="74,35" alphatest="on" />
+</screen>

@@ -1,0 +1,4 @@
+﻿<widget name="hdpic" position="200,581" size="270,20" pixmap="~/SmokeHD/images/coverpic_hd.png" zPosition="0" transparent="1" alphatest="blend" />
+<widget name="rating0" position="30,582" size="270,12" pixmap="~/SmokeHD/images/stars-empty10.png" zPosition="3" transparent="1" alphatest="blend" />
+<widget name="rating10" position="30,582" size="270,12" pixmap="~/SmokeHD/images/stars-full10.png" zPosition="4" transparent="1" />
+<ePixmap pixmap="~/SmokeHD/images/coverbar270.png" position="20,580" size="270,16" zPosition="2"  alphatest="blend" />

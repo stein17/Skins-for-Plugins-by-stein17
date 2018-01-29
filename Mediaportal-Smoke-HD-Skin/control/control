@@ -1,0 +1,11 @@
+Package: enigma2-plugin-skincomponents-mediaportal-smokehd
+Version: 1.0
+Section: base
+OE: enigma2-plugins
+License: open
+Priority: optional
+Architecture: all
+Maintainer: stein17
+Description: HD Skin for Mediaportal by stein17
+Source: https://www.google.de/
+Homepage: https://www.google.de/

@@ -1,0 +1,26 @@
+<widget name="Query" position="25,480" size="150,25" backgroundColor="black" transparent="1" font="Regular; 20" valign="center" halign="left" zPosition="1" foregroundColor="#0000deff" />
+	<widget name="query" position="180,480" size="560,25" backgroundColor="black" transparent="1" font="Regular;20" valign="center" halign="left" zPosition="1" foregroundColor="grey" />
+	<widget name="Keywords" position="25,510" size="150,25" backgroundColor="black" transparent="1" font="Regular;20" valign="center" halign="left" zPosition="1" foregroundColor="#0000deff" />
+	<widget name="keywords" position="180,510" size="560,25" backgroundColor="black" transparent="1" font="Regular;20" valign="center" halign="left" zPosition="1" foregroundColor="grey" />
+	<widget name="Time" position="25,540" size="150,25" backgroundColor="black" transparent="1" font="Regular;20" valign="center" halign="left" zPosition="1" foregroundColor="#0000deff" />
+	<widget name="time" position="180,540" size="200,25" backgroundColor="black" transparent="1" font="Regular;20" valign="center" halign="left" zPosition="1" foregroundColor="grey" />
+	<widget name="Metalang" position="385,570" size="150,25" backgroundColor="black" transparent="1" font="Regular;20" valign="center" halign="left" zPosition="1" foregroundColor="#0000deff" />
+	<widget name="metalang" position="541,570" size="200,25" backgroundColor="black" transparent="1" font="Regular;20" valign="center" halign="left" zPosition="1" foregroundColor="grey" />
+	<widget name="Regionid" position="25,570" size="150,25" backgroundColor="black" transparent="1" font="Regular;20" valign="center" halign="left" zPosition="1" foregroundColor="#0000deff" />
+	<widget name="regionid" position="180,570" size="200,25" backgroundColor="black" transparent="1" font="Regular;20" valign="center" halign="left" zPosition="1" foregroundColor="grey" />
+	<widget name="Author" position="385,540" size="150,25" backgroundColor="black" transparent="1" font="Regular;20" valign="center" halign="left" zPosition="1" foregroundColor="#0000deff" />
+	<widget name="author" position="541,540" size="200,25" backgroundColor="black" transparent="1" font="Regular;20" valign="center" halign="left" zPosition="1" foregroundColor="grey" />
+	<widget name="3D" position="25,600" size="150,25" backgroundColor="black" transparent="1" font="Regular; 20" valign="center" halign="left" zPosition="1" foregroundColor="#0000deff" />
+	<widget name="3d" position="180,600" size="200,25" backgroundColor="black" transparent="1" font="Regular;20" valign="center" halign="left" zPosition="1" foregroundColor="grey" />
+	<widget name="Duration" position="385,600" size="150,25" backgroundColor="black" transparent="1" font="Regular;20" valign="center" halign="left" zPosition="1" foregroundColor="#0000deff" />
+	<widget name="duration" position="541,600" size="200,25" backgroundColor="black" transparent="1" font="Regular;20" valign="center" halign="left" zPosition="1" foregroundColor="grey" />
+	<widget name="Reserve1" position="25,630" size="150,25" backgroundColor="black" transparent="1" font="Regular;20" valign="center" halign="left" zPosition="1" foregroundColor="#0000deff" />
+	<widget name="reserve1" position="541,630" size="200,25" backgroundColor="black" transparent="1" font="Regular;20" valign="center" halign="left" zPosition="1" foregroundColor="grey" />
+	<widget name="Reserve2" position="385,630" size="150,25" backgroundColor="black" transparent="1" font="Regular;20" valign="center" halign="left" zPosition="1" foregroundColor="#0000deff" />
+	<widget name="reserve2" position="180,630" size="200,25" backgroundColor="black" transparent="1" font="Regular;20" valign="center" halign="left" zPosition="1" foregroundColor="grey" />
+<eLabel position="33,475" size="700,1" backgroundColor="grey" />
+
+
+
+	
+	

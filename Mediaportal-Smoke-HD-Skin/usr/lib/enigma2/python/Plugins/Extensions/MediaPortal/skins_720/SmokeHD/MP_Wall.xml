@@ -1,0 +1,21 @@
+<!-- Hauptscreen_Wall -->
+<screen name="MediaPortal" position="center,center" size="1280,720" backgroundColor="black" flags="wfNoBorder">
+	<widget name="name" position="25,75" size="713,40" foregroundColor="grey" borderColor="blue" borderWidth="1" backgroundColor="black" transparent="1" font="mediaportal; 30" valign="top" halign="left" />
+	<widget name="page" position="745,79" size="140,30" foregroundColor="grey" backgroundColor="black" transparent="1" font="mediaportal;24" valign="center" halign="center" />
+	<widget name="CH+" position="943,686" size="60,30" transparent="1" font="mediaportal; 24" backgroundColor="black" foregroundColor="grey" valign="center" halign="center" zPosition="1" />
+	<widget name="CH-" position="1006,686" size="60,30" transparent="1" font="mediaportal; 24" backgroundColor="black" foregroundColor="grey" valign="center" halign="center" zPosition="1" />
+	<eLabel text="MediaPortal" zPosition="1" position="15,5" size="400,44" valign="center" font="mediaportal; 32" foregroundColor="#0000deff" backgroundColor="background" transparent="1" halign="left" />
+	<ePixmap pixmap="~/SmokeHD/images/key_menu.png" position="1085,688" size="64,26" alphatest="blend" />
+    <!-- <widget name="Menu" position="1103,686" size="170,30" zPosition="1" font="mediaportal;20" backgroundColor="black" foregroundColor="white" valign="center" halign="center" /> -->
+	<ePixmap pixmap="~/SmokeHD/images/buttonred.png" position="10,689" size="25,25" alphatest="blend" />
+	<ePixmap pixmap="~/SmokeHD/images/buttongreen.png" position="218,689" size="25,25" alphatest="blend" />
+	<ePixmap pixmap="~/SmokeHD/images/buttonyellow.png" position="426,689" size="25,25" alphatest="blend" />
+	<ePixmap pixmap="~/SmokeHD/images/buttonblue.png" position="684,689" size="25,25" alphatest="blend" />
+	<eLabel position="33,118" size="1213,1" backgroundColor="grey" />
+	<widget name="F1" position="40,686" size="170,30" zPosition="1" font="mediaportal;20" backgroundColor="background" valign="center" halign="left" transparent="1" />
+	<widget name="F2" position="248,686" size="170,30" zPosition="1" font="mediaportal;20" backgroundColor="background" valign="center" halign="left" transparent="1" />
+	<widget name="F3" position="456,686" size="220,30" zPosition="1" font="mediaportal;20" backgroundColor="background" valign="center" halign="left" transparent="1" />
+	<widget name="F4" position="714,686" size="220,30" zPosition="1" font="mediaportal;20" backgroundColor="background" valign="center" halign="left" transparent="1" />
+	<ePixmap pixmap="~/SmokeHD/images/browser-epg.png" position="0,0" size="1280,720" zPosition="-10" alphatest="blend" backgroundColor="black" />
+    <widget name="version" backgroundColor="background" font="mediaportal; 24" halign="left" valign="left" position="497,10" shadowColor="black" shadowOffset="4,4" size="130,30" transparent="1" foregroundColor="grey" />
+    <eLabel text="Version vom:" backgroundColor="background" font="mediaportal; 24" halign="center" valign="left" position="323,10" shadowColor="black" shadowOffset="4,4" size="180,30" transparent="1" foregroundColor="grey" />

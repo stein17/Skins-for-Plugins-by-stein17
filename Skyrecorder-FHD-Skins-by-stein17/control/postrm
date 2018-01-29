@@ -1,0 +1,38 @@
+#!/bin/sh
+
+mv /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyAddedEdit.py_orig /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyAddedEdit.py
+mv /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyChannelEditor.py_orig /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyChannelEditor.py
+mv /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyChannelSelect.py_orig /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyChannelSelect.py
+mv /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyGenreSelect.py_orig /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyGenreSelect.py
+mv /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyRecorderArchiv.py_orig /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyRecorderArchiv.py
+mv /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyRecorderMainScreen.py_orig /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyRecorderMainScreen.py
+mv /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyRecorderSettings.py_orig /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyRecorderSettings.py
+mv /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkySkipWordsSelect.py_orig /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkySkipWordsSelect.py
+mv /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyWhitelist.py_orig /usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/SkyWhitelist.py
+
+echo "syncing disk"
+sync
+echo ""
+echo ""
+echo "****************************************"
+echo "* FHD Skins for SkyRecorder  by stein17 "
+echo "****************************************"
+echo ""
+echo ""
+echo ""
+echo "FHD Skins for SkyRecorder by stein17 successfully removed!"
+echo ""
+echo ""
+echo "GUI restart."
+echo ""
+echo ""
+echo ""
+echo "FHD Skins for SkyRecorder by stein17 wurde erfolgreich entfernt!"
+echo ""
+echo ""
+echo ""
+echo "GUI Neustart."
+echo ""
+echo ""
+echo ""
+exit 0

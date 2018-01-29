@@ -1,0 +1,32 @@
+<!-- MP_Setup -->
+<screen name="MediaPortal_Setup" position="center,center" size="1280,720" backgroundColor="background" flags="wfNoBorder">
+   <widget name="title" zPosition="1" position="15,5" size="400,44" valign="center" font="mediaportal; 32" foregroundColor="#0000deff" backgroundColor="background" transparent="1" halign="left" />
+	<widget source="global.CurrentTime" render="Label" position="850,5" size="370,44" valign="center" font="mediaportal; 32" foregroundColor="#0000deff" backgroundColor="background" halign="right" transparent="1">
+	<convert type="ClockToText">Format:%a, %d.%m.%Y   %H:%M</convert>
+	</widget>
+	 <widget name="version" backgroundColor="background" font="mediaportal; 24" halign="left" valign="left" position="497,10" shadowColor="black" shadowOffset="4,4" size="130,30" transparent="1" foregroundColor="grey" />
+    <eLabel text="Version vom:" backgroundColor="background" font="mediaportal; 24" halign="center" valign="left" position="323,10" shadowColor="black" shadowOffset="4,4" size="180,30" transparent="1" foregroundColor="grey" />
+
+	<ePixmap pixmap="~/SmokeHD/images/menu-setup.png" position="0,0" size="1280,720" zPosition="-20" alphatest="blend" backgroundColor="black" />
+	<widget name="config" position="25,75" size="715,580" backgroundColor="black" foregroundColor="grey" foregroundColorSelected="white" itemHeight="32" font="mediaportal;24" transparent="0" />
+	<ePixmap pixmap="~/SmokeHD/images/buttonred.png" position="10,689" size="25,25" alphatest="blend" />
+	<ePixmap pixmap="~/SmokeHD/images/buttongreen.png" position="218,689" size="25,25" alphatest="blend" />
+	<ePixmap pixmap="~/SmokeHD/images/buttonyellow.png" position="426,689" size="25,25" alphatest="blend" />
+	<ePixmap pixmap="~/SmokeHD/images/buttonblue.png" position="634,689" size="25,25" alphatest="blend" />
+	<widget name="F1" position="40,686" size="170,30" zPosition="1" font="mediaportal;20" backgroundColor="background" valign="center" halign="center" transparent="1" />
+	<widget name="F2" position="248,686" size="170,30" zPosition="1" font="mediaportal;20" backgroundColor="background" valign="center" halign="center" transparent="1" />
+	<widget name="F3" position="456,686" size="170,30" zPosition="1" font="mediaportal;20" backgroundColor="background" valign="center" halign="center" transparent="1" />
+	<widget name="F4" position="664,686" size="170,30" zPosition="1" font="mediaportal;20" backgroundColor="background" valign="center" halign="center" transparent="1" />
+	<eLabel position="786,331" size="471,1" backgroundColor="#0000deff" />
+	<eLabel backgroundColor="black" position="786,71" size="471,295" zPosition="-10" />
+    <eLabel position="785,70" size="473,297" zPosition="-15" backgroundColor="#0000deff" transparent="0" />
+    <widget position="786,71" size="471,260" source="session.VideoPicture" render="Pig" zPosition="3" backgroundColor="transparent" />
+    <widget position="786,333" size="471,33" source="session.CurrentService" render="Label" font="mediaportal;22" foregroundColor="#0000deff" backgroundColor="black" borderWidth="2" transparent="1" valign="center" halign="center" noWrap="1" zPosition="5">
+    <convert type="ServiceName">Name</convert>
+    </widget>
+	<eLabel text="~MediaPortal Skin by stein17~" backgroundColor="background" font="mediaportal; 11" halign="center" valign="top" position="752,664" shadowColor="black" shadowOffset="4,4" size="170,14" transparent="1" foregroundColor="blue" />
+    <eLabel text="# Coded by MediaPortal Team (c) 2013-2017 #" backgroundColor="background" font="mediaportal; 12" halign="center" valign="top" position="667,734" shadowColor="black" shadowOffset="4,4" size="280,16" transparent="1" foregroundColor="#A9A9A9" />
+    <eLabel text="Big thanks to @dhwz for the support" backgroundColor="background" font="mediaportal; 11" halign="center" valign="top" position="1083,664" shadowColor="black" shadowOffset="4,4" size="206,14" transparent="1" foregroundColor="#A9A9A9" />
+    <eLabel text="MediaPortal for Dreambox OS" backgroundColor="background" font="mediaportal; 11" halign="center" valign="top" position="919,664" shadowColor="black" shadowOffset="4,4" size="170,14" transparent="1" foregroundColor="#A9A9A9" />
+
+</screen>
