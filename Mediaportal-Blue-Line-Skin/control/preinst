@@ -1,0 +1,2 @@
+#!/bin/sh
+rm -rf /usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/Blue-Line-FHD

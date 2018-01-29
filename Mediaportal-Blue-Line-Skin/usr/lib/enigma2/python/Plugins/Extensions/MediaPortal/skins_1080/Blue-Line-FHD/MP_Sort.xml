@@ -1,0 +1,13 @@
+<!-- MP_Sort -->
+<screen name="pluginSort" position="0,0" size="700,1080" flags="wfNoBorder" backgroundColor="transparent">
+  <ePixmap pixmap="~/Blue-Line-FHD/images/bg1920.png" position="0,0" zPosition="-10" size="700,1080" />
+  <widget source="global.CurrentTime" render="Label" position="530,25" size="150,50" font="mediaportal; 40" halign="right" foregroundColor="bluetitle" backgroundColor="black" transparent="1" zPosition="3">
+  <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <eLabel name="vertikalline" position="22,183" size="648,2" foregroundColor="backgroundBlue" backgroundColor="backgroundBlue" />
+  <eLabel text="MediaPortal" position="13,25" size="500,50" font="mediaportal; 40" halign="left" valign="center" foregroundColor="bluetitle" backgroundColor="black" transparent="1" zPosition="1" /> 
+  <ePixmap pixmap="~/Blue-Line-FHD/images/key_ok.png" position="522,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <ePixmap pixmap="~/Blue-Line-FHD/images/key_exit.png" position="600,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <widget name="config2" position="30,186" size="635,770" backgroundColor="background" foregroundColor="white" backgroundColorSelected="black" foregroundColorSelected="bluetitle" scrollbarMode="showOnDemand" transparent="1" font="mediaportal; 27" />
+  <eLabel text="User Plugin Sortierung" position="30,122" size="635,60" transparent="1" font="mediaportal; 40" backgroundColor="background" borderColor="blue" borderWidth="3" valign="center" halign="center" zPosition="0" foregroundColor="lightblue" />
+</screen>

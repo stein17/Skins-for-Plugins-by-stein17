@@ -1,0 +1,28 @@
+<!-- MP_Setup -->
+<screen name="hauptScreenSetup" position="center,center" size="1920,1080" flags="wfNoBorder" backgroundColor="#80ffffff">
+  <widget source="global.CurrentTime" render="Label" position="660,31" size="600,40" font="mediaportal; 32" halign="right" foregroundColor="foregroundClock" backgroundColor="black" transparent="1">
+  <convert type="ClockToText">Format:%A, %d.%m.%Y   %H:%M</convert>
+  </widget>
+  <eLabel text="MediaPortal" foregroundColor="bluetitle" backgroundColor="black" font="mediaportal;50" halign="left" valign="center" position="30,0" shadowColor="#00000000" shadowOffset="4,4" size="350,90" transparent="1" />
+  <widget name="config" backgroundColor="background" foregroundColor="white" backgroundColorSelected="black" foregroundColorSelected="bluetitle" position="30,180" size="1230,760" scrollbarMode="showOnDemand" transparent="1" itemHeight="45" font="mediaportal;33" zPosition="0" />
+  <widget name="name" backgroundColor="background" borderColor="blue" borderWidth="3" font="mediaportal;50" halign="center" position="30,105" size="1230,60" transparent="1" />
+  <eLabel text="~MediaPortal Skin by stein17~" backgroundColor="background" font="mediaportal; 17" halign="left" valign="top" position="60,960" shadowColor="black" shadowOffset="4,4" size="260,20" transparent="1" foregroundColor="blue" />
+  <eLabel text="# Coded by MediaPortal Team (c) 2013-2017 #" backgroundColor="background" font="mediaportal; 17" halign="center" valign="top" position="552,960" shadowColor="black" shadowOffset="4,4" size="398,20" transparent="1" foregroundColor="darkgrey" />
+  <eLabel text="Big thanks to @dhwz for the support" backgroundColor="background" font="mediaportal; 17" halign="center" valign="top" position="921,960" shadowColor="black" shadowOffset="4,4" size="320,20" transparent="1" foregroundColor="darkgrey" />
+  <eLabel text="MediaPortal for Dreambox OS" backgroundColor="background" font="mediaportal; 17" halign="center" valign="top" position="321,960" shadowColor="black" shadowOffset="4,4" size="260,20" transparent="1" foregroundColor="darkgrey" />
+  <ePixmap pixmap="~/Blue-Line-FHD/images/key_exit.png" position="1676,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <ePixmap pixmap="~/Blue-Line-FHD/images/key_ok.png" position="1755,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <ePixmap pixmap="~/Blue-Line-FHD/images/key_bouq.png" position="1832,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <ePixmap pixmap="~/Blue-Line-FHD/images/key_red.png" position="5,1018" size="35,35" alphatest="blend" />
+  <ePixmap pixmap="~/Blue-Line-FHD/images/key_green.png" position="385,1018" size="35,35" alphatest="blend" />
+  <ePixmap pixmap="~/Blue-Line-FHD/images/key_yellow.png" position="765,1018" size="35,35" alphatest="blend" />
+  <ePixmap pixmap="~/Blue-Line-FHD/images/key_blue.png" position="1145,1018" size="35,35" alphatest="blend" />
+  <widget name="F1" position="55,1000" size="320,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
+  <widget name="F2" position="435,999" size="320,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
+  <widget name="F3" position="815,1000" size="320,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
+  <widget name="F4" position="1195,1000" size="320,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
+  <ePixmap pixmap="~/Blue-Line-FHD/images/bg1920.png" position="0,0" zPosition="-20" size="1290,1080" />
+  <eLabel name="vertikalline" position="30,170" size="1230,2" foregroundColor="backgroundBlue" backgroundColor="backgroundBlue" />
+  <eLabel name="vertikalline" position="30,943" size="1230,2" foregroundColor="backgroundBlue" backgroundColor="backgroundBlue" />
+  <eLabel name="" position="1290,998" size="630,82" zPosition="-1" />
+</screen>

@@ -1,52 +1,33 @@
-<!--haupt_screen-->
+<!--MP_List-->
 <screen name="MediaPortal" position="0,0" size="1920,1080" title="MediaPortal" flags="wfNoBorder" backgroundColor="transparent">
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/menu_duo_blue.png" position="0,0" zPosition="-1" size="1920,1080" />
+  <ePixmap pixmap="~/AX-Blue-FULL-HD/images/menu_duo_blue.png" position="0,0" zPosition="-1" size="1920,1080" />
   <widget source="global.CurrentTime" render="Label" position="508,30" size="600,40" font="mediaportal; 32" halign="right" foregroundColor="foregroundClock" backgroundColor="black" transparent="1">
   <convert type="ClockToText">Format:%a, %d.%m.%Y   %H:%M</convert>
   </widget>
-  <ePixmap position="971,676" size="256,256" zPosition="2" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/AX Blue_skin_icon.png" transparent="1" />
+  <ePixmap position="971,676" size="256,256" zPosition="2" pixmap="~/AX-Blue-FULL-HD/images/AX Blue_skin_icon.png" transparent="1" />
+  <eLabel text="MediaPortal" position="10,20" size="320,60" backgroundColor="black" transparent="1" zPosition="1" font="mediaportal; 50" foregroundColor="bluetitle" halign="left" valign="center" />
+  <widget name="name" backgroundColor="background" borderColor="blue" borderWidth="3" font="mediaportal;50" halign="left" position="30,123" size="880,60" transparent="1" />
+  <widget name="liste" position="30,191" size="880,770" backgroundColor="black" foregroundColor="white" backgroundColorSelected="bluelabel" foregroundColorSelected="white"  scrollbarMode="showOnDemand" transparent="1" itemHeight="96" />
+  <ePixmap pixmap="~/AX-Blue-FULL-HD/images/line890.png" position="22,962" size="890,2" alphatest="blend" zPosition="1" />
+  <ePixmap pixmap="~/AX-Blue-FULL-HD/images/line890.png" position="25,186" size="890,2" alphatest="blend" zPosition="1" />
+  <ePixmap pixmap="~/AX-Blue-FULL-HD/images/key_red.png" position="5,1018" size="35,35" alphatest="blend" />
+  <ePixmap pixmap="~/AX-Blue-FULL-HD/images/key_green.png" position="385,1018" size="35,35" alphatest="blend" />
+  <ePixmap pixmap="~/AX-Blue-FULL-HD/images/key_yellow.png" position="765,1018" size="35,35" alphatest="blend" />
+  <ePixmap pixmap="~/AX-Blue-FULL-HD/images/key_blue.png" position="1145,1018" size="35,35" alphatest="blend" />
+  <widget name="F1" position="55,1000" size="320,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
+  <widget name="F2" position="435,999" size="320,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
+  <widget name="F3" position="815,1000" size="320,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
+  <widget name="F4" position="1195,1000" size="320,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
+  <ePixmap pixmap="~/AX-Blue-FULL-HD/images/key_help.png" position="1755,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <ePixmap pixmap="~/AX-Blue-FULL-HD/images/key_exit.png" position="1676,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <ePixmap pixmap="~/AX-Blue-FULL-HD/key_info.png" position="1597,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <ePixmap pixmap="~/AX-Blue-FULL-HD/images/key_bouq.png" position="1832,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <eLabel name="" position="942,650" size="313,311" foregroundColor="background" />
   <eLabel text="Coded by MediaPortal Team (c) 2013-2017" backgroundColor="background" font="mediaportal; 20" halign="left" valign="top" position="955,444" shadowColor="black" shadowOffset="4,4" size="300,50" transparent="1" foregroundColor="darkgrey" />
   <eLabel text="Big thanks to @dhwz for the support" backgroundColor="background" font="mediaportal; 20" halign="left" valign="top" position="955,495" shadowColor="black" shadowOffset="4,4" size="300,50" transparent="1" foregroundColor="darkgrey" />
   <eLabel text="MediaPortal for Dreambox OS" backgroundColor="background" font="mediaportal; 20" halign="left" valign="top" position="955,421" shadowColor="black" shadowOffset="4,4" size="300,30" transparent="1" foregroundColor="darkgrey" />
   <eLabel text="MediaPortal" backgroundColor="background" font="mediaportal; 48" halign="left" valign="center" position="965,245" shadowColor="black" shadowOffset="4,4" size="300,60" transparent="1" foregroundColor="bluetitle" />
-  <eLabel text="MediaPortal" position="10,20" size="320,60" backgroundColor="black" transparent="1" zPosition="1" font="mediaportal; 50" foregroundColor="bluetitle" halign="left" valign="center" />
   <eLabel text="Version vom:" backgroundColor="background" font="mediaportal; 24" halign="center" valign="left" position="955,307" shadowColor="black" shadowOffset="4,4" size="180,30" transparent="1" foregroundColor="bluetitle" />
   <widget name="version" backgroundColor="background" font="mediaportal; 24" halign="left" valign="left" position="1123,307" shadowColor="black" shadowOffset="4,4" size="130,30" transparent="1" foregroundColor="bluetitle" />
-  <widget backgroundColor="background" borderColor="blue" borderWidth="3" font="mediaportal;50" halign="center" name="name" position="30,123" size="880,60" transparent="1" />
-  <widget backgroundColor="black" foregroundColor="darkgrey" font="mediaportal;45" name="Mediatheken" position="30,190" size="880,55" transparent="1" />
-  <widget backgroundColor="background" foregroundColor="white" backgroundColorSelected="bluelabel" foregroundColorSelected="white" name="mediatheken" position="30,250" scrollbarMode="showOnDemand" size="880,710" transparent="1" itemHeight="90" />
-  <widget backgroundColor="black" foregroundColor="white" font="mediaportal;45" name="NewsDoku" position="30,190" size="880,55" transparent="1" />
-  <widget backgroundColor="background" foregroundColor="white" backgroundColorSelected="bluelabel" foregroundColorSelected="white" name="newsdoku" position="30,250" scrollbarMode="showOnDemand" size="880,710" transparent="1" itemHeight="90" />
-  <widget backgroundColor="black" foregroundColor="orange" font="mediaportal;45" name="Fun" position="30,190" size="880,55" transparent="1" />
-  <widget backgroundColor="background" foregroundColor="white" backgroundColorSelected="bluelabel" foregroundColorSelected="white" name="fun" position="30,250" scrollbarMode="showOnDemand" size="880,710" transparent="1" itemHeight="90" />
-  <widget backgroundColor="black" foregroundColor="bluelabel" font="mediaportal;45" name="Music" position="30,190" size="880,55" transparent="1" />
-  <widget backgroundColor="background" foregroundColor="white" backgroundColorSelected="bluelabel" foregroundColorSelected="white" name="music" position="30,250" scrollbarMode="showOnDemand" size="880,710" transparent="1" itemHeight="90" />
-  <widget backgroundColor="black" foregroundColor="yellow" font="mediaportal;45" name="Sport" position="30,190" size="880,55" transparent="1" />
-  <widget backgroundColor="background" foregroundColor="white" backgroundColorSelected="bluelabel" foregroundColorSelected="white" name="sport" position="30,250" scrollbarMode="showOnDemand" size="880,710" transparent="1" itemHeight="90" />
-  <widget backgroundColor="black" foregroundColor="red" font="mediaportal;45" name="Porn" position="30,190" size="880,55" transparent="1" />
-  <widget backgroundColor="background" foregroundColor="white" backgroundColorSelected="bluelabel" foregroundColorSelected="white" name="porn" position="30,250" scrollbarMode="showOnDemand" size="880,710" transparent="1" itemHeight="90" />
-  <widget backgroundColor="black" font="mediaportal;45" name="Useradditions" position="30,190" size="880,55" transparent="1" foregroundColor="green" />
-  <widget backgroundColor="background" foregroundColor="white" backgroundColorSelected="bluelabel" foregroundColorSelected="white" name="useradditions" position="30,250" scrollbarMode="showOnDemand" size="880,710" transparent="1" itemHeight="90" />
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/line890.png" position="25,247" size="890,2" alphatest="blend" zPosition="1" />
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/line890.png" position="25,186" size="890,2" alphatest="blend" zPosition="1" />
-  <widget name="red" position="67,1000" size="240,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
-<!--   <widget name="key_green" position="370,1000" size="240,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
-  <widget name="key_yellow" position="675,1000" size="240,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
-  <widget name="key_blue" position="983,1000" size="240,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" /> -->
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_red.png" position="23,1018" size="35,35" alphatest="blend" />
-<!--   <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_green.png" position="325,1018" size="35,35" alphatest="blend" />
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_yellow.png" position="629,1018" size="35,35" alphatest="blend" />
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_blue.png" position="936,1018" size="35,35" alphatest="blend" /> -->
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_bouq.png" position="896,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_pvr.png" position="1056,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_info.png" position="976,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_exit.png" position="816,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_help.png" position="1136,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
-<!--   <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_bouq.png" position="1396,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_pvr.png" position="1556,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_info.png" position="1476,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_exit.png" position="1316,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_help.png" position="1636,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" /> -->
-    <!-- <eLabel name="bg_keys" position="1300,995" size="412,85" /> -->
-<eLabel name="" position="942,650" size="313,311" foregroundColor="background" />
+
 </screen>

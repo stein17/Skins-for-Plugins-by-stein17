@@ -1,0 +1,28 @@
+<!-- MP_List -->
+<screen name="MediaPortal" position="0,0" size="1920,1080" title="MediaPortal" flags="wfNoBorder" backgroundColor="transparent">
+  <widget source="global.CurrentTime" render="Label" position="1300,31" size="600,40" font="Regular; 32" halign="center" foregroundColor="white" backgroundColor="black" transparent="1">
+  <convert type="ClockToText">Format:%A, %d.%m.%Y   %H:%M</convert>
+  </widget>
+  <eLabel text="MediaPortal" foregroundColor="bluetitle" backgroundColor="black" font="mediaportal;50" halign="left" valign="center" position="30,0" shadowColor="#00000000" shadowOffset="4,4" size="350,90" transparent="1" />
+  <eLabel text="Version vom:" backgroundColor="background" font="mediaportal; 24" halign="center" valign="left" position="323,36" shadowColor="black" shadowOffset="4,4" size="180,30" transparent="1" foregroundColor="bluetitle" />
+  <widget name="version" backgroundColor="background" font="mediaportal; 24" halign="left" valign="left" position="497,36" shadowColor="black" shadowOffset="4,4" size="130,30" transparent="1" foregroundColor="bluetitle" />
+  <widget name="name" position="30,105" size="730,60" backgroundColor="background" borderColor="blue" borderWidth="3" font="mediaportal;50" halign="center" transparent="1" />
+  <widget name="liste" position="30,180" size="730,770" backgroundColor="background" foregroundColor="white" backgroundColorSelected="black" foregroundColorSelected="bluetitle"  scrollbarMode="showOnDemand" transparent="1" itemHeight="96" />
+  <ePixmap pixmap="~/Blue-Line-FHD/images/bg1920.png" position="0,0" zPosition="-20" size="800,1080" />
+  <eLabel name="vertikalline" position="30,170" size="730,2" foregroundColor="backgroundBlue" backgroundColor="backgroundBlue" />
+  <ePixmap pixmap="~/Blue-Line-FHD/images/key_red.png" position="5,1018" size="35,35" alphatest="blend" />
+  <ePixmap pixmap="~/Blue-Line-FHD/images/key_green.png" position="385,1018" size="35,35" alphatest="blend" />
+  <ePixmap pixmap="~/Blue-Line-FHD/images/key_yellow.png" position="765,1018" size="35,35" alphatest="blend" />
+  <ePixmap pixmap="~/Blue-Line-FHD/images/key_blue.png" position="1145,1018" size="35,35" alphatest="blend" />
+  <widget name="F1" position="55,1000" size="320,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
+  <widget name="F2" position="435,999" size="320,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
+  <widget name="F3" position="815,1000" size="320,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
+  <widget name="F4" position="1195,1000" size="320,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
+  <ePixmap pixmap="~/Blue-Line-FHD/images/key_help.png" position="1755,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <ePixmap pixmap="~/Blue-Line-FHD/images/key_exit.png" position="1676,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <ePixmap pixmap="~/Blue-Line-FHD/images/key_info.png" position="1597,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <ePixmap pixmap="~/Blue-Line-FHD/images/key_bouq.png" position="1832,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <eLabel name="" position="800,998" size="1120,82" zPosition="-1" />
+  <eLabel name="" position="1300,31" size="600,40" zPosition="-1" />
+    <ePixmap position="971,676" size="256,256" zPosition="2" pixmap="~/Blue-Line-FHD/images/AX Blue_skin_icon.png" transparent="1" />
+</screen>

@@ -20,9 +20,9 @@
   <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_exit.png" position="1326,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
   <!-- select screen -->
   <widget name="coverArt" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/no_coverArt.png" position="1282,600" size="610,350" transparent="1" alphatest="blend" />
-  <widget name="ContentTitle" position="30,220" size="1860,50" backgroundColor="background" zPosition="5" font="mediaportal;30" halign="center" transparent="1" />
- <widget name="name" position="1280,290" size="610,300" backgroundColor="background" transparent="1" zPosition="1" font="mediaportal; 24" valign="center" halign="center" />
-<widget name="liste" position="30,290" size="1240,665" backgroundColor="background" scrollbarMode="showOnDemand" transparent="1" foregroundColorSelected="white" itemHeight="35" font="mediaportal; 24" />
+  <widget name="ContentTitle" position="30,220" size="1860,50" backgroundColor="background" zPosition="5" font="mediaportal;42" halign="center" transparent="1" />
+ <widget name="name" position="1280,290" size="610,300" backgroundColor="background" transparent="1" zPosition="1" font="mediaportal; 30" itemHeight="42" valign="center" halign="center" />
+<widget name="liste" position="30,290" size="1240,665" backgroundColor="background" scrollbarMode="showOnDemand" transparent="1" foregroundColorSelected="white" itemHeight="42" font="mediaportal; 30" />
    <widget name="title" position="30,120" size="1860,90" backgroundColor="background" borderColor="blue" borderWidth="3" transparent="1" font="mediaportal;50" valign="center" halign="center" />
   <widget name="Page" position="1479,1016" size="150,40" backgroundColor="background" transparent="1" font="mediaportal;30" zPosition="1" />
   <widget name="page" position="1576,1016" size="200,40" backgroundColor="background" transparent="1" font="mediaportal;30" zPosition="1" />

@@ -1,0 +1,6 @@
+<!--   MP_Update  -->
+<screen name="MPUpdateScreen" position="358,168" size="1204,746" title="" backgroundColor="background">
+    <widget name="mplog" position="10,75" size="1180,660" backgroundColor="background" transparent="1" zPosition="1" foregroundColor="white" itemHeight="35" />
+    <eLabel name="vertikalline" position="10,65" size="1180,2" foregroundColor="backgroundBlue" backgroundColor="backgroundBlue" />
+    <widget name="title" position="2,2" size="1200,60" font="mediaportal;40" backgroundColor="background" foregroundColor="bluetitle" zPosition="1" halign="center" valign="center" />
+</screen>

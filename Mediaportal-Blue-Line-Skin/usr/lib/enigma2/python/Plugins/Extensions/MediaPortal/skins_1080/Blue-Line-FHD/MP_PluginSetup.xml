@@ -1,0 +1,7 @@
+<!-- MP_PluginSetup -->
+<screen position="center,center" size="910,245" title="" backgroundColor="background" name="PluginUserDefault">
+  <widget name="config" position="15,80" size="880,150" scrollbarMode="showOnDemand" itemHeight="40" zPosition="2" transparent="1" />
+  <widget name="title" position="2,2" size="906,60" font="mediaportal;40" backgroundColor="background" foregroundColor="bluetitle" zPosition="1" halign="center" valign="center" />
+  <ePixmap pixmap="~/Blue-Line-FHD/images/key_blue.png" position="650,189" size="35,35" alphatest="blend" zPosition="3" />
+  <widget name="F4" position="690,185" size="200,40" transparent="1" font="mediaportal; 25" backgroundColor="black" foregroundColor="white" valign="center" halign="center" zPosition="3" />
+</screen>

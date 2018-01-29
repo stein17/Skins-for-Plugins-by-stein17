@@ -1,19 +1,19 @@
 <skin>
 	<windowstyle id="0" type="skinned">
 		<title font="mediaportal;32" offset="15,2" />
-		<color name="Background" color="background20" />
-		<color name="LabelForeground" color="white" />
-		<color name="ListboxBackground" color="background20" />
-		<color name="ListboxForeground" color="white" />
-		<color name="ListboxSelectedBackground" color="white" />
-		<color name="ListboxSelectedForeground" color="black" />
-		<color name="ListboxMarkedBackground" color="white" />
-		<color name="ListboxMarkedForeground" color="black" />
-		<color name="ListboxMarkedAndSelectedBackground" color="white" />
-		<color name="ListboxMarkedAndSelectedForeground" color="black" />
-		<color name="WindowTitleForeground" color="white" />
-		<color name="WindowTitleBackground" color="background" />
-		<color color="#66000000" name="WindowDimmer" />
+		<color name="Background" color="#20000000" />
+		<color name="LabelForeground" color="#ffffff" />
+		<color name="ListboxBackground" color="#20000000" />
+		<color name="ListboxForeground" color="#ffffff" />
+		<color name="ListboxSelectedBackground" color="#003399" />
+		<color name="ListboxSelectedForeground" color="#ffffff" />
+		<color name="ListboxMarkedBackground" color="#20000000" />
+		<color name="ListboxMarkedForeground" color="#00deff" />
+		<color name="ListboxMarkedAndSelectedBackground" color="#575757" />
+		<color name="ListboxMarkedAndSelectedForeground" color="#00deff" />
+		<color name="WindowTitleForeground" color="#00deff" />
+		<color name="WindowTitleBackground" color="#20000000" />
+		<color name="WindowDimmer" color="#66000000" />
 		<borderset name="bsWindow">
 			<pixmap filename="skins_1080/Blue-Line-FHD/images/b_tl.png" pos="bpTopLeft" />
 			<pixmap filename="skins_1080/Blue-Line-FHD/images/b_t.png" pos="bpTop" />
@@ -25,8 +25,14 @@
 			<pixmap filename="skins_1080/Blue-Line-FHD/images/b_br.png" pos="bpBottomRight" />
 		</borderset>
 		<borderset name="bsListboxEntry">
-			<pixmap filename="skins_1080/Blue-Line-FHD/images/line.png" pos="bpTop" />
-			<pixmap filename="skins_1080/Blue-Line-FHD/images/line.png" pos="bpBottom" />
+			<pixmap filename="skins_1080/Blue-Line-FHD/images/top-left.png" pos="bpTopLeft" />
+			<pixmap filename="skins_1080/Blue-Line-FHD/images/h-top.png" pos="bpTop" />
+			<pixmap filename="skins_1080/Blue-Line-FHD/images/top-right.png" pos="bpTopRight" />
+			<pixmap filename="skins_1080/Blue-Line-FHD/images/v-left.png" pos="bpLeft" />
+			<pixmap filename="skins_1080/Blue-Line-FHD/images/v-right.png" pos="bpRight" />
+			<pixmap filename="skins_1080/Blue-Line-FHD/images/bot-left.png" pos="bpBottomLeft" />
+			<pixmap filename="skins_1080/Blue-Line-FHD/images/h-bot.png" pos="bpBottom" />
+			<pixmap filename="skins_1080/Blue-Line-FHD/images/bot-right.png" pos="bpBottomRight" />
 		</borderset>
 		<listfont type="Bigger" font="Regular" size="32" />
 		<listfont type="Big" font="Regular" size="30" />

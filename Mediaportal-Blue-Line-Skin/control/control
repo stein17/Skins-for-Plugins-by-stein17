@@ -1,5 +1,5 @@
-Package: enigma2-plugin-skin-mediaportal-blue-line-fhd
-Version: 1.2
+Package: enigma2-plugin-skincomponents-mediaportal-blue-line-fhd
+Version: 3.2
 Section: base
 OE: enigma2-plugins
 License: open
@@ -9,4 +9,3 @@ Maintainer: stein17
 Description: FHD Skin for Mediaportal by stein17
 Source: http://octagon-forum.eu/forums/skins.93/
 Homepage: http://octagon-forum.eu/
-

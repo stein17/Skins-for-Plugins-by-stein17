@@ -4,23 +4,24 @@
     <convert type="ClockToText">Format:%a, %d.%m.%Y   %H:%M</convert>
   </widget>
     <eLabel text="MediaPortal" position="10,25" size="300,50" font="mediaportal; 40" halign="left" valign="center" foregroundColor="bluetitle" backgroundColor="black" transparent="1" zPosition="1" />
-  <widget name="version" backgroundColor="background" font="mediaportal;20" halign="center" valign="left" position="311,44" shadowColor="black" shadowOffset="4,4" size="130,25" transparent="1" />
+   <widget name="version" backgroundColor="background" font="mediaportal; 24" halign="left" valign="left" position="497,36" shadowColor="black" shadowOffset="4,4" size="130,30" transparent="1" foregroundColor="bluetitle" />
+  <eLabel text="Version vom:" backgroundColor="background" font="mediaportal; 24" halign="center" valign="left" position="323,36" shadowColor="black" shadowOffset="4,4" size="180,30" transparent="1" foregroundColor="bluetitle" />
   <widget name="name" position="30,125" size="1860,60" font="mediaportal;42" backgroundColor="background" borderColor="blue" borderWidth="3" zPosition="1" noWrap="1" transparent="1" valign="center" halign="left" />
-  <widget name="page" position="1656,1014" size="200,40" font="mediaportal;34" foregroundColor="bluetitle" backgroundColor="background" halign="right" transparent="1" />
-  <ePixmap name="back" position="0,0" size="1920,1080" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/Browser.png" zPosition="-75" />
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/line1880.png" position="23,185" size="1875,2" alphatest="blend" zPosition="1" />
-  <widget name="red" position="67,1000" size="240,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
-  <widget name="green" position="370,1000" size="240,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
-  <widget name="yellow" position="675,1000" size="200,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
-  <widget name="blue" position="943,1000" size="290,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_red.png" position="23,1018" size="35,35" alphatest="blend" />
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_green.png" position="325,1018" size="35,35" alphatest="blend" />
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_yellow.png" position="629,1018" size="35,35" alphatest="blend" />
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_blue.png" position="896,1018" size="35,35" alphatest="blend" />
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_bouq.png" position="1396,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_pvr.png" position="1556,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_info.png" position="1476,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_exit.png" position="1316,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
-  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_help.png" position="1237,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <widget name="page" position="center,920" size="200,40" font="mediaportal;34" foregroundColor="bluetitle" backgroundColor="background" halign="right" transparent="1" />
+  <ePixmap name="back" position="0,0" size="1920,1080" pixmap="~/AX-Blue-FULL-HD/images/Browser.png" zPosition="-75" />
+  <ePixmap pixmap="~/AX-Blue-FULL-HD/images/line1880.png" position="23,185" size="1875,2" alphatest="blend" zPosition="1" />
+  <ePixmap pixmap="~/AX-Blue-FULL-HD/images/line1880.png" position="23,185" size="1875,2" alphatest="blend" zPosition="1" />
+  <ePixmap pixmap="~/AX-Blue-FULL-HD/images/key_red.png" position="5,1018" size="35,35" alphatest="blend" />
+  <ePixmap pixmap="~/AX-Blue-FULL-HD/images/key_green.png" position="385,1018" size="35,35" alphatest="blend" />
+  <ePixmap pixmap="~/AX-Blue-FULL-HD/images/key_yellow.png" position="765,1018" size="35,35" alphatest="blend" />
+  <ePixmap pixmap="~/AX-Blue-FULL-HD/images/key_blue.png" position="1145,1018" size="35,35" alphatest="blend" />
+  <widget name="F1" position="55,1000" size="320,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
+  <widget name="F2" position="435,999" size="320,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
+  <widget name="F3" position="815,1000" size="320,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
+  <widget name="F4" position="1195,1000" size="320,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
+  <ePixmap pixmap="~/AX-Blue-FULL-HD/images/key_help.png" position="1755,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <ePixmap pixmap="~/AX-Blue-FULL-HD/images/key_exit.png" position="1676,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <ePixmap pixmap="~/AX-Blue-FULL-HD/images/key_info.png" position="1597,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
+  <ePixmap pixmap="~/AX-Blue-FULL-HD/images/key_bouq.png" position="1832,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
 
 

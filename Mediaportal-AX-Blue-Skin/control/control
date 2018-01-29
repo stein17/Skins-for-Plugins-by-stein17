@@ -1,5 +1,5 @@
-Package: enigma2-plugin-skin-mediaportal-ax-blue-full-hd
-Version: 3.0
+Package: enigma2-plugin-skincomponents-mediaportal-ax-blue-full-hd
+Version: 3.3
 Section: base
 OE: enigma2-plugins
 License: open
