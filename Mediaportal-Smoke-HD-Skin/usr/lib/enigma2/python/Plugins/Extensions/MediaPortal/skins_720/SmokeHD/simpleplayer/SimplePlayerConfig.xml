@@ -3,6 +3,6 @@
 	<widget name="config" position="25,75" size="712,580" scrollbarMode="showOnDemand" font="mediaportal;22" itemHeight="32" />
 <ePixmap pixmap="~/SmokeHD/images/MovieSelection.png" position="0,0" size="766,720" zPosition="-10" alphatest="blend" backgroundColor="black" />	
 	
-<eLabel text="Simple Player Config" zPosition="1" position="15,5" size="400,44" valign="center" font="mediaportal; 32" foregroundColor="#0000deff" backgroundColor="background" transparent="1" halign="left" />
+<eLabel text="Simple Player Config" zPosition="1" position="15,5" size="400,44" valign="center" font="mediaportal; 32" backgroundColor="#000000" foregroundColor="ffffff" backgroundColorSelected="#3a3a3a" foregroundColorSelected="#00ffff" transparent="1" halign="left" />
 
 </screen>

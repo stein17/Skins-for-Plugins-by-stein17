@@ -6,7 +6,7 @@
 	</widget>
 	<ePixmap pixmap="~/SmokeHD/images/menu-setup.png" position="0,0" size="1280,720" zPosition="-10" alphatest="blend" backgroundColor="black" />
 	<widget name="ContentTitle" position="25,75" size="713,30" foregroundColor="grey" borderColor="blue" borderWidth="1" backgroundColor="black" transparent="1" font="mediaportal; 30" valign="top" halign="center" />
-	<widget name="liste" position="25,115" size="713,540" backgroundColor="black" foregroundColor="grey" foregroundColorSelected="white" scrollbarMode="showOnDemand" transparent="0" itemHeight="28" />
+	<widget name="liste" position="25,115" size="713,540" backgroundColor="#000000" foregroundColor="ffffff" backgroundColorSelected="#3a3a3a" foregroundColorSelected="#00ffff" scrollbarMode="showOnDemand" transparent="0" itemHeight="28" />
 	<widget name="coverArt" pixmap="~/SmokeHD/images/no_coverArt.png" position="785,70" size="473,297" transparent="1" alphatest="blend" borderWidth="2" borderColor="black" />
 	<widget name="name" position="770,399" size="500,30" foregroundColor="#0000deff" backgroundColor="background" transparent="1" font="mediaportal;26" valign="top" zPosition="0" />
 	<widget name="handlung" render="RunningText" options="movetype=running,startdelay=5000,steptime=60,direction=top,startpoint=0,wrap=1,always=0,repeat=2,oneshot=1" position="770,448" size="500,210" backgroundColor="black" foregroundColor="grey" transparent="1" font="mediaportal;22" valign="top" zPosition="0" /> 

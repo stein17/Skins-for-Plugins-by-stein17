@@ -1,0 +1,62 @@
+<skin>
+  <windowstyle type="skinned" id="0">
+    <title offset="20,14" font="mediaportal;32" />
+    <color name="Background" color="#000000" />
+    <color name="LabelForeground" color="#ffffff" />
+    <color name="ListboxBackground" color="#000000" />
+    <color name="ListboxForeground" color="#ffffff" />
+    <color name="ListboxSelectedBackground" color="#3a3a3a" />
+    <color name="ListboxSelectedForeground" color="#00ffff" />
+    <color name="ListboxMarkedBackground" color="#3a3a3a" />
+    <color name="ListboxMarkedForeground" color="#00ffff" />
+    <color name="ListboxMarkedAndSelectedBackground" color="#3a3a3a" />
+    <color name="ListboxMarkedAndSelectedForeground" color="#00ffff" />
+    <color name="WindowTitleForeground" color="#00ffff" />
+    <color name="WindowTitleBackground" color="#000000" />
+	<color color="#66000000" name="WindowDimmer" />
+
+    <borderset name="bsWindow">
+      <pixmap pos="bpTopLeft" filename="skins_720/SmokeHD/images/window/bs_tl.png" />
+      <pixmap pos="bpTop" filename="skins_720/SmokeHD/images/window/bs_t.png" />
+      <pixmap pos="bpTopRight" filename="skins_720/images/window/bs_tr.png" />
+      <pixmap pos="bpLeft" filename="skins_720/SmokeHD/images/window/bs_l.png" />
+      <pixmap pos="bpRight" filename="skins_720/SmokeHD/images/window/bs_r.png" />
+      <pixmap pos="bpBottomLeft" filename="skins_720/SmokeHD/images/window/bs_b.png" />
+      <pixmap pos="bpBottomRight" filename="kins_720/SmokeHD/images/window/bs_br.png" />
+    </borderset>
+    <borderset name="bsListboxEntry">
+      <pixmap pos="bpTopLeft" filename="skins_720/SmokeHD/images/window/top-left.png" />
+      <pixmap pos="bpTop" filename="skins_720/SmokeHD/images/window/h-top.png" />
+      <pixmap pos="bpTopRight" filename="skins_720/SmokeHD/images/window/top-right.png" />
+      <pixmap pos="bpLeft" filename="skins_720/SmokeHD/images/window/v-left.png" />
+      <pixmap pos="bpRight" filename="skins_720/SmokeHD/images/window/v-right.png" />
+      <pixmap pos="bpBottomLeft" filename="skins_720/SmokeHD/images/window/bot-left.png" />
+      <pixmap pos="bpBottom" filename="skins_720/SmokeHD/images/window/h-bot.png" />
+      <pixmap pos="bpBottomRight" filename="skins_720/SmokeHD/images/window/bot-right.png" />
+    </borderset>
+
+		<listfont type="Bigger" font="Regular" size="22" />
+		<listfont type="Big" font="Regular" size="21" />
+		<listfont type="Medium" font="Regular" size="20" />
+		<listfont type="Small" font="Regular" size="18" />
+		<listfont type="Smaller" font="Regular" size="17" />
+	</windowstyle>
+
+    <listboxcontent>
+        <offset name="left" value="3" />
+        <offset name="right" value="3" />
+        <font font="mediaportal;20" name="string" />
+        <value name="string_item_height" value="26" />
+        <font font="mediaportal;20" name="config_description" />
+        <font font="mediaportal;18" name="config_value" />
+        <value name="config_item_height" value="26" />
+    </listboxcontent>
+	<mediaportal>
+		<color color="#00ffffff" name="ThumbViewTextForeground" />
+		<pagebar_posy value="655" />
+		<!--<overridefont font="Regular" />-->
+		<!--<overridefontsize value="20" />-->
+		<!--<overridesizefactor value="2" />-->
+	</mediaportal>
+</skin>
+

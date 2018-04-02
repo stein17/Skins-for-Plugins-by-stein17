@@ -2,7 +2,7 @@
 <screen name="pluginSort" position="center,center" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
 	<eLabel text="User Plugin Sortierung" zPosition="1" position="15,5" size="400,44" valign="center" font="mediaportal; 32" foregroundColor="#0000deff" backgroundColor="background" transparent="1" halign="left" />
     <ePixmap pixmap="~/SmokeHD/images/second-infobar.png" position="0,0" size="640,720" zPosition="-10" alphatest="blend" backgroundColor="black" />
-	<widget name="config2" position="25,75" size="590,580" itemHeight="32" font="mediaportal;26" scrollbarMode="showOnDemand" backgroundColor="black" foregroundColor="grey" foregroundColorSelected="white" transparent="0" />
+	<widget name="config2" position="25,75" size="590,580" itemHeight="32" font="mediaportal;26" scrollbarMode="showOnDemand" backgroundColor="#000000" foregroundColor="ffffff" backgroundColorSelected="#3a3a3a" foregroundColorSelected="#00ffff" transparent="0" />
 	<ePixmap pixmap="~/SmokeHD/images/key_exit.png" position="565,688" size="64,26" alphatest="blend" />
 	<ePixmap pixmap="~/SmokeHD/images/key_ok.png" position="490,688" size="64,26" alphatest="blend" />
 </screen>

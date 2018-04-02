@@ -8,7 +8,7 @@
     <eLabel text="Version vom:" backgroundColor="background" font="mediaportal; 24" halign="center" valign="left" position="323,10" shadowColor="black" shadowOffset="4,4" size="180,30" transparent="1" foregroundColor="grey" />
 
 	<ePixmap pixmap="~/SmokeHD/images/menu-setup.png" position="0,0" size="1280,720" zPosition="-20" alphatest="blend" backgroundColor="black" />
-	<widget name="config" position="25,75" size="715,580" backgroundColor="black" foregroundColor="grey" foregroundColorSelected="white" itemHeight="32" font="mediaportal;24" transparent="0" />
+	<widget name="config" position="25,75" size="715,580" backgroundColor="#000000" foregroundColor="ffffff" backgroundColorSelected="#3a3a3a" foregroundColorSelected="#00ffff" itemHeight="32" font="mediaportal;24" transparent="0" />
 	<ePixmap pixmap="~/SmokeHD/images/buttonred.png" position="10,689" size="25,25" alphatest="blend" />
 	<ePixmap pixmap="~/SmokeHD/images/buttongreen.png" position="218,689" size="25,25" alphatest="blend" />
 	<ePixmap pixmap="~/SmokeHD/images/buttonyellow.png" position="426,689" size="25,25" alphatest="blend" />

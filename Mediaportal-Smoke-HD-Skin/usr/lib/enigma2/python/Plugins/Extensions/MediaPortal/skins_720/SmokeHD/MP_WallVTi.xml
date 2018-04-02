@@ -19,6 +19,6 @@
 	<ePixmap pixmap="~/SmokeHD/images/browser-epg.png" position="0,0" size="1280,720" zPosition="-10" alphatest="blend" backgroundColor="black" />
     <widget name="version" backgroundColor="background" font="mediaportal; 24" halign="left" valign="left" position="497,10" shadowColor="black" shadowOffset="4,4" size="130,30" transparent="1" foregroundColor="grey" />
     <eLabel text="Version vom:" backgroundColor="background" font="mediaportal; 24" halign="center" valign="left" position="323,10" shadowColor="black" shadowOffset="4,4" size="180,30" transparent="1" foregroundColor="grey" />
-	<widget name="list" position="25,125" size="1230,530" transparent="0" backgroundColor="background" itemSize="150,80" itemScale="130,130" itemSpace="20" useOverlay="1" backgroundColorGlobal="background" zPosition="-1" />
+	<widget name="list" position="25,125" size="1230,530" transparent="0" backgroundColor="#000000" foregroundColor="ffffff" backgroundColorSelected="#3a3a3a" foregroundColorSelected="#00ffff" itemSize="150,80" itemScale="130,130" itemSpace="20" useOverlay="1" backgroundColorGlobal="#000000" zPosition="-1" />
 </screen>
 

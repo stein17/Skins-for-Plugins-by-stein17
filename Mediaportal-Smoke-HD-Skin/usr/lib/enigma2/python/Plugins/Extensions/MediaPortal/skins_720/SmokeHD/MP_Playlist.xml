@@ -5,7 +5,7 @@
 	<convert type="ClockToText">Format:%a, %d.%m.%Y   %H:%M</convert>
 	</widget>
 	<ePixmap pixmap="~/SmokeHD/images/menu-setup.png" position="0,0" size="1280,720" zPosition="-10" alphatest="blend" backgroundColor="black" />
-  <widget name="liste" position="25,115" size="713,540" backgroundColor="black" foregroundColor="grey" foregroundColorSelected="white" scrollbarMode="showOnDemand" transparent="0" itemHeight="25" />
+  <widget name="liste" position="25,115" size="713,540" backgroundColor="#000000" foregroundColor="ffffff" backgroundColorSelected="#3a3a3a" foregroundColorSelected="#00ffff" scrollbarMode="showOnDemand" transparent="0" itemHeight="25" />
   <widget name="songtitle" position="766,390" size="510,30" foregroundColor="cyan1" backgroundColor="background" transparent="1" font="Regular;24" valign="top" />
   <widget source="session.CurrentService" render="Label" position="1192,488" size="85,25" font="Regular; 22" foregroundColor="cyan1" backgroundColor="background" halign="center" transparent="1">
     <convert type="MPServicePosition">Length</convert>
