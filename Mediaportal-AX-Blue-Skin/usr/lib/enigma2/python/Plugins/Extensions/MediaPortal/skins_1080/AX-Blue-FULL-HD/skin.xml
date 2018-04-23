@@ -15,24 +15,24 @@
 		<color name="WindowTitleBackground" color="#20000000" />
 		<color name="WindowDimmer" color="#66000000" />
 		<borderset name="bsWindow">
-			<pixmap filename="skins_1080/AX-Blue-FHD/images/b_tl.png" pos="bpTopLeft" />
-			<pixmap filename="skins_1080/AX-Blue-FHD/images/b_t.png" pos="bpTop" />
-			<pixmap filename="skins_1080/AX-Blue-FHD/images/b_tr.png" pos="bpTopRight" />
-			<pixmap filename="skins_1080/AX-Blue-FHD/images/b_l.png" pos="bpLeft" />
-			<pixmap filename="skins_1080/AX-Blue-FHD/images/b_r.png" pos="bpRight" />
-			<pixmap filename="skins_1080/AX-Blue-FHD/images/b_bl.png" pos="bpBottomLeft" />
-			<pixmap filename="skins_1080/AX-Blue-FHD/images/b_b.png" pos="bpBottom" />
-			<pixmap filename="skins_1080/AX-Blue-FHD/images/b_br.png" pos="bpBottomRight" />
+			<pixmap filename="skins_1080/AX-Blue-FULL-HD/images/b_tl.png" pos="bpTopLeft" />
+			<pixmap filename="skins_1080/AX-Blue-FULL-HD/images/b_t.png" pos="bpTop" />
+			<pixmap filename="skins_1080/AX-Blue-FULL-HD/images/b_tr.png" pos="bpTopRight" />
+			<pixmap filename="skins_1080/AX-Blue-FULL-HD/images/b_l.png" pos="bpLeft" />
+			<pixmap filename="skins_1080/AX-Blue-FULL-HD/images/b_r.png" pos="bpRight" />
+			<pixmap filename="skins_1080/AX-Blue-FULL-HD/images/b_bl.png" pos="bpBottomLeft" />
+			<pixmap filename="skins_1080/AX-Blue-FULL-HD/images/b_b.png" pos="bpBottom" />
+			<pixmap filename="skins_1080/AX-Blue-FULL-HD/images/b_br.png" pos="bpBottomRight" />
 		</borderset>
 		<borderset name="bsListboxEntry">
-			<pixmap filename="skins_1080/AX-Blue-FHD/images/top-left.png" pos="bpTopLeft" />
-			<pixmap filename="skins_1080/AX-Blue-FHD/images/h-top.png" pos="bpTop" />
-			<pixmap filename="skins_1080/AX-Blue-FHD/images/top-right.png" pos="bpTopRight" />
-			<pixmap filename="skins_1080/AX-Blue-FHD/images/v-left.png" pos="bpLeft" />
-			<pixmap filename="skins_1080/AX-Blue-FHD/images/v-right.png" pos="bpRight" />
-			<pixmap filename="skins_1080/AX-Blue-FHD/images/bot-left.png" pos="bpBottomLeft" />
-			<pixmap filename="skins_1080/AX-Blue-FHD/images/h-bot.png" pos="bpBottom" />
-			<pixmap filename="skins_1080/AX-Blue-FHD/images/bot-right.png" pos="bpBottomRight" />
+			<pixmap filename="skins_1080/AX-Blue-FULL-HD/images/top-left.png" pos="bpTopLeft" />
+			<pixmap filename="skins_1080/AX-Blue-FULL-HD/images/h-top.png" pos="bpTop" />
+			<pixmap filename="skins_1080/AX-Blue-FULL-HD/images/top-right.png" pos="bpTopRight" />
+			<pixmap filename="skins_1080/AX-Blue-FULL-HD/images/v-left.png" pos="bpLeft" />
+			<pixmap filename="skins_1080/AX-Blue-FULL-HD/images/v-right.png" pos="bpRight" />
+			<pixmap filename="skins_1080/AX-Blue-FULL-HD/images/bot-left.png" pos="bpBottomLeft" />
+			<pixmap filename="skins_1080/AX-Blue-FULL-HD/images/h-bot.png" pos="bpBottom" />
+			<pixmap filename="skins_1080/AX-Blue-FULL-HD/images/bot-right.png" pos="bpBottomRight" />
 		</borderset>
 		<listfont type="Bigger" font="Regular" size="32" />
 		<listfont type="Big" font="Regular" size="30" />
@@ -47,8 +47,8 @@
 		<value name="ValuePixmapBottomHeight" value="2" />
 		<value name="ScrollbarWidth" value="7" />
 		<value name="ScrollbarBorderWidth" value="0" />
-		<pixmap filename="skins_1080/AX-Blue-FHD/images/scrollbar.png" name="BackgroundPixmap" />
-		<pixmap filename="skins_1080/AX-Blue-FHD/images/slider.png" name="ValuePixmap" />
+		<pixmap filename="skins_1080/AX-Blue-FULL-HD/images/scrollbar.png" name="BackgroundPixmap" />
+		<pixmap filename="skins_1080/AX-Blue-FULL-HD/images/slider.png" name="ValuePixmap" />
 	</windowstylescrollbar>
     <listboxcontent>
         <offset name="left" value="5" />
