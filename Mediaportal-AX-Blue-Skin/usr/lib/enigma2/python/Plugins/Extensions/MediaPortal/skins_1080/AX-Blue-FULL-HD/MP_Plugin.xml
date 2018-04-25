@@ -1,13 +1,12 @@
-<!-- defaultGenreScreenCover -->
-<screen name="defaultGenre" position="center,center" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+<!-- defaultListWideScreen MP_Plugin-->
+<screen name="defaultListWide" position="center,center" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
   <ePixmap name="back" position="0,0" size="1920,1080" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/Browser.png" zPosition="-75" />
   <widget source="global.CurrentTime" render="Label" position="1173,30" size="600,40" font="mediaportal; 32" halign="right" foregroundColor="foregroundClock" backgroundColor="black" transparent="1">
-    <convert type="ClockToText">Format:%a, %d.%m.%Y   %H:%M</convert>
+  <convert type="ClockToText">Format:%a, %d.%m.%Y   %H:%M</convert>
   </widget>
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/line1880.png" position="24,212" size="1875,2" alphatest="blend" zPosition="1" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/line1880.png" position="23,273" size="1875,2" alphatest="blend" zPosition="1" />
   <eLabel text="MediaPortal" position="10,25" size="800,50" font="mediaportal; 40" halign="left" valign="center" foregroundColor="bluetitle" backgroundColor="black" transparent="1" zPosition="1" />
-  <!-- select screen -->
-<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/line1880.png" position="24,212" size="1875,2" alphatest="blend" zPosition="1" />
-<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/line1880.png" position="23,273" size="1875,2" alphatest="blend" zPosition="1" />
   <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_red.png" position="23,1018" size="35,35" alphatest="blend" />
   <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_green.png" position="325,1018" size="35,35" alphatest="blend" />
   <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_yellow.png" position="629,1018" size="35,35" alphatest="blend" />
@@ -18,12 +17,12 @@
   <widget name="F4" position="983,1000" size="240,70" zPosition="1" valign="center" font="mediaportal; 27" halign="left" backgroundColor="black" transparent="1" />
   <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_ok.png" position="1237,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
   <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/key_exit.png" position="1326,1011" size="60,50" zPosition="10" transparent="1" alphatest="blend" />
-  <!-- select screen -->
-  <widget name="coverArt" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/no_coverArt.png" position="1282,290" size="610,350" transparent="1" alphatest="blend" />
+  <widget name="handlung" position="1280,760" size="610,190" backgroundColor="background" font="mediaportal; 30" transparent="1" />
+  <widget name="coverArt" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins_1080/AX-Blue-FULL-HD/images/no_coverArt.png" position="1280,290" size="610,360" transparent="1" alphatest="blend" />
   <widget name="ContentTitle" position="30,220" size="1860,50" backgroundColor="background" zPosition="5" font="mediaportal;42" halign="center" transparent="1" />
- <widget name="name" position="1282,655" size="610,300" backgroundColor="background" transparent="1" zPosition="1" font="mediaportal; 30" itemHeight="42" valign="center" halign="center" />
-<widget name="liste" position="30,290" size="1240,665" backgroundColor="background" scrollbarMode="showOnDemand" transparent="1" foregroundColorSelected="white" itemHeight="42" font="mediaportal; 30" />
-   <widget name="title" position="30,120" size="1860,90" backgroundColor="background" borderColor="blue" borderWidth="3" transparent="1" font="mediaportal;50" valign="center" halign="center" />
+  <widget name="name" position="1280,655" size="610,100" backgroundColor="background" transparent="1" zPosition="1" font="mediaportal;30" itemHeight="42" valign="center" halign="center" />
+  <widget name="liste" position="30,290" size="1240,660" backgroundColor="background" scrollbarMode="showOnDemand" transparent="1" foregroundColorSelected="white" itemHeight="42" font="mediaportal; 30" />
+  <widget name="title" position="30,120" size="1860,90" backgroundColor="background" borderColor="blue" borderWidth="3" transparent="1" font="mediaportal;50" valign="center" halign="center" />
   <widget name="Page" position="1479,1016" size="150,40" backgroundColor="background" transparent="1" font="mediaportal;30" zPosition="1" />
   <widget name="page" position="1576,1016" size="200,40" backgroundColor="background" transparent="1" font="mediaportal;30" zPosition="1" />
 </screen>
