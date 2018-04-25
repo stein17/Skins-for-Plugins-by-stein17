@@ -1,6 +1,0 @@
-<screen name="MPUpdateScreen" position="458,267" size="1004,546" title=""  flags="wfNoBorder">
-    <widget name="mplog" position="10,75" size="980,460" font="mediaportal;30" valign="top" halign="left"  transparent="1" zPosition="1"  />
-    <eLabel name="bg up" position="2,2" size="1000,60" />
-    <eLabel name="bg down" position="2,64" size="1000,480" />
-    <widget name="title" position="2,2" size="1000,60" font="mediaportal_clean;40"   zPosition="1" halign="center" valign="center" />
-</screen>

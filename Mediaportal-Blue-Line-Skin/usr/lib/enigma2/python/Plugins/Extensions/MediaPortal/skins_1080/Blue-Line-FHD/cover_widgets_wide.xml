@@ -1,3 +1,0 @@
-﻿<widget name="length" position="1700,400" size="200,30"  transparent="1" font="mediaportal_clean;30" valign="center" halign="right" zPosition="3" />
-<widget name="rating5" position="1290,400" size="170,34" pixmap="~/Blue-Line-FHD/images/rating5.png" zPosition="4" transparent="1" />
-<widget name="rating0" position="1290,400" size="170,34" pixmap="~/Blue-Line-FHD/images/rating0.png" zPosition="3" transparent="1" alphatest="blend" />
