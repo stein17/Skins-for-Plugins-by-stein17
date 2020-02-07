@@ -1,16 +1,16 @@
 <!-- MP_InputHelpDialog -->
-<screen name="VirtualKeyBoardExtInputHelpDialog" position="257,470" zPosition="9999" size="394,124" backgroundColor="black" flags="wfNoBorder">
-	<eLabel position="0,0" size="392,122" backgroundColor="#c0c0c0" zPosition="-1" />
-	<widget name="key1" position="2,2" size="130,30" font="mediaportal;18" halign="center" valign="center" />
-	<widget name="key2" position="132,2" size="130,30" font="mediaportal;18" halign="center" valign="center" />
-	<widget name="key3" position="262,2" size="130,30" font="mediaportal;18" halign="center" valign="center" />
-	<widget name="key4" position="2,32" size="130,30" font="mediaportal;18" halign="center" valign="center" />
-	<widget name="key5" position="132,32" size="130,30" font="mediaportal;18" halign="center" valign="center" />
-	<widget name="key6" position="262,32" size="130,30" font="mediaportal;18" halign="center" valign="center" />
-	<widget name="key7" position="2,62" size="130,30" font="mediaportal;18" halign="center" valign="center" />
-	<widget name="key8" position="132,62" size="130,30" font="mediaportal;18" halign="center" valign="center" />
-	<widget name="key9" position="262,62" size="130,30" font="mediaportal;18" halign="center" valign="center" />
-	<widget name="help1" position="2,92" size="130,30" font="mediaportal;18" halign="center" valign="center" />
-	<widget name="key0" position="132,92" size="130,30" font="mediaportal;14" halign="center" valign="center" />
-	<widget name="help2" position="262,92" size="130,30" font="mediaportal;18" halign="center" valign="center" />
+<screen name="VirtualKeyBoardExtInputHelpDialog" position="240,490" zPosition="9999" size="600,121" backgroundColor="black" flags="wfNoBorder">
+ <ePixmap pixmap="~/SmokeHD/images/BG_InputHelpDialog.png" position="0,0" zPosition="-5" size="600,121" alphatest="blend" transparent="1" />
+  <widget name="key1" position="1,1" size="197,28" font="Regular;18" halign="center" valign="center" transparent="1" />
+  <widget name="key2" position="200,1" size="199,28" font="Regular;18" halign="center" valign="center" transparent="1" />
+  <widget name="key3" position="401,1" size="197,28" font="Regular;18" halign="center" valign="center" transparent="1" />
+  <widget name="key4" position="1,31" size="197,28" font="Regular;18" halign="center" valign="center" transparent="1" />
+  <widget name="key5" position="200,31" size="199,28" font="Regular;18" halign="center" valign="center" transparent="1" />
+  <widget name="key6" position="401,31" size="197,28" font="Regular;18" halign="center" valign="center" transparent="1" />
+  <widget name="key7" position="1,61" size="197,28" font="Regular;18" halign="center" valign="center" transparent="1" />
+  <widget name="key8" position="200,61" size="199,28" font="Regular;18" halign="center" valign="center" transparent="1" />
+  <widget name="key9" position="401,61" size="197,28" font="Regular;18" halign="center" valign="center" transparent="1" />
+  <widget name="help1" position="1,91" size="97,28" font="Regular;22" halign="center" valign="center" transparent="1" />
+  <widget name="key0" position="100,91" size="399,28" font="Regular;18" halign="center" valign="center" transparent="1" />
+  <widget name="help2" position="501,91" size="97,28" font="Regular;22" halign="center" valign="center" transparent="1" />
 </screen>

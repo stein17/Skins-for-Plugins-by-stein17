@@ -1,12 +1,16 @@
 <!--   MP_VirtualKeyBoard  -->
-<screen name="VirtualKeyBoardExt" position="center,center" size="900,550" zPosition="9998" title="" flags="wfNoBorder">
-	<ePixmap pixmap="~/SmokeHD/images/vkey_text.png" position="10,60" zPosition="-4" size="880,40" alphatest="on" />
-	<widget source="country" render="Pixmap" position="830,10" size="60,40" alphatest="on" borderWidth="2" borderColor="yellow">
+<screen name="VirtualKeyBoardExt" position="center,center" size="820,580" zPosition="9998" title="" backgroundColor="#80ffffff" flags="wfNoBorder">
+	<widget name="title" position="10,10" size="800,44" font="Regular;32" halign="left" valign="center" foregroundColor="#00ffff" transparent="1" zPosition="1" />
+	<widget source="country" render="Pixmap" position="741,12" size="60,40" alphatest="on" borderWidth="2" zPosition="5" borderColor="yellow">
      <convert type="ValueToPixmap">LanguageCode</convert>
 	</widget>
-	<widget name="header" position="10,22" size="815,28" font="mediaportal;24" transparent="1" noWrap="1" />
-	<widget name="text" position="12,59" size="876,40" font="mediaportal;32" transparent="1" noWrap="1" halign="right" />
-	<widget name="list" position="12,115" size="878,225" selectionDisabled="1" transparent="1" itemHeight="45" />
-	<widget name="suggestionlist" position="10,350" size="520,175" selectionDisabled="1" transparent="1" scrollbarMode="showOnDemand" itemHeight="25" />
-	<widget name="captcha" position="540,350" size="300,200" transparent="1" alphatest="on" />
+	<widget name="header" position="10,60" size="600,30" font="mediaportal;24" transparent="1" noWrap="1" />
+	<widget name="text" position="11,96" size="798,36" font="mediaportal;32" transparent="0" noWrap="1" halign="right" backgroundColor="background" foregroundColor="#00ffff" zPosition="2" />
+	<widget name="list" position="10,140" size="600,170" selectionDisabled="1" transparent="1" itemHeight="32" />
+	<widget name="suggestionlist" position="10,320" size="600,125" selectionDisabled="1" transparent="1" scrollbarMode="showOnDemand" itemHeight="24" />
+	<widget name="captcha" position="619,319" size="190,130" transparent="1" alphatest="on" />
+	<eLabel name="" position="10,95" size="800,38" backgroundColor="#00ffff" />
+	<eLabel name="" position="10,10" size="800,44" backgroundColor="background" />
+    <eLabel text="Language" position="40,550" size="180,26" font="mediaportal; 20" align="left" valign="center" transparent="0" zPosition="1" halign="left" />
+    <ePixmap pixmap="~/SmokeHD/images/buttonyellow.png" position="10,550" zPosition="5" size="25,25" alphatest="blend" transparent="1" />
 </screen>
