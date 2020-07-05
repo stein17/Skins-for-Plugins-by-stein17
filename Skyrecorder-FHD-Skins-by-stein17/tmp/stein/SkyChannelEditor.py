@@ -1,4 +1,5 @@
 #-*- coding: utf-8 -*-
+from __future__ import print_function
 from Screens.VirtualKeyBoard import VirtualKeyBoard
 from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
@@ -57,7 +58,7 @@ class SkyChannelEditor(Screen):
         #self.onLayoutFinish.append(self.readChannellist)
 
 
-    def skyChannellistSelectListEntry(self,entry):
+    def skyChannellistSelectListEntry(self, entry):
         # check, if channel_stb was found in servicelist
         if entry[3]:
             pic = "/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/plus.png"
@@ -85,16 +86,16 @@ class SkyChannelEditor(Screen):
 
         self.channellist = []
 
-        for (id_channel,channel,channel_stb,status,position,channel_id_sky) in sql.readChannelAll():
+        for (id_channel, channel, channel_stb, status, position, channel_id_sky) in sql.readChannelAll():
             # check, if channel_stb was found in servicelist
             if not channel_stb:
                 continue
             if self.checkChannelByName(channel_stb):
-                self.channellist.append((id_channel,channel,channel_stb,True))
+                self.channellist.append((id_channel, channel, channel_stb, True))
             else:
-                self.channellist.append((id_channel,channel,channel_stb,False))
+                self.channellist.append((id_channel, channel, channel_stb, False))
 
-        print "[skyrecorder] reload channellist."
+        print("[skyrecorder] reload channellist.")
 
         self.streamMenuList.setList(map(self.skyChannellistSelectListEntry, sorted(self.channellist, key=lambda s_channel: s_channel[1])))
         if self.last_index < len(self.channellist):
@@ -102,7 +103,7 @@ class SkyChannelEditor(Screen):
 
 
     def checkChannelByName(self, channel):
-        for (channelname,channelref) in self.sky_chlist:
+        for (channelname, channelref) in self.sky_chlist:
             if channelname.lower() == channel.lower():
                 return True
         return False
@@ -123,8 +124,8 @@ class SkyChannelEditor(Screen):
         if not self.id_channel:
             return
         if word and len(word) > 0:
-            sql.updateChannelnameSTB(self.id_channel,word)
-            print "[skyrecorder] channel_stb changed: %s" % word
+            sql.updateChannelnameSTB(self.id_channel, word)
+            print("[skyrecorder] channel_stb changed: %s" % word)
         self.readChannellist()
 
 

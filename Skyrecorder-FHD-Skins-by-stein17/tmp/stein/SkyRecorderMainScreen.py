@@ -1,4 +1,5 @@
 #-*- coding: utf-8 -*-
+from __future__ import print_function
 from Components.Label import Label
 from Components.ScrollLabel import ScrollLabel
 from Components.Sources.StaticText import StaticText
@@ -81,28 +82,28 @@ class SkyRecorderMainScreen(Screen):
         self.mInfo = SkyTheMovieDB(timeout=10)
 
         self["mainscreen_actions"]  = ActionMap(["OkCancelActions", "ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions"], {
-                "ok"    : self.keyOK,
+                "ok": self.keyOK,
                 "cancel": self.keyCancel,
-                "up" : self.keyUp,
-                "down" : self.keyDown,
-                "right" : self.keyRight,
-                "left" : self.keyLeft,
-                "nextBouquet" : self.keyPageUp,
-                "prevBouquet" : self.keyPageDown,
-                "red" : self.skipListe,
-                "green" : self.openWhitelist,
-                "yellow" : self.toggleIsNew,
-                "blue"  : self.skyarchive,
-                "menu" : self.skysettings,
-                "0" : self.toggleEventIgnored,
-                "2" : self.addToWhitelist,
-                "5" : self.refreshCover,
-                "8" : self.deleteEvent,
-                "9" : self.nextSort,
-                "7" : self.previousSort,
-                "nextService" : self.nextGroup,
-                "prevService" : self.prevGroup,
-                "info" : self.searchMovieInfo,
+                "up": self.keyUp,
+                "down": self.keyDown,
+                "right": self.keyRight,
+                "left": self.keyLeft,
+                "nextBouquet": self.keyPageUp,
+                "prevBouquet": self.keyPageDown,
+                "red": self.skipListe,
+                "green": self.openWhitelist,
+                "yellow": self.toggleIsNew,
+                "blue": self.skyarchive,
+                "menu": self.skysettings,
+                "0": self.toggleEventIgnored,
+                "2": self.addToWhitelist,
+                "5": self.refreshCover,
+                "8": self.deleteEvent,
+                "9": self.nextSort,
+                "7": self.previousSort,
+                "nextService": self.nextGroup,
+                "prevService": self.prevGroup,
+                "info": self.searchMovieInfo,
         }, -1)
 
         self["popup_actions"] = ActionMap(["OkCancelActions", "ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions"],
@@ -206,7 +207,7 @@ class SkyRecorderMainScreen(Screen):
         self['movieinfo_green_label'] = Label("Suche")
         self['movieinfo_green_label'].hide()
 
-        for n in range(0,10):
+        for n in range(0, 10):
             star = "star{0}".format(n)
             self[star] = Pixmap()
             self[star].hide()
@@ -248,7 +249,7 @@ class SkyRecorderMainScreen(Screen):
         for t_record in self.timerList:
             if not t_record['channel']:
                 continue
-            res = sql.getIdChannel(t_record['channel'],stb=True)
+            res = sql.getIdChannel(t_record['channel'], stb=True)
             if not res:
                 continue
             id_channel = res
@@ -279,7 +280,7 @@ class SkyRecorderMainScreen(Screen):
             if not id_eventslist or not id_events:
                 continue
             #if not sql.checkAdded(t_record['title'], t_record['description'], t_record['id_channel'],t_record['id_genre']):
-            if not sql.checkAdded(t_record['title'], t_record['description'], t_record['id_channel'],None):
+            if not sql.checkAdded(t_record['title'], t_record['description'], t_record['id_channel'], None):
             #if not sql.checkAdded(t_record['title'], t_record['description'], None,None):
                 sql.addAdded(
                                         t_record['title'],
@@ -294,7 +295,7 @@ class SkyRecorderMainScreen(Screen):
                                         t_record['eit'],
                                         int(id_eventslist))
             # if we still have timers in system timerlist, we want to know about it
-            sql.updateEventListStatus(id_events,starttime,status="True",commit=False)
+            sql.updateEventListStatus(id_events, starttime, status="True", commit=False)
             need_commit = True
 
         # commit database changes
@@ -339,7 +340,7 @@ class SkyRecorderMainScreen(Screen):
 
         self.groupnames = None
         self.groupnames = []
-        self.groupnames.append([0,"Alle"])
+        self.groupnames.append([0, "Alle"])
         rows = sql.readGroupsShort()
         for t_row in rows:
             row = list(t_row)
@@ -369,9 +370,9 @@ class SkyRecorderMainScreen(Screen):
             self.sort_info = config.plugins.skyrecorder.main_list_order.getText()
 
         try:
-            rows = sql.getEventsMain("ASC", self.onlyIsNew, self.current_group_idx, current_timestamp, only_active_genres,limit_count=self.limit_count,limit_offset=self.limit_offset,sort_type=self.sort_type,check_endtime=True)
-        except Exception, e:
-            print "[skyrecorder] ERROR: {0}".format(e)
+            rows = sql.getEventsMain("ASC", self.onlyIsNew, self.current_group_idx, current_timestamp, only_active_genres, limit_count=self.limit_count, limit_offset=self.limit_offset, sort_type=self.sort_type, check_endtime=True)
+        except Exception as e:
+            print("[skyrecorder] ERROR: {0}".format(e))
             sys.exc_clear()
             return
 
@@ -399,7 +400,7 @@ class SkyRecorderMainScreen(Screen):
                         addedlist = list(addedlist_raw_row)
                         if str(addedlist[9]) == "Hidden":
                             #if sql.updateEventListStatus(row[0],e_starttime,status="Hidden",commit=True):
-                            if sql.updateEventListStatus(row[0],None,status="Hidden",commit=False):
+                            if sql.updateEventListStatus(row[0], None, status="Hidden", commit=False):
                                 row[6] = "Hidden"
                                 need_commit = True
                             break
@@ -408,7 +409,7 @@ class SkyRecorderMainScreen(Screen):
                                 e_starttime = int(addedlist[5]) + config.plugins.skyrecorder.margin_before.value * 60
                             else:
                                 e_starttime = int(addedlist[5])
-                            if sql.updateEventListStatus(row[0],e_starttime,status="Done",commit=False):
+                            if sql.updateEventListStatus(row[0], e_starttime, status="Done", commit=False):
                             #if sql.updateEventListStatus(row[0],0,"Done"):
                                 row[6] = "Done"
                                 need_commit = True
@@ -418,8 +419,8 @@ class SkyRecorderMainScreen(Screen):
                 # maybe we have some whitelist entries and want to mark them
                 if row[6] != "True":
                     for whitelist_event in whitelist:
-                        escaped1 = str(whitelist_event[2]).lower().replace("[","\[").replace("]","\]").replace("(","\(").replace(")","\)")
-                        escaped2 = str(row[1]).lower().replace("[","\[").replace("]","\]").replace("(","\(").replace(")","\)")
+                        escaped1 = str(whitelist_event[2]).lower().replace("[", "\[").replace("]", "\]").replace("(", "\(").replace(")", "\)")
+                        escaped2 = str(row[1]).lower().replace("[", "\[").replace("]", "\]").replace("(", "\(").replace(")", "\)")
                         if re.match(escaped1 + '.*?', escaped2, re.I):
                             row[6] = "Xallowed"
                             break
@@ -462,7 +463,7 @@ class SkyRecorderMainScreen(Screen):
         self.keyLocked = False
 
 
-    def skyAnytimeListEntry(self,entry):
+    def skyAnytimeListEntry(self, entry):
         icon = None
         new = None
         if entry[6] == "True":
@@ -510,7 +511,7 @@ class SkyRecorderMainScreen(Screen):
         self.clearFilmInfoScreen()
         self['name'].setText("Konnte Sky TV-Guide nicht laden.")
         self['handlung'].setText("%s" % error)
-        print error
+        print(error)
 
     def clearFilmInfoScreen(self):
         self.streamMenuList.setList([])
@@ -522,7 +523,7 @@ class SkyRecorderMainScreen(Screen):
         self['dualch'].hide()
         self['sub'].hide()
         self['handlung'].setText("")
-        for n in range(0,10):
+        for n in range(0, 10):
             star = "star{0}".format(n)
             self[star].hide()
 
@@ -533,7 +534,7 @@ class SkyRecorderMainScreen(Screen):
         except Exception:
             return
 
-        for n in range(0,10):
+        for n in range(0, 10):
             star = "star{0}".format(n)
             self[star].hide()
 
@@ -570,20 +571,20 @@ class SkyRecorderMainScreen(Screen):
         self.m_id_movie = None
         got_movieinfo = False
         sky_title = self['filmliste'].getCurrent()[0][1]
-        rows = sql.getMovieInfo(id_events=None, m_id_movie=None, m_name=None,sky_title=sky_title)
+        rows = sql.getMovieInfo(id_events=None, m_id_movie=None, m_name=None, sky_title=sky_title)
         for t_row in rows:
             got_movieinfo = True
             if float(t_row[6]) > 0:
                 max_star = float(t_row[6])
-                max_star = int(round(max_star,0))
-                for n in range(0,max_star):
+                max_star = int(round(max_star, 0))
+                for n in range(0, max_star):
                     star = "star{0}".format(n)
                     self[star].show()
 
             m_name = str(t_row[3]) + " (" + str(t_row[4]) + ")"
             self['name'].setText(m_name)
 
-            m_description = "{0}\n{1} {2}".format(str(t_row[7]),country,year)
+            m_description = "{0}\n{1} {2}".format(str(t_row[7]), country, year)
             if m_description:
                 self['handlung'].setText(m_description)
             else:
@@ -593,9 +594,9 @@ class SkyRecorderMainScreen(Screen):
             self.m_id_movie = "tmdb_id:{0}".format(m_id_movie) # need this class-wide for timer tags
             poster = None
             if m_id_movie > 0:
-                poster = sql.getMovieInfoPoster(None, m_id_movie,pos=0)
+                poster = sql.getMovieInfoPoster(None, m_id_movie, pos=0)
             else:
-                poster = sql.getMovieInfoPoster(id_events, None,pos=0)
+                poster = sql.getMovieInfoPoster(id_events, None, pos=0)
             if poster:
                 cover_file = "/tmp/skyrecorder_tempcover.png"
                 with open(cover_file, "wb") as f:
@@ -630,7 +631,7 @@ class SkyRecorderMainScreen(Screen):
                 try:
                     if self.haveInternet:
                         downloadPage(image, "/tmp/skyrecorder_tempcover.png", headers=self.headers2, agent=self.agent).addCallback(self.downloadImage, "/tmp/skyrecorder_tempcover.png", id_events)
-                except Exception, e:
+                except Exception as e:
                     self.dataError(e)
 
         gotData = False
@@ -641,7 +642,7 @@ class SkyRecorderMainScreen(Screen):
                 gotData = True
                 if not got_movieinfo or not m_description or m_description == "N/A" or len(m_description) < 20:
                     if handlung:
-                        handlung = "{0}\n{1} {2}".format(handlung,country,year)
+                        handlung = "{0}\n{1} {2}".format(handlung, country, year)
                         self['handlung'].setText(handlung)
                     else:
                         self['handlung'].setText("Keine infos gefunden.")
@@ -738,10 +739,10 @@ class SkyRecorderMainScreen(Screen):
 
         check_state = sql.getEventListStatus(id_events, None)
         if check_state and check_state == "Hidden":
-            sql.updateEventListStatus(id_events, None, status="False",commit=True)
+            sql.updateEventListStatus(id_events, None, status="False", commit=True)
 
             #sql.removeFromAdded(title,desc,id_channel,None,hidden=True)
-            sql.removeFromAdded(title.lower(), desc.lower(),None,None,hidden=True)
+            sql.removeFromAdded(title.lower(), desc.lower(), None, None, hidden=True)
             # maybe we should delete this title from our skipword-list instead of disabling?
             if title and len(title) >= 3:
                 #sql.delSkip(title)
@@ -770,9 +771,9 @@ class SkyRecorderMainScreen(Screen):
                             return
                         # force Hidden and Delete, if we delete a recording timer
                         if id_added:
-                            sql.resetAddedUpdateHidden(id_added,None)
+                            sql.resetAddedUpdateHidden(id_added, None)
                             res = sql.deleteEventById(id_events)
-            sql.updateEventListStatus(id_events, None, status="Hidden",commit=True)
+            sql.updateEventListStatus(id_events, None, status="Hidden", commit=True)
 
             # append this title to our skipword-list, but mark it as disabled (-)
             if title and len(title) >= 3:
@@ -803,7 +804,7 @@ class SkyRecorderMainScreen(Screen):
             #if res and not sql.checkAdded(title.lower(), desc.lower(), id_channel, id_genre):
             if res and not sql.checkAdded(title.lower(), desc.lower(), id_channel, None):
             #if res and not sql.checkAdded(title.lower(), desc.lower(), None, None):
-                sql.addAdded(title, desc, id_channel, id_genre, 0, 0, '-', '-', 'Hidden',0,0)
+                sql.addAdded(title, desc, id_channel, id_genre, 0, 0, '-', '-', 'Hidden', 0, 0)
             self.delayedGetMainEventList()
 
 
@@ -820,7 +821,7 @@ class SkyRecorderMainScreen(Screen):
         self.last_index = self['filmliste'].getSelectionIndex()
         if coverurl:
             # update the cover url for this event in our database
-            sql.updateEventCoverUrlByIdEvents(id_events,coverurl)
+            sql.updateEventCoverUrlByIdEvents(id_events, coverurl)
 
         sql.deleteEventCoverByIdEvents(id_events)
         self.delayedGetMainEventList("lade Bild neu ...")
@@ -856,7 +857,7 @@ class SkyRecorderMainScreen(Screen):
         self.last_index = self['filmliste'].getSelectionIndex()
 
         #check_state = sql.addToWhitelist(id_channel,title,desc, status="True")
-        check_state = sql.addToWhitelist(id_channel,title,None, status="True")
+        check_state = sql.addToWhitelist(id_channel, title, None, status="True")
         self.delayedGetMainEventList()
 
     def openWhitelist(self):
@@ -949,7 +950,7 @@ class SkyRecorderMainScreen(Screen):
         #posterUrl = self['movieinfo'].getCurrent()[0][5]
         id_events = self['movieinfo'].getCurrent()[0][6]
         title = self['movieinfo'].getCurrent()[0][7]
-        self.getMovieInfo(movieURL=movieURL,movieTitle=title,posterUrl=posterUrl,id_events=id_events,sky_title=title)
+        self.getMovieInfo(movieURL=movieURL, movieTitle=title, posterUrl=posterUrl, id_events=id_events, sky_title=title)
         self['movieinfo_bg'].hide()
         self['movieinfo'].hide()
         self.movieinfoVisible = False
@@ -1016,7 +1017,7 @@ class SkyRecorderMainScreen(Screen):
             self.close()
 
 
-    def skyAnytimerListEntry(self,entry):
+    def skyAnytimerListEntry(self, entry):
         if entry[5] == "True":
             icon = "/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/neu_timer.png"
         elif entry[5] == "Done":
@@ -1058,7 +1059,7 @@ class SkyRecorderMainScreen(Screen):
         myList = []
         self.timerSelectList.setList(myList)
 
-        rows = sql.getEventsTimer(self.id_events,"ASC", getCurrentTimestamp(),check_endtime=True)
+        rows = sql.getEventsTimer(self.id_events, "ASC", getCurrentTimestamp(), check_endtime=True)
         resultCount = len(rows)
         if resultCount > 0:
             for t_row in rows:
@@ -1068,12 +1069,12 @@ class SkyRecorderMainScreen(Screen):
             self.timerSelectList.setList(map(self.skyAnytimerListEntry, sorted(myList, key=lambda stime: stime[2])))
 
     def getChannelref(self, channel):
-        for (channelname,channelref) in self.sky_chlist:
+        for (channelname, channelref) in self.sky_chlist:
             if channelname.lower() == channel.lower():
                 return channelref
 
 
-    def getEPGevent(self,query,channeref,title,starttime):
+    def getEPGevent(self, query, channeref, title, starttime):
         if not query or len(query) != 2:
             return
         epgmatches = []
@@ -1116,10 +1117,10 @@ class SkyRecorderMainScreen(Screen):
         timer_starttime = starttime - config.plugins.skyrecorder.margin_before.value * 60
         timer_endtime = endtime + config.plugins.skyrecorder.margin_after.value * 60
 
-        stb_channel = sql.getChannelFromChannel(channel,stb=True)
+        stb_channel = sql.getChannelFromChannel(channel, stb=True)
         channelref = self.getChannelref(stb_channel)
 
-        print datum, starttime, endtime, stb_channel, channelref
+        print(datum, starttime, endtime, stb_channel, channelref)
 
         # try to delete this recordtimer-entry
         if status == "True":
@@ -1139,8 +1140,8 @@ class SkyRecorderMainScreen(Screen):
             #id_added = sql.checkAdded(title.lower(), desc.lower(), None, None)
             if retval:
                 if id_added:
-                    sql.resetAdded(id_added,id_eventslist)
-                res = sql.updateEventListStatus(self.id_events,starttime,status="False")
+                    sql.resetAdded(id_added, id_eventslist)
+                res = sql.updateEventListStatus(self.id_events, starttime, status="False")
                 if config.plugins.skyrecorder.silent_timer_mode.value == False:
                     message = self.session.open(MessageBox, _("Timer gelöscht!"), MessageBox.TYPE_INFO, timeout=3)
             self.timerCallback(True)
@@ -1152,7 +1153,7 @@ class SkyRecorderMainScreen(Screen):
 
             # try to get eventID (eit) from epgCache
             eit = 0
-            event_matches = self.getEPGevent(['RITBDSE',(channelref,0, starttime, -1)],channelref,title,starttime)
+            event_matches = self.getEPGevent(['RITBDSE', (channelref, 0, starttime, -1)], channelref, title, starttime)
             if event_matches and len(event_matches) > 0:
                 for event_entry in event_matches:
                     eit = int(event_entry[1])
@@ -1172,7 +1173,7 @@ class SkyRecorderMainScreen(Screen):
                         group_dir = os.path.join(recordings_base_folder, a_dir + "/")
                         if not os.path.exists(group_dir):
                             try:
-                                os.makedirs(group_dir, mode=0777)
+                                os.makedirs(group_dir, mode=0o777)
                                 dirname = group_dir
                             except Exception:
                                 sys.exc_clear()
@@ -1180,18 +1181,18 @@ class SkyRecorderMainScreen(Screen):
                             dirname = group_dir
 
             if not config.plugins.skyrecorder.short_record_filenames or not config.plugins.skyrecorder.short_record_filenames.value:
-                file = getRecordFilename(title,desc,timer_starttime,stb_channel) # "%s - %s - %s.ts" % (begin_date,channel,title)
+                file = getRecordFilename(title, desc, timer_starttime, stb_channel) # "%s - %s - %s.ts" % (begin_date,channel,title)
             else:
                 # for short filenames only need the description field for group "serie" or "series" or "tv shows"
                 group = sql.getGenregroupByGenreId(self.id_genre)
                 if group.lower() == "serie" or group.lower() == "series" or group.lower() == "tv shows":
-                    file_base = getRecordFilenameBase(title,desc,timer_starttime,stb_channel)
+                    file_base = getRecordFilenameBase(title, desc, timer_starttime, stb_channel)
                 else:
-                    file_base = getRecordFilenameBase(title,"",timer_starttime,stb_channel)
+                    file_base = getRecordFilenameBase(title, "", timer_starttime, stb_channel)
 
                 file = file_base
                 ccn = 2
-                while 1:
+                while True:
                     if not os.path.exists(dirname + file + ".ts"):
                         break
                     file = file_base + " (" +  str(ccn) +")"
@@ -1208,13 +1209,13 @@ class SkyRecorderMainScreen(Screen):
 
             result = SkyTimerRec.addTimer(self.session, channelref, timer_starttime, timer_endtime, title, desc, 0, justplay, 3, dirname, tags, 0, None, eit=eit, recordfile=recordfile)
             if result["result"]:
-                sql.updateEventListStatus(self.id_events,starttime,status="True")
+                sql.updateEventListStatus(self.id_events, starttime, status="True")
 
                 # id_added,title,description,id_channel,id_genre,begin,end,serviceref,location,recordedfile
                 #if not sql.checkAdded(title.lower(), desc.lower(), self.id_channel, self.id_genre):
                 if not sql.checkAdded(title.lower(), desc.lower(), self.id_channel, None):
                 #if not sql.checkAdded(title.lower(), desc.lower(), None, None):
-                    sql.addAdded(title, desc, self.id_channel, self.id_genre, timer_starttime, timer_endtime, channelref, dirname, file,result["eit"],id_eventslist)
+                    sql.addAdded(title, desc, self.id_channel, self.id_genre, timer_starttime, timer_endtime, channelref, dirname, file, result["eit"], id_eventslist)
 
                 self.timerCallback(True)
                 self.getTimerEventList()
@@ -1234,16 +1235,16 @@ class SkyRecorderMainScreen(Screen):
         #self.session.openWithCallback(self.gotMovieSearchName, VirtualKeyBoard, title = info_title, text = title)
 
 
-    def gotMovieSearchName(self,title):
+    def gotMovieSearchName(self, title):
         if not title or len(title) < 3:
             return
-        self.searchMovieInfo(language="de",title=title)
+        self.searchMovieInfo(language="de", title=title)
 
     def unmatchMovieInfo(self):
         exist = self['filmliste'].getCurrent()
         if exist:
             title = self['filmliste'].getCurrent()[0][1]
-            sql.resetMovieInfoActive(id_events=None, m_id_movie=None, m_name="",sky_title=title,id_themoviedb=None)
+            sql.resetMovieInfoActive(id_events=None, m_id_movie=None, m_name="", sky_title=title, id_themoviedb=None)
             self['movieinfo_bg'].hide()
             self['movieinfo'].hide()
             self['movieinfo_red_label'].hide()
@@ -1257,7 +1258,7 @@ class SkyRecorderMainScreen(Screen):
         else:
             return
 
-    def movieinfoListEntry(self,entry):
+    def movieinfoListEntry(self, entry):
         return [entry,
                 (eListboxPythonMultiContent.TYPE_TEXT, 20, 0, 980, 40, 0, RT_HALIGN_LEFT, entry[2]),
                 (eListboxPythonMultiContent.TYPE_TEXT, 1010, 0, 120, 40, 0, RT_HALIGN_LEFT, entry[3])
@@ -1282,13 +1283,13 @@ class SkyRecorderMainScreen(Screen):
 
         # try some fallbacks, if we did not find anything
         try:
-            res = self.mInfo.getListFor(searchStr=title,split=False,language=language)
+            res = self.mInfo.getListFor(searchStr=title, split=False, language=language)
             if not res or len(res) < 1:
-                res = self.mInfo.getListFor(searchStr=title.split("-")[0].strip(),split=False,language=language)
+                res = self.mInfo.getListFor(searchStr=title.split("-")[0].strip(), split=False, language=language)
                 if not res or len(res) < 1:
-                    res = self.mInfo.getListFor(searchStr=title.split(":")[0].strip(),split=False,language=language)
+                    res = self.mInfo.getListFor(searchStr=title.split(":")[0].strip(), split=False, language=language)
                     if not res or len(res) < 1:
-                        res = self.mInfo.getListFor(searchStr=title.split("...")[0].strip(),split=False,language=language)
+                        res = self.mInfo.getListFor(searchStr=title.split("...")[0].strip(), split=False, language=language)
                         if not res or len(res) < 1:
                             # ok, we give up
                             #self.session.open(MessageBox, "Keine Info gefunden für:\n{0}".format(title), MessageBox.TYPE_INFO, timeout=-1)
@@ -1320,7 +1321,7 @@ class SkyRecorderMainScreen(Screen):
         self['movieinfo_red'].show()
         #self['movieinfo_green'].show()
         self.movieinfoVisible = True
-        self.getMovieSearchList(searchlist=res,id_events=self.id_events,sky_title=title)
+        self.getMovieSearchList(searchlist=res, id_events=self.id_events, sky_title=title)
         return
 
 
@@ -1331,7 +1332,7 @@ class SkyRecorderMainScreen(Screen):
         myList = []
         self.movieinfoSelectList.setList(myList)
         for t_row in searchlist:
-            myList.append([t_row["m_movie_url"],t_row["m_title_org"],t_row["m_title"],t_row["m_date"],t_row["m_id_movie"],t_row["m_poster_url"],id_events,sky_title])
+            myList.append([t_row["m_movie_url"], t_row["m_title_org"], t_row["m_title"], t_row["m_date"], t_row["m_id_movie"], t_row["m_poster_url"], id_events, sky_title])
         self.movieinfoSelectList.setList(map(self.movieinfoListEntry, myList))
 
 
@@ -1339,10 +1340,10 @@ class SkyRecorderMainScreen(Screen):
         if not movieURL:
             return
         movieinfo = None
-        movieinfo = self.mInfo.getInfoFor(movieURL=movieURL,movieTitle=movieTitle,idMovie="",language="de",lastlang=-1)
+        movieinfo = self.mInfo.getInfoFor(movieURL=movieURL, movieTitle=movieTitle, idMovie="", language="de", lastlang=-1)
         if not movieinfo or len(movieinfo) < 1:
             # fallback language english
-            movieinfo = self.mInfo.getInfoFor(movieURL=movieURL,movieTitle=movieTitle,idMovie="",language="en",lastlang=-1)
+            movieinfo = self.mInfo.getInfoFor(movieURL=movieURL, movieTitle=movieTitle, idMovie="", language="en", lastlang=-1)
             if not movieinfo or len(movieinfo) < 1:
                 self.session.open(MessageBox, "Keine Info für:\n{0}".format(movieURL), MessageBox.TYPE_INFO, timeout=3)
                 return False
@@ -1383,7 +1384,7 @@ class SkyRecorderMainScreen(Screen):
             m_rating = "0"
 
         # got movieinfo, store it
-        res = sql.addNewMovieInfo(id_events, m_id_movie, m_name, m_year, m_title_org, m_rating, m_description, m_genre,sky_title)
+        res = sql.addNewMovieInfo(id_events, m_id_movie, m_name, m_year, m_title_org, m_rating, m_description, m_genre, sky_title)
 
         if not res:
             return
@@ -1398,10 +1399,10 @@ class SkyRecorderMainScreen(Screen):
                 #getPage(coverurl, headers=self.headers2, agent=self.agent).addCallback(self.gotPoster, id_events, m_id_movie, coverurl).addErrback(self.dataErrorPage)
                 data = None
                 socket.setdefaulttimeout(10)
-                req = Request(coverurl,None,self.headers2)
+                req = Request(coverurl, None, self.headers2)
                 response = urlopen(req)
                 data = response.read()
-                self.gotPoster(data,id_events, m_id_movie, coverurl)
+                self.gotPoster(data, id_events, m_id_movie, coverurl)
 
     def gotPoster(self, data, id_events, m_id_movie, coverurl):
         if data:
@@ -1412,4 +1413,4 @@ class SkyRecorderMainScreen(Screen):
         self.clearFilmInfoScreen()
         self['name'].setText("Fehler beim Laden.")
         self['handlung'].setText("%s" % error)
-        print error
+        print(error)

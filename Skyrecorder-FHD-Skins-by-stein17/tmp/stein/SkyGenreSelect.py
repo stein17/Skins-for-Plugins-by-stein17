@@ -1,5 +1,6 @@
 #-*- coding: utf-8 -*-
 #from Screens.VirtualKeyBoard import VirtualKeyBoard
+from __future__ import print_function
 from Screens.Screen import Screen
 from Tools.Directories import fileExists, resolveFilename, SCOPE_PLUGINS
 from enigma import gFont, eListboxPythonMultiContent, RT_HALIGN_LEFT, RT_HALIGN_RIGHT, RT_HALIGN_CENTER, RT_VALIGN_CENTER
@@ -62,7 +63,7 @@ class SkyGenreSelect(Screen, ConfigListScreen):
         self.onLayoutFinish.append(self.readGenre)
 
 
-    def skyGenreSelectListEntry(self,entry):
+    def skyGenreSelectListEntry(self, entry):
         if entry[1] == "True":
             plus = "/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/plus.png"
             return [entry,
@@ -100,12 +101,12 @@ class SkyGenreSelect(Screen, ConfigListScreen):
         self.configlist = None
         self.configlist = []
 
-        for (genre,status,id_genregroup, id_genre, id_groups) in templist:
+        for (genre, status, id_genregroup, id_genre, id_groups) in templist:
             #self.id_genregroup_list.append(id_genregroup)
-            self.configlist.append(getConfigListEntry("",ConfigSelection(default=id_groups, choices=sql.readJoindGroupsShort(id_genregroup))))
-            self.genreliste.append((genre,status,id_genregroup, id_genre, id_groups))
+            self.configlist.append(getConfigListEntry("", ConfigSelection(default=id_groups, choices=sql.readJoindGroupsShort(id_genregroup))))
+            self.genreliste.append((genre, status, id_genregroup, id_genre, id_groups))
 
-        print "[skyrecorder] reload genrelist."
+        print("[skyrecorder] reload genrelist.")
         self["config"].setList(self.configlist)
         self.streamMenuList.setList(map(self.skyGenreSelectListEntry, self.genreliste))
 
@@ -133,7 +134,7 @@ class SkyGenreSelect(Screen, ConfigListScreen):
         #id_genregroup = self['channelselect'].getCurrent()[0][2]
         #id_groups_selected = (self["config"].getCurrent()[1]).value
         #sql.updateGenregroup(id_genregroup, id_groups_selected)
-        print genre_auswahl
+        print(genre_auswahl)
         sql.changeGenre(genre_auswahl)
 
         self.readGenre()

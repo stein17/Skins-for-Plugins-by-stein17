@@ -1,4 +1,5 @@
 #-*- coding: utf-8 -*-
+from __future__ import print_function
 from Screens.Screen import Screen
 from Tools.Directories import fileExists, resolveFilename, SCOPE_PLUGINS
 from enigma import gFont, eListboxPythonMultiContent, RT_HALIGN_LEFT, RT_HALIGN_RIGHT, RT_HALIGN_CENTER, RT_VALIGN_CENTER
@@ -53,7 +54,7 @@ class SkyChannelSelect(Screen):
         self.onLayoutFinish.append(self.readChannels)
 
 
-    def skyChannelSelectListEntry(self,entry):
+    def skyChannelSelectListEntry(self, entry):
         if entry[1] == "True":
             plus = "/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/plus.png"
             return [entry,
@@ -78,9 +79,9 @@ class SkyChannelSelect(Screen):
                 return
 
         self.channelliste = []
-        for (channel,status) in sql.readChannel():
-            self.channelliste.append((channel,status))
-        print "[skyrecorder] reload channelSelectListe."
+        for (channel, status) in sql.readChannel():
+            self.channelliste.append((channel, status))
+        print("[skyrecorder] reload channelSelectListe.")
         self.channelliste.sort()
         self.streamMenuList.setList(map(self.skyChannelSelectListEntry, self.channelliste))
         if self.last_index < len(self.channelliste):
@@ -89,7 +90,7 @@ class SkyChannelSelect(Screen):
 
 
     def keyChange(self):
-        print "change"
+        print("change")
         self.last_index = self['channelselect'].getSelectionIndex()
         self.session.openWithCallback(self.readChannels, SkyChannelEditor, self.last_index)
 
@@ -100,7 +101,7 @@ class SkyChannelSelect(Screen):
 
         channel_auswahl = self['channelselect'].getCurrent()[0][0]
         self.last_index = self['channelselect'].getSelectionIndex()
-        print channel_auswahl
+        print(channel_auswahl)
         sql.changeChannel(channel_auswahl)
         self.readChannels()
 

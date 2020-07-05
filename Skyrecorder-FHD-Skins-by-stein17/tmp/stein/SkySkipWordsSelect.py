@@ -1,4 +1,5 @@
 #-*- coding: utf-8 -*-
+from __future__ import print_function
 from Screens.VirtualKeyBoard import VirtualKeyBoard
 from Screens.Screen import Screen
 from Tools.Directories import fileExists, resolveFilename, SCOPE_PLUGINS
@@ -33,10 +34,10 @@ class SkySkipWordsSelect(Screen):
         contentSize = config.plugins.skyrecorder.contentsize.value
 
         self["actions"]  = ActionMap(["OkCancelActions", "ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions"], {
-                "ok"    : self.keyOK,
+                "ok": self.keyOK,
                 "cancel": self.keyCancel,
-                "green" : self.keyAdd,
-                "red" : self.keyDel,
+                "green": self.keyAdd,
+                "red": self.keyDel,
         }, -1)
 
         self.skipwordliste = []
@@ -51,7 +52,7 @@ class SkySkipWordsSelect(Screen):
         self.onLayoutFinish.append(self.readSkipWords)
 
 
-    def skySkipWordSelectListEntry(self,entry):
+    def skySkipWordSelectListEntry(self, entry):
         if entry[1] == "True":
             plus = "/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/plus.png"
             return [entry,
@@ -76,9 +77,9 @@ class SkySkipWordsSelect(Screen):
                 return
 
         self.skipwordliste = []
-        for (skipword,status) in sql.readSkipSelect():
-            self.skipwordliste.append((skipword,status))
-        print "[skyrecorder] reload skips."
+        for (skipword, status) in sql.readSkipSelect():
+            self.skipwordliste.append((skipword, status))
+        print("[skyrecorder] reload skips.")
         self.skipwordliste.sort()
         self.streamMenuList.setList(map(self.skySkipWordSelectListEntry, self.skipwordliste))
 
@@ -88,7 +89,7 @@ class SkySkipWordsSelect(Screen):
         if exist == None:
             return
         skipword_auswahl = self['skipwordselect'].getCurrent()[0][0]
-        print skipword_auswahl
+        print(skipword_auswahl)
         sql.changeSkip(skipword_auswahl)
         self.readSkipWords()
 
@@ -97,13 +98,13 @@ class SkySkipWordsSelect(Screen):
         #       return
 
     def keyAdd(self):
-        print "add"
+        print("add")
         self.session.openWithCallback(self.addSkipWord, VirtualKeyBoard, title = ("Skip word eintragen:"))
 
     def addSkipWord(self, word = None):
         if word != None or word == "":
             sql.addSkip(word)
-            print "[skyrecorder] add skip: %s" % word
+            print("[skyrecorder] add skip: %s" % word)
         self.readSkipWords()
 
     def keyDel(self):
@@ -112,7 +113,7 @@ class SkySkipWordsSelect(Screen):
             return
         skipword_auswahl = self['skipwordselect'].getCurrent()[0][0]
         sql.delSkip(skipword_auswahl)
-        print "[skyrecorder] del skip: %s" % skipword_auswahl
+        print("[skyrecorder] del skip: %s" % skipword_auswahl)
         self.readSkipWords()
 
         #print "del"
