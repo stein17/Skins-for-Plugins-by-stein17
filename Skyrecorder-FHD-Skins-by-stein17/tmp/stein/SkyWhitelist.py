@@ -20,18 +20,18 @@ from SkySql import *
 
 
 class SkyWhitelist(Screen):
-	
+
 	def __init__(self, session):
 		self.session = session
 		self.last_index = -1
-		
+
 		path = "%s/skins/%s/screen_whitelist.xml" % (getPluginPath(), config.plugins.skyrecorder.anytime_skin.value)
 		with open(path, "r") as f:
 			self.skin = f.read()
 			f.close()
-			
+
 		Screen.__init__(self, session)
-		
+
 		pluginName = config.plugins.skyrecorder.pluginname.value
 		contentSize = config.plugins.skyrecorder.contentsize.value
 
@@ -42,15 +42,15 @@ class SkyWhitelist(Screen):
 			"yellow": self.keyAdd,
 			"red": self.keyDel,
 		}, -1)
-				
+
 		self.whitelistliste = []
 		self.streamMenuList = MenuList([], enableWrapAround=True, content=eListboxPythonMultiContent)
 		self.streamMenuList.l.setFont(0, gFont('Regular', 28))
 		self.streamMenuList.l.setItemHeight(75)
 		self['whitelist'] = self.streamMenuList
-			
+
 		self.onLayoutFinish.append(self.readWhitelist)
-	
+
 	def skyWhitelistListEntry(self, entry):
 		if entry[4] == "True":
 			pic = "/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/plus.png"
@@ -72,7 +72,7 @@ class SkyWhitelist(Screen):
 				sql.connect()
 			except Exception:
 				return
-		
+
 		self.whitelistliste = []
 		for (id_whitelist, id_channel, title, description, status) in sql.readWhitelist():
 			self.whitelistliste.append((id_whitelist, id_channel, title, description, status))
@@ -81,7 +81,7 @@ class SkyWhitelist(Screen):
 		self.streamMenuList.setList(map(self.skyWhitelistListEntry, self.whitelistliste))
 		if self.last_index < len(self.whitelistliste):
 			self['whitelist'].moveToIndex(self.last_index)
-	
+
 	def keyOK(self):
 		exist = self['whitelist'].getCurrent()
 		if exist == None:
@@ -90,7 +90,7 @@ class SkyWhitelist(Screen):
 		self.last_index = self['whitelist'].getSelectionIndex()
 		sql.changeWhitelistStatus(id_whitelist)
 		self.readWhitelist()
-		
+
 	def keyEdit(self):
 		exist = self['whitelist'].getCurrent()
 		if exist == None:
@@ -99,7 +99,7 @@ class SkyWhitelist(Screen):
 		self.last_index = self['whitelist'].getSelectionIndex()
 		word = self['whitelist'].getCurrent()[0][2]
 		self.session.openWithCallback(self.editWord, VirtualKeyBoard, title=("Titel bearbeiten:"), text=word)
-		
+
 	def keyAdd(self):
 		exist = self['whitelist'].getCurrent()
 		if exist:
@@ -110,12 +110,12 @@ class SkyWhitelist(Screen):
 		if word != None or word != "":
 			check_state = sql.addToWhitelist(None, word, None, status="True")
 		self.readWhitelist()
-	
+
 	def editWord(self, word=None):
 		if word != None or word != "":
 			sql.updateWhitelistEntry(self.id_whitelist, word)
 		self.readWhitelist()
-	
+
 	def keyDel(self):
 		exist = self['whitelist'].getCurrent()
 		if exist == None:
@@ -124,7 +124,6 @@ class SkyWhitelist(Screen):
 		self.last_index = self['whitelist'].getSelectionIndex()
 		sql.delFromWhitelistById(id_whitelist)
 		self.readWhitelist()
-		
+
 	def keyCancel(self):
 		self.close()
-

@@ -20,17 +20,17 @@ from SkySql import *
 
 
 class SkyAddedEdit(Screen):
-	
+
 	def __init__(self, session):
 		self.session = session
-		
+
 		path = "%s/skins/%s/screen_added_edit.xml" % (getPluginPath(), config.plugins.skyrecorder.anytime_skin.value)
 		with open(path, "r") as f:
 			self.skin = f.read()
 			f.close()
-			
+
 		Screen.__init__(self, session)
-		
+
 		pluginName = config.plugins.skyrecorder.pluginname.value
 		contentSize = config.plugins.skyrecorder.contentsize.value
 
@@ -39,17 +39,17 @@ class SkyAddedEdit(Screen):
 			"green": self.keyDel,
 			"red": self.askDelAll,
 		}, -1)
-		
+
 		self.addededit_list = []
 		self.streamMenuList = MenuList([], enableWrapAround=True, content=eListboxPythonMultiContent)
 		self.streamMenuList.l.setFont(0, gFont('Regular', contentSize))
 		self.streamMenuList.l.setItemHeight(45)
 		self['addededit'] = self.streamMenuList
-		
-		self.last_index = 0	
-	
+
+		self.last_index = 0
+
 		self.onLayoutFinish.append(self.readAdded)
-	
+
 	def skyAddedEditListEntry(self, entry):
 		if str(entry[5]) == "Hidden":
 			infostr = str(entry[5]) + ": " + str(entry[1]) + " - " + str(entry[2])
@@ -57,7 +57,7 @@ class SkyAddedEdit(Screen):
 			#infostr = str(entry[5])
 			infostr = str(entry[5]) + " - " + str(entry[2])
 		return [entry, (eListboxPythonMultiContent.TYPE_TEXT, 0, 0, 1100, 50, 0, RT_HALIGN_LEFT, infostr)]
-	
+
 	def readAdded(self):
 		try:
 			sql.cur.execute('SELECT SQLITE_VERSION()')
@@ -67,23 +67,23 @@ class SkyAddedEdit(Screen):
 				sql.connect()
 			except Exception:
 				return
-		
+
 		self.addededit_list = []
 		# possible fields are:
 		# id_added,title,description,id_channel,id_genre,recordedfile,begin,id_eventslist
 		rows = sql.readAddedEdit()
 		resultCount = len(rows)
-		
+
 		for t_row in rows:
 			row = list(t_row)
 			self.addededit_list.append(row)
-		
+
 		#self.addededit_list.sort()
 		self.addededit_list = sorted(self.addededit_list, key=lambda x: x[6], reverse=True)
 		self.streamMenuList.setList(map(self.skyAddedEditListEntry, self.addededit_list))
 		if self.last_index < resultCount:
 			self['addededit'].moveToIndex(self.last_index)
-	
+
 #	def removeTimer(self):
 #		entry_dict = None
 #		entry_dict = {}
@@ -91,7 +91,7 @@ class SkyAddedEdit(Screen):
 #		entry_dict['description'] = desc
 #		entry_dict['timer_starttime'] = timer_starttime
 #		entry_dict['channelref'] = channelref
-#			
+#
 #		retval = SkyTimerRec.removeTimerEntry(entry_dict)
 #		if retval:
 #			sql.updateEventListStatus(self.id_events,starttime,"False")
@@ -99,7 +99,7 @@ class SkyAddedEdit(Screen):
 #				message = self.session.open(MessageBox, _("Timer gelöscht!"), MessageBox.TYPE_INFO, timeout=3)
 #		self.getTimerEventList()
 #		return
-			
+
 	def keyDel(self):
 		exist = self['addededit'].getCurrent()
 		if exist == None:
@@ -125,7 +125,6 @@ class SkyAddedEdit(Screen):
 		sql.resetAdded()
 		print "[skyrecorder] truncated table added"
 		self.readAdded()
-					
+
 	def keyCancel(self):
 		self.close()
-
