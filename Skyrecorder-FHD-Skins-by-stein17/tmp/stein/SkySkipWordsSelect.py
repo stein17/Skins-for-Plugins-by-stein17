@@ -33,7 +33,7 @@ class SkySkipWordsSelect(Screen):
 		pluginName = config.plugins.skyrecorder.pluginname.value
 		contentSize = config.plugins.skyrecorder.contentsize.value
 
-		self["actions"]  = ActionMap(["OkCancelActions", "ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions"], {
+		self["actions"] = ActionMap(["OkCancelActions", "ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions"], {
 			"ok": self.keyOK,
 			"cancel": self.keyCancel,
 			"green": self.keyAdd,

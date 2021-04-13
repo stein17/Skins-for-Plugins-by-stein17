@@ -83,7 +83,7 @@ class SkyRecorderMainScreen(Screen):
 		self.movieinfoVisible = False
 		self.mInfo = SkyTheMovieDB(timeout=10)
 
-		self["mainscreen_actions"]  = ActionMap(["OkCancelActions", "ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions"], {
+		self["mainscreen_actions"] = ActionMap(["OkCancelActions", "ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions"], {
 			"ok": self.keyOK,
 			"cancel": self.keyCancel,
 			"up": self.keyUp,
@@ -451,7 +451,7 @@ class SkyRecorderMainScreen(Screen):
 		if self.last_index < resultCount:
 			self['filmliste'].moveToIndex(self.last_index)
 		elif resultCount > 1:
-			self['filmliste'].moveToIndex(resultCount -1)
+			self['filmliste'].moveToIndex(resultCount - 1)
 		
 		try:	
 			newnew = ""
@@ -700,14 +700,14 @@ class SkyRecorderMainScreen(Screen):
 	# button actions
 	def nextGroup(self):
 		self.current_group_idx += 1
-		if self.current_group_idx > len(self.groupnames) -1:
+		if self.current_group_idx > len(self.groupnames) - 1:
 			self.current_group_idx = 0
 		self.delayedGetMainEventList()
 		
 	def prevGroup(self):
 		self.current_group_idx -= 1
 		if self.current_group_idx < 0:
-			self.current_group_idx = len(self.groupnames) -1
+			self.current_group_idx = len(self.groupnames) - 1
 		self.delayedGetMainEventList()	
 	
 	def nextSort(self):
@@ -1197,7 +1197,7 @@ class SkyRecorderMainScreen(Screen):
 				while 1:
 					if not os.path.exists(dirname + file + ".ts"):
 						break
-					file = file_base + " (" +  str(ccn) +")"
+					file = file_base + " (" + str(ccn) + ")"
 					ccn += 1			
 				
 			# the suffix ".ts" will be added by the system Timerfunction

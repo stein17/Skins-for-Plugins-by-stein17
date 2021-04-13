@@ -162,7 +162,7 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 		self.popUpScreen = self.session.instantiateDialog(SkyHelpAll)
 		self.popUpIsVisible = False
 		
-		self["actions"]  = ActionMap(["OkCancelActions","ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions","HelpActions"], {
+		self["actions"] = ActionMap(["OkCancelActions","ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions","HelpActions"], {
 			"ok": self.keyOK,
 			"cancel": self.keyCancel,
 			"nextBouquet": self.log_up,
@@ -396,15 +396,15 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 
 		elif self["config"].getCurrent() == self.cleanup_tmdb_data:
 			mymsg = "{0}\nSollen alle TMDb-Daten jetzt gelöscht werden?\nAchtung, der Vorgang kann die STB für eine Zeit lang blockieren.".format(pluginName)
-			self.session.openWithCallback(self.cleanupTMDbData,  MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=True)
+			self.session.openWithCallback(self.cleanupTMDbData, MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=True)
 		
 		elif self["config"].getCurrent() == self.skydb_vacuum:
 			mymsg = "{0}\nSoll die Datenbank jetzt optimiert werden?\nAchtung, der Vorgang kann die STB für eine Zeit lang blockieren.".format(pluginName)
-			self.session.openWithCallback(self.skydbVacuum,  MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=True)
+			self.session.openWithCallback(self.skydbVacuum, MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=True)
 		
 		elif self["config"].getCurrent() == self.reset_logfile:
 			mymsg = "{0}\nSoll die Logdatei jetzt gelöscht werden?".format(pluginName)
-			self.session.openWithCallback(self.resetLogfile,  MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=True)
+			self.session.openWithCallback(self.resetLogfile, MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=True)
 		
 		elif self["config"].getCurrent() == self.edit_channellist:
 			self.session.openWithCallback(self.changedEntry, SkyChannelSelect)
@@ -521,7 +521,7 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 	
 	def askOverwriteSkydb(self,dbpath):
 		mymsg = "{0}\nEs befindet sich schon eine skydb.db in '{1}.'\nSoll sie überschrieben werden?".format(pluginName,dbpath)
-		self.session.openWithCallback(self.confirmOverwriteSkydb,  MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=True)
+		self.session.openWithCallback(self.confirmOverwriteSkydb, MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=True)
 	
 	def confirmOverwriteSkydb(self,result):
 		return result
@@ -638,7 +638,7 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 			if SkyGetTvGuide.instance:
 				if SkyGetTvGuide.instance.IS_RUNNING and SkyGetTvGuide.instance.IS_RUNNING == True:
 					mymsg = "Achtung!\nEin Datenbankupdate läuft schon im Hintergrund.\nSoll das Update jetzt abgebrochen werden?"
-					self.session.openWithCallback(self.tryToStopDatabseUpdate,  MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=False)
+					self.session.openWithCallback(self.tryToStopDatabseUpdate, MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=False)
 					return
 		except Exception:
 			sys.exc_clear()
@@ -647,7 +647,7 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 			mymsg = "{0}\nSoll die Datenbank jetzt aktualisiert werden?\nAchtung, 'automatische Timer hinzufügen' ist aktiviert und wird im Anschluss ausgeführt.".format(pluginName)
 		else:
 			mymsg = "{0}\nSoll die Datenbank jetzt aktualisiert werden?".format(pluginName)
-		self.session.openWithCallback(self.updateDatabase,  MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=True)
+		self.session.openWithCallback(self.updateDatabase, MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=True)
 	
 	
 	def updateDatabase(self, canstart=True):
@@ -671,7 +671,7 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 	def askAddRecordimerNow(self):
 		self.togglePopUp(True)
 		mymsg = "{0}\nSollen alle automatischen Timer jetzt hinzugefügt werden?".format(pluginName)
-		self.session.openWithCallback(self.addRecordimerNow,  MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=True)
+		self.session.openWithCallback(self.addRecordimerNow, MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=True)
 	
 	
 	def addRecordimerNow(self, canstart=True):
@@ -684,14 +684,14 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 		self.togglePopUp(True)
 		self.includeAdded = False
 		mymsg = "{0}\nSky TV-Guide Datenbank aufräumen.\nSollen auch alle gemerkten Timereinträge aus der Datenbank entfernt werden?".format(pluginName)
-		self.session.openWithCallback(self.askCleanUpDatabaseGo,  MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=False)
+		self.session.openWithCallback(self.askCleanUpDatabaseGo, MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=False)
 		
 
 	def askCleanUpDatabaseGo(self,includeAdded=False):
 		self.togglePopUp(True)
 		self.includeAdded = includeAdded
 		mymsg = "{0}\nSky TV-Guide Datenbank jetzt leeren?".format(pluginName)
-		self.session.openWithCallback(self.cleanUpDatabase,  MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=False)
+		self.session.openWithCallback(self.cleanUpDatabase, MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=False)
 
 	
 	def cleanUpDatabase(self, cleanUp=False):

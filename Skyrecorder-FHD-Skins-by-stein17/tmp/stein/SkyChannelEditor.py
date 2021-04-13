@@ -37,7 +37,7 @@ class SkyChannelEditor(Screen):
 		
 		self.sky_chlist = buildSkyChannellist()
 
-		self["actions"]  = ActionMap(["OkCancelActions", "ShortcutActions", "ColorActions", "MenuActions"], {
+		self["actions"] = ActionMap(["OkCancelActions", "ShortcutActions", "ColorActions", "MenuActions"], {
 			"ok": self.keyOK,
 			"cancel": self.keyCancel,
 			"red": self.askDeleteChannels,
@@ -136,7 +136,7 @@ class SkyChannelEditor(Screen):
 		self.id_channel = self['channeledit'].getCurrent()[0][0]
 		self.last_index = self['channeledit'].getSelectionIndex()
 		mymsg = "Eintrag wirklich löschen?"
-		self.session.openWithCallback(self.deleteChannel,  MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=False)
+		self.session.openWithCallback(self.deleteChannel, MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=False)
 	
 	def deleteChannel(self,cleanUp=False):
 		if cleanUp is not True:
@@ -150,13 +150,13 @@ class SkyChannelEditor(Screen):
 		if exist == None:
 			return
 		mymsg = "Soll die Senderliste zurückgesetzt werden?\n\nHinweis:\nDie Liste wird bei einem Datenbankupdate\nneu erstellt, aber es müssen die Sendernamen neu überprüft werden."
-		self.session.openWithCallback(self.deleteChannels,  MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=False)
+		self.session.openWithCallback(self.deleteChannels, MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=False)
 	
 	def deleteChannels(self,cleanUp=False):
 		if cleanUp is not True:
 			return
 		sql.truncateTableChannel()
-		self.session.openWithCallback(self.keyCancel,  MessageBox, "Senderliste gelöscht.", MessageBox.TYPE_INFO, timeout=-1, default=False)
+		self.session.openWithCallback(self.keyCancel, MessageBox, "Senderliste gelöscht.", MessageBox.TYPE_INFO, timeout=-1, default=False)
 		
 	def keyCancel(self,cleanUp=False):
 		self.close()

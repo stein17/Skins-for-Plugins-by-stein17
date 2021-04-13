@@ -575,7 +575,7 @@ class SkyRecorderArchiv(Screen):
 				try:
 					#moviesize = os.path.getsize(moviefile)
 					moviesize = info.getInfoObject(sref_moviefile, iServiceInformation.sFileSize)
-					moviesize = "{0:.0f} MB".format(moviesize/(1024*1024))
+					moviesize = "{0:.0f} MB".format(moviesize / (1024 * 1024))
 				except Exception:
 					sys.exc_clear()
 					moviesize = ""
@@ -1067,11 +1067,11 @@ class SkyRecorderArchiv(Screen):
 					#dst_file = os.path.splitext(dst_file)[0] # remove the suffix
 					dst_file = src_dir + new_name
 					# build list of files
-					src_file_list = glob.glob(os.path.splitext(src_file)[0]+ ".*?")
+					src_file_list = glob.glob(os.path.splitext(src_file)[0] + ".*?")
 					for old_file in src_file_list:
 						parts = os.path.splitext(old_file)
 						if len(parts) > 1:
-							new_file = dst_file + os.path.splitext(parts[0])[1] +  parts[1]
+							new_file = dst_file + os.path.splitext(parts[0])[1] + parts[1]
 						else:
 							new_file = dst_file + parts[1]
 						if fileExists(old_file) and not fileExists(new_file):
@@ -1449,11 +1449,11 @@ class SkyRecorderArchiv(Screen):
 			dst_file = os.path.splitext(dst_file)[0] # remove the suffix
 			#dst_file = src_dir + new_name
 			# build list of files
-			src_file_list = glob.glob(os.path.splitext(src_file)[0]+ ".*?")
+			src_file_list = glob.glob(os.path.splitext(src_file)[0] + ".*?")
 			for old_file in src_file_list:
 				parts = os.path.splitext(old_file)
 				if len(parts) > 1:
-					new_file = dst_file + os.path.splitext(parts[0])[1] +  parts[1]
+					new_file = dst_file + os.path.splitext(parts[0])[1] + parts[1]
 				else:
 					new_file = dst_file + parts[1]
 				if fileExists(old_file) and not fileExists(new_file):

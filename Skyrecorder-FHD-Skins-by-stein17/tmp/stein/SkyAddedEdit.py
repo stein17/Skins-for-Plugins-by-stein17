@@ -33,7 +33,7 @@ class SkyAddedEdit(Screen):
 		pluginName = config.plugins.skyrecorder.pluginname.value
 		contentSize = config.plugins.skyrecorder.contentsize.value
 
-		self["actions"]  = ActionMap(["OkCancelActions", "ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions"], {
+		self["actions"] = ActionMap(["OkCancelActions", "ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions"], {
 			"cancel": self.keyCancel,
 			"green": self.keyDel,
 			"red": self.askDelAll,
@@ -114,7 +114,7 @@ class SkyAddedEdit(Screen):
 
 	def askDelAll(self):
 		mymsg = "Den kompletten Timerlauf jetzt löschen?"
-		self.session.openWithCallback(self.keyDelAll,  MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=False)
+		self.session.openWithCallback(self.keyDelAll, MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=False)
 
 
 	def keyDelAll(self,cleanUp=False):
