@@ -51,13 +51,13 @@ class SkyAddedEdit(Screen):
 		self.onLayoutFinish.append(self.readAdded)
 	
 	
-	def skyAddedEditListEntry(self,entry):
+	def skyAddedEditListEntry(self, entry):
 		if str(entry[5]) == "Hidden":
 			infostr = str(entry[5]) + ": " + str(entry[1]) + " - " + str(entry[2])
 		else:
 			#infostr = str(entry[5])
 			infostr = str(entry[5]) + " - " + str(entry[2])
-		return [entry,(eListboxPythonMultiContent.TYPE_TEXT, 0, 0, 1100, 50, 0, RT_HALIGN_LEFT, infostr)]
+		return [entry, (eListboxPythonMultiContent.TYPE_TEXT, 0, 0, 1100, 50, 0, RT_HALIGN_LEFT, infostr)]
 	
 	def readAdded(self):
 		try:
@@ -108,7 +108,7 @@ class SkyAddedEdit(Screen):
 		id_added = self['addededit'].getCurrent()[0][0]
 		id_eventslist = self['addededit'].getCurrent()[0][7]
 		self.last_index = self['addededit'].getSelectionIndex()
-		sql.resetAdded(id_added,id_eventslist)
+		sql.resetAdded(id_added, id_eventslist)
 		print "[skyrecorder] deleted id_added: %s" % id_added
 		self.readAdded()
 
@@ -117,7 +117,7 @@ class SkyAddedEdit(Screen):
 		self.session.openWithCallback(self.keyDelAll, MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=False)
 
 
-	def keyDelAll(self,cleanUp=False):
+	def keyDelAll(self, cleanUp=False):
 		if cleanUp is not True:
 			return
 		exist = self['addededit'].getCurrent()

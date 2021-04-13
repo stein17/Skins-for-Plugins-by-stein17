@@ -58,7 +58,7 @@ class SkyChannelEditor(Screen):
 		#self.onLayoutFinish.append(self.readChannellist)
 	
 	
-	def skyChannellistSelectListEntry(self,entry):
+	def skyChannellistSelectListEntry(self, entry):
 		# check, if channel_stb was found in servicelist
 		if entry[3]:
 			pic = "/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/plus.png"
@@ -86,14 +86,14 @@ class SkyChannelEditor(Screen):
 				
 		self.channellist = []
 
-		for (id_channel,channel,channel_stb,status,position,channel_id_sky) in sql.readChannelAll():
+		for (id_channel, channel, channel_stb, status, position, channel_id_sky) in sql.readChannelAll():
 			# check, if channel_stb was found in servicelist
 			if not channel_stb:
 				continue
 			if self.checkChannelByName(channel_stb):
-				self.channellist.append((id_channel,channel,channel_stb,True))
+				self.channellist.append((id_channel, channel, channel_stb, True))
 			else:
-				self.channellist.append((id_channel,channel,channel_stb,False))
+				self.channellist.append((id_channel, channel, channel_stb, False))
 
 		print "[skyrecorder] reload channellist."
 
@@ -103,7 +103,7 @@ class SkyChannelEditor(Screen):
 			
 	
 	def checkChannelByName(self, channel):
-		for (channelname,channelref) in self.sky_chlist:
+		for (channelname, channelref) in self.sky_chlist:
 			if channelname.lower() == channel.lower():
 				return True
 		return False
@@ -124,7 +124,7 @@ class SkyChannelEditor(Screen):
 		if not self.id_channel:
 			return
 		if word and len(word) > 0:
-			sql.updateChannelnameSTB(self.id_channel,word)
+			sql.updateChannelnameSTB(self.id_channel, word)
 			print "[skyrecorder] channel_stb changed: %s" % word
 		self.readChannellist()
 
@@ -138,7 +138,7 @@ class SkyChannelEditor(Screen):
 		mymsg = "Eintrag wirklich löschen?"
 		self.session.openWithCallback(self.deleteChannel, MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=False)
 	
-	def deleteChannel(self,cleanUp=False):
+	def deleteChannel(self, cleanUp=False):
 		if cleanUp is not True:
 			return
 		sql.deleteChannel(self.id_channel)
@@ -152,12 +152,12 @@ class SkyChannelEditor(Screen):
 		mymsg = "Soll die Senderliste zurückgesetzt werden?\n\nHinweis:\nDie Liste wird bei einem Datenbankupdate\nneu erstellt, aber es müssen die Sendernamen neu überprüft werden."
 		self.session.openWithCallback(self.deleteChannels, MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=False)
 	
-	def deleteChannels(self,cleanUp=False):
+	def deleteChannels(self, cleanUp=False):
 		if cleanUp is not True:
 			return
 		sql.truncateTableChannel()
 		self.session.openWithCallback(self.keyCancel, MessageBox, "Senderliste gelöscht.", MessageBox.TYPE_INFO, timeout=-1, default=False)
 		
-	def keyCancel(self,cleanUp=False):
+	def keyCancel(self, cleanUp=False):
 		self.close()
 

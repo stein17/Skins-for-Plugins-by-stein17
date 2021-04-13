@@ -63,7 +63,7 @@ class SkyGenreSelect(Screen, ConfigListScreen):
 		self.onLayoutFinish.append(self.readGenre)
 
 
-	def skyGenreSelectListEntry(self,entry):
+	def skyGenreSelectListEntry(self, entry):
 		if entry[1] == "True":
 			plus = "/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/plus.png"
 			return [entry,
@@ -101,10 +101,10 @@ class SkyGenreSelect(Screen, ConfigListScreen):
 		self.configlist = None
 		self.configlist = []
 		
-		for (genre,status,id_genregroup, id_genre, id_groups) in templist:
+		for (genre, status, id_genregroup, id_genre, id_groups) in templist:
 			#self.id_genregroup_list.append(id_genregroup)
-			self.configlist.append(getConfigListEntry("",ConfigSelection(default=id_groups, choices=sql.readJoindGroupsShort(id_genregroup))))
-			self.genreliste.append((genre,status,id_genregroup, id_genre, id_groups))
+			self.configlist.append(getConfigListEntry("", ConfigSelection(default=id_groups, choices=sql.readJoindGroupsShort(id_genregroup))))
+			self.genreliste.append((genre, status, id_genregroup, id_genre, id_groups))
 
 		print "[skyrecorder] reload genrelist."
 		self["config"].setList(self.configlist)

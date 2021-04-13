@@ -52,7 +52,7 @@ class SkySkipWordsSelect(Screen):
 		self.onLayoutFinish.append(self.readSkipWords)
 	
 	
-	def skySkipWordSelectListEntry(self,entry):
+	def skySkipWordSelectListEntry(self, entry):
 		if entry[1] == "True":
 			plus = "/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/plus.png"
 			return [entry,
@@ -77,8 +77,8 @@ class SkySkipWordsSelect(Screen):
 				return
 		
 		self.skipwordliste = []
-		for (skipword,status) in sql.readSkipSelect():
-			self.skipwordliste.append((skipword,status))
+		for (skipword, status) in sql.readSkipSelect():
+			self.skipwordliste.append((skipword, status))
 		print "[skyrecorder] reload skips."
 		self.skipwordliste.sort()
 		self.streamMenuList.setList(map(self.skySkipWordSelectListEntry, self.skipwordliste))

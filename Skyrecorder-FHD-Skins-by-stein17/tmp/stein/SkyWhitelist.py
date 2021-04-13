@@ -51,7 +51,7 @@ class SkyWhitelist(Screen):
 		self.onLayoutFinish.append(self.readWhitelist)
 	
 	
-	def skyWhitelistListEntry(self,entry):
+	def skyWhitelistListEntry(self, entry):
 		if entry[4] == "True":
 			pic = "/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/plus.png"
 		else:
@@ -75,8 +75,8 @@ class SkyWhitelist(Screen):
 				return
 		
 		self.whitelistliste = []
-		for (id_whitelist,id_channel,title,description,status) in sql.readWhitelist():
-			self.whitelistliste.append((id_whitelist,id_channel,title,description,status))
+		for (id_whitelist, id_channel, title, description, status) in sql.readWhitelist():
+			self.whitelistliste.append((id_whitelist, id_channel, title, description, status))
 		#self.whitelistliste.sort()
 		self.whitelistliste = sorted(self.whitelistliste, key=lambda x: x[2], reverse=False)
 		self.streamMenuList.setList(map(self.skyWhitelistListEntry, self.whitelistliste))
@@ -101,22 +101,22 @@ class SkyWhitelist(Screen):
 		self.id_whitelist = self['whitelist'].getCurrent()[0][0]
 		self.last_index = self['whitelist'].getSelectionIndex()
 		word = self['whitelist'].getCurrent()[0][2]
-		self.session.openWithCallback(self.editWord, VirtualKeyBoard, title=("Titel bearbeiten:"),text=word)
+		self.session.openWithCallback(self.editWord, VirtualKeyBoard, title=("Titel bearbeiten:"), text=word)
 		
 	def keyAdd(self):
 		exist = self['whitelist'].getCurrent()
 		if exist:
 			self.last_index = self['whitelist'].getSelectionIndex()
-		self.session.openWithCallback(self.addWord, VirtualKeyBoard, title=("Neuer Eintrag:"),text="")
+		self.session.openWithCallback(self.addWord, VirtualKeyBoard, title=("Neuer Eintrag:"), text="")
 
 	def addWord(self, word=None):
 		if word != None or word != "":
-			check_state = sql.addToWhitelist(None,word,None, status="True")
+			check_state = sql.addToWhitelist(None, word, None, status="True")
 		self.readWhitelist()
 	
 	def editWord(self, word=None):
 		if word != None or word != "":
-			sql.updateWhitelistEntry(self.id_whitelist,word)
+			sql.updateWhitelistEntry(self.id_whitelist, word)
 		self.readWhitelist()
 	
 	def keyDel(self):

@@ -54,7 +54,7 @@ class SkyChannelSelect(Screen):
 		self.onLayoutFinish.append(self.readChannels)
 	
 	
-	def skyChannelSelectListEntry(self,entry):
+	def skyChannelSelectListEntry(self, entry):
 		if entry[1] == "True":
 			plus = "/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/plus.png"
 			return [entry,
@@ -79,8 +79,8 @@ class SkyChannelSelect(Screen):
 				return
 		
 		self.channelliste = []
-		for (channel,status) in sql.readChannel():
-			self.channelliste.append((channel,status))
+		for (channel, status) in sql.readChannel():
+			self.channelliste.append((channel, status))
 		print "[skyrecorder] reload channelSelectListe."
 		self.channelliste.sort()
 		self.streamMenuList.setList(map(self.skyChannelSelectListEntry, self.channelliste))

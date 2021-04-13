@@ -67,8 +67,8 @@ config.plugins.skyrecorder.guide_days_to_scan = ConfigSelection(
 				("6", _("sechs Tage")),
 				("7", _("eine Woche")),
 				("14", _("zwei Wochen"))])
-config.plugins.skyrecorder.fromtime = ConfigInteger(00, (00,23))
-config.plugins.skyrecorder.totime = ConfigInteger(23, (00,23))
+config.plugins.skyrecorder.fromtime = ConfigInteger(00, (00, 23))
+config.plugins.skyrecorder.totime = ConfigInteger(23, (00, 23))
 config.plugins.skyrecorder.autoupdate_database = ConfigYesNo(default=False)
 config.plugins.skyrecorder.database_update_time = ConfigClock(default=((9 * 60 + 0) * 60))
 config.plugins.skyrecorder.anytime_skin = ConfigSelection(
@@ -100,10 +100,10 @@ config.plugins.skyrecorder.create_dirtree = ConfigYesNo(default=True)
 #config.plugins.skyrecorder.skydb = ConfigText(default=defaultmoviefolder + "skydb.db")
 config.plugins.skyrecorder.skydb = ConfigText(default=pluginfolder + "/skydb.db")
 config.plugins.skyrecorder.silent_timer_mode = ConfigYesNo(default=False)
-config.plugins.skyrecorder.timer_mode = ConfigSelection(default="0", choices=[("0", _("Aufnahme")),("1", _("Erinnerung"))])
+config.plugins.skyrecorder.timer_mode = ConfigSelection(default="0", choices=[("0", _("Aufnahme")), ("1", _("Erinnerung"))])
 config.plugins.skyrecorder.msgtimeout = ConfigInteger(3)
-config.plugins.skyrecorder.max_per_page = ConfigInteger(10,(1,9999))
-config.plugins.skyrecorder.mainlisttype = ConfigSelection(default="0", choices=[("0", _("einfach")),("1", _("erweitert"))])
+config.plugins.skyrecorder.max_per_page = ConfigInteger(10, (1, 9999))
+config.plugins.skyrecorder.mainlisttype = ConfigSelection(default="0", choices=[("0", _("einfach")), ("1", _("erweitert"))])
 # let us set maring_before and margin_after in the plugin itself
 # so we have better control of this values if the user change the system margins after adding timers
 try:
@@ -112,8 +112,8 @@ try:
 except Exception:
 	default_before = 0
 	default_after = 0
-config.plugins.skyrecorder.margin_before = ConfigInteger(default_before, (00,99))
-config.plugins.skyrecorder.margin_after = ConfigInteger(default_after, (00,99))
+config.plugins.skyrecorder.margin_before = ConfigInteger(default_before, (00, 99))
+config.plugins.skyrecorder.margin_after = ConfigInteger(default_after, (00, 99))
 # let us choose from a list of ordering options for the main screen
 config.plugins.skyrecorder.main_list_order = ConfigSelection(
 			default="channel",
@@ -162,7 +162,7 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 		self.popUpScreen = self.session.instantiateDialog(SkyHelpAll)
 		self.popUpIsVisible = False
 		
-		self["actions"] = ActionMap(["OkCancelActions","ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions","HelpActions"], {
+		self["actions"] = ActionMap(["OkCancelActions", "ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions", "HelpActions"], {
 			"ok": self.keyOK,
 			"cancel": self.keyCancel,
 			"nextBouquet": self.log_up,
@@ -176,7 +176,7 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 			"displayHelp": self.togglePopUp
 		}, -1)
 		
-		self["disabled_actions"] = ActionMap(["OkCancelActions","ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions","HelpActions"],
+		self["disabled_actions"] = ActionMap(["OkCancelActions", "ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions", "HelpActions"],
 		{
 			"ok": self.keyCancel,
 			"cancel": self.keyCancel,
@@ -267,7 +267,7 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 	def ignoreKey(self):
 		pass
 
-	def togglePopUp(self,hide_me=False):
+	def togglePopUp(self, hide_me=False):
 		if self.popUpIsVisible or hide_me:
 			self.popUpScreen.hide()
 			self.popUpIsVisible = False
@@ -413,7 +413,7 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 			self.session.openWithCallback(self.changedEntry, SkyGenreSelect)
 
 
-	def resetLogfile(self,canstart=True):
+	def resetLogfile(self, canstart=True):
 		if not canstart:
 			return
 		print "[skyrecorder] reset logfile."
@@ -422,7 +422,7 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 		self.changedEntry()
 		self.startReadLog()
 		
-	def cleanupTMDbData(self,canstart=True):
+	def cleanupTMDbData(self, canstart=True):
 		if not canstart:
 			return
 		print "[skyrecorder] cleanup skydb.db TMDb-data"
@@ -430,7 +430,7 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 		self.changedEntry()
 		self.startReadLog()
 		
-	def skydbVacuum(self,canstart=True):
+	def skydbVacuum(self, canstart=True):
 		if not canstart:
 			return
 		print "[skyrecorder] running VACUUM on skydb.db"
@@ -438,7 +438,7 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 		self.changedEntry()
 		self.startReadLog()
 	
-	def buildDirTree(self,my_base_folder=None):
+	def buildDirTree(self, my_base_folder=None):
 		if not my_base_folder:
 			return False
 		
@@ -519,11 +519,11 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 					self.session.open(MessageBox, _("{0}\nKonnte den Verzeichnisbaum für die Aufnahmen nicht erstellen.".format(pluginName)), MessageBox.TYPE_INFO, timeout=-1)
 			self.changedEntry()
 	
-	def askOverwriteSkydb(self,dbpath):
-		mymsg = "{0}\nEs befindet sich schon eine skydb.db in '{1}.'\nSoll sie überschrieben werden?".format(pluginName,dbpath)
+	def askOverwriteSkydb(self, dbpath):
+		mymsg = "{0}\nEs befindet sich schon eine skydb.db in '{1}.'\nSoll sie überschrieben werden?".format(pluginName, dbpath)
 		self.session.openWithCallback(self.confirmOverwriteSkydb, MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=True)
 	
-	def confirmOverwriteSkydb(self,result):
+	def confirmOverwriteSkydb(self, result):
 		return result
 	
 	def gotSkydbFolder(self, res):
@@ -553,10 +553,10 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 					except Exception:
 						sys.exc_clear()
 						from SkyCreateDatabase import buildSkydb
-						retval = buildSkydb(target=new_db,rebuild=True,backup=False)
+						retval = buildSkydb(target=new_db, rebuild=True, backup=False)
 				else:
 					from SkyCreateDatabase import buildSkydb
-					retval = buildSkydb(target=new_db,rebuild=True,backup=False)
+					retval = buildSkydb(target=new_db, rebuild=True, backup=False)
 			
 			if retval:
 				config.plugins.skyrecorder.skydb.value = new_db
@@ -658,14 +658,14 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 		try:
 			if SkyGetTvGuide.instance.refreshTimer:
 				#SkyGetTvGuide.instance.refreshTimer.stop()
-				SkyGetTvGuide.instance.start(oneShot=True,no_after_event=True)
+				SkyGetTvGuide.instance.start(oneShot=True, no_after_event=True)
 				#SkyGetTvGuide.instance.refreshTimer.start()
 			else:
-				SkyGetTvGuide(self.session, oneShot=False,no_after_event=True)
-				SkyGetTvGuide.instance.start(oneShot=True,no_after_event=True)
+				SkyGetTvGuide(self.session, oneShot=False, no_after_event=True)
+				SkyGetTvGuide.instance.start(oneShot=True, no_after_event=True)
 		except AttributeError:
 			SkyGetTvGuide(self.session, oneShot=False, no_after_event=True)
-			SkyGetTvGuide.instance.start(oneShot=True,no_after_event=True)
+			SkyGetTvGuide.instance.start(oneShot=True, no_after_event=True)
 
 	
 	def askAddRecordimerNow(self):
@@ -677,7 +677,7 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 	def addRecordimerNow(self, canstart=True):
 		if not canstart:
 			return
-		SkyRunAutocheck(self.session,no_after_event=True)
+		SkyRunAutocheck(self.session, no_after_event=True)
 	
 
 	def askCleanUpDatabase(self):
@@ -687,7 +687,7 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 		self.session.openWithCallback(self.askCleanUpDatabaseGo, MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=False)
 		
 
-	def askCleanUpDatabaseGo(self,includeAdded=False):
+	def askCleanUpDatabaseGo(self, includeAdded=False):
 		self.togglePopUp(True)
 		self.includeAdded = includeAdded
 		mymsg = "{0}\nSky TV-Guide Datenbank jetzt leeren?".format(pluginName)
@@ -727,7 +727,7 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 		lt = time.localtime()
 		datum = time.strftime("%d.%m.%Y - %H:%M:%S", lt)
 		with open(self.sky_log_path, "a") as write_log:
-			write_log.write('"%s - %s"\n' % (datum,text))
+			write_log.write('"%s - %s"\n' % (datum, text))
 	
 	def keyCancel(self):
 		if self.popUpIsVisible:
