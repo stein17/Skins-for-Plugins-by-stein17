@@ -10,7 +10,8 @@ from Components.Button import Button
 from Components.Label import Label
 from Tools.LoadPixmap import LoadPixmap
 from Components.config import config, KEY_LEFT, KEY_RIGHT, NoSave, getConfigListEntry, ConfigSelection
-import re, shutil
+import re
+import shutil
 import os
 import sys
 
