@@ -18,6 +18,7 @@ import sys
 from SkyMainFunctions import getPluginPath
 from SkySql import *
 
+
 class SkyAddedEdit(Screen):
 	
 	def __init__(self, session):
@@ -39,7 +40,6 @@ class SkyAddedEdit(Screen):
 			"red": self.askDelAll,
 		}, -1)
 		
-		
 		self.addededit_list = []
 		self.streamMenuList = MenuList([], enableWrapAround=True, content=eListboxPythonMultiContent)
 		self.streamMenuList.l.setFont(0, gFont('Regular', contentSize))
@@ -49,7 +49,6 @@ class SkyAddedEdit(Screen):
 		self.last_index = 0	
 	
 		self.onLayoutFinish.append(self.readAdded)
-	
 	
 	def skyAddedEditListEntry(self, entry):
 		if str(entry[5]) == "Hidden":
@@ -115,7 +114,6 @@ class SkyAddedEdit(Screen):
 	def askDelAll(self):
 		mymsg = "Den kompletten Timerlauf jetzt löschen?"
 		self.session.openWithCallback(self.keyDelAll, MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=False)
-
 
 	def keyDelAll(self, cleanUp=False):
 		if cleanUp is not True:

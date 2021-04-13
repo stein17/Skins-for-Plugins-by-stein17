@@ -19,6 +19,7 @@ import sys
 from SkyMainFunctions import getPluginPath, buildSkyChannellist
 from SkySql import *
 
+
 class SkyChannelEditor(Screen):
 	
 	def __init__(self, session, last_index):
@@ -44,7 +45,6 @@ class SkyChannelEditor(Screen):
 			"green": self.askDeleteChannel
 		}, -1)
 		
-		
 		self.channellist = []
 		self.streamMenuList = MenuList([], enableWrapAround=True, content=eListboxPythonMultiContent)
 		self.streamMenuList.l.setFont(0, gFont('Regular', 32))
@@ -56,7 +56,6 @@ class SkyChannelEditor(Screen):
 				
 		self.onShown.append(self.readChannellist)
 		#self.onLayoutFinish.append(self.readChannellist)
-	
 	
 	def skyChannellistSelectListEntry(self, entry):
 		# check, if channel_stb was found in servicelist
@@ -73,7 +72,6 @@ class SkyChannelEditor(Screen):
 				(eListboxPythonMultiContent.TYPE_TEXT, 525, 0, 550, 45, 0, RT_HALIGN_LEFT, str(entry[2]))
 				]
 
-	
 	def readChannellist(self):
 		try:
 			sql.cur.execute('SELECT SQLITE_VERSION()')
@@ -101,7 +99,6 @@ class SkyChannelEditor(Screen):
 		if self.last_index < len(self.channellist):
 			self['channeledit'].moveToIndex(self.last_index)
 			
-	
 	def checkChannelByName(self, channel):
 		for (channelname, channelref) in self.sky_chlist:
 			if channelname.lower() == channel.lower():
@@ -119,7 +116,6 @@ class SkyChannelEditor(Screen):
 			return
 		self.session.openWithCallback(self.changeChannelName, VirtualKeyBoard, title=("Sendername eingeben, wie er\nin der STB-Kanalliste benannt ist:"), text=channel_stb)
 
-
 	def changeChannelName(self, word):
 		if not self.id_channel:
 			return
@@ -127,7 +123,6 @@ class SkyChannelEditor(Screen):
 			sql.updateChannelnameSTB(self.id_channel, word)
 			print "[skyrecorder] channel_stb changed: %s" % word
 		self.readChannellist()
-
 
 	def askDeleteChannel(self):
 		exist = self['channeledit'].getCurrent()
@@ -143,7 +138,6 @@ class SkyChannelEditor(Screen):
 			return
 		sql.deleteChannel(self.id_channel)
 		self.readChannellist()
-
 
 	def askDeleteChannels(self):
 		exist = self['channeledit'].getCurrent()

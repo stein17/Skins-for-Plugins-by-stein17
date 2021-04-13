@@ -53,7 +53,6 @@ class SkyChannelSelect(Screen):
 		
 		self.onLayoutFinish.append(self.readChannels)
 	
-	
 	def skyChannelSelectListEntry(self, entry):
 		if entry[1] == "True":
 			plus = "/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/plus.png"
@@ -88,7 +87,6 @@ class SkyChannelSelect(Screen):
 			self['channelselect'].moveToIndex(self.last_index)
 			#self['channelselect'].selectionChanged()
 		
-	
 	def keyChange(self):
 		print "change"
 		self.last_index = self['channelselect'].getSelectionIndex()
@@ -104,7 +102,6 @@ class SkyChannelSelect(Screen):
 		print channel_auswahl
 		sql.changeChannel(channel_auswahl)
 		self.readChannels()
-		
 		
 	def keyCancel(self):
 		self.close()

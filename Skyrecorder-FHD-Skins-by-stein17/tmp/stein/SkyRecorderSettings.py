@@ -143,7 +143,6 @@ config.plugins.skyrecorder.apikey = ConfigText("00000000000000000000000000000000
 ### end config
 
 
-
 class SkyRecorderSettings(Screen, ConfigListScreen):
 	
 	def __init__(self, session, firstRun=False):
@@ -200,7 +199,6 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 		self.tempTimer = None
 		self.onLayoutFinish.append(self.startReadLog)
 		#self.onLayoutFinish.append(self.readLog)
-		
 		
 	def createConfigList(self):
 		self.configlist = []
@@ -263,7 +261,6 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 		self.skydb_vacuum = getConfigListEntry("Datenbank optimieren", config.plugins.skyrecorder.fake_entry)
 		self.configlist.append(self.skydb_vacuum)
 		
-	
 	def ignoreKey(self):
 		pass
 
@@ -283,7 +280,6 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 		self.popUpScreen.loadHelpText()
 		self.popUpIsVisible = True
 		
-
 	def startReadLog(self):
 		if not self.tempTimer:
 			self.tempTimer = eTimer()
@@ -291,7 +287,6 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 		self.tempTimer.stop()
 		self.tempTimer.start(1000, False)
 		
-	
 	def fullLog(self):
 		self.readLog(10000)
 		
@@ -320,7 +315,6 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 			self["log"].setText(text)
 			rawData = None
 			text = None
-
 
 	def changeTimer(self):
 		self.startReadLog()
@@ -360,27 +354,21 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 				# was never running
 				print "[skyrecorder] changeTimer did nothing"
 
-	
 	def log_up(self):
 		self["log"].pageUp()
-
 
 	def log_down(self):
 		self["log"].pageDown()
 	
-	
 	def help_page_up(self):
 		self.popUpScreen["text"].pageUp()
-
 
 	def help_page_down(self):
 		self.popUpScreen["text"].pageDown()
 	
-	
 	def readAdded(self):
 		self.session.openWithCallback(self.changedEntry, SkyAddedEdit)
 		
-	
 	def keyOK(self):
 		self.togglePopUp(True)
 		if self["config"].getCurrent() == self.get_anytimefolder:
@@ -411,7 +399,6 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 			
 		elif self["config"].getCurrent() == self.edit_genrelist:
 			self.session.openWithCallback(self.changedEntry, SkyGenreSelect)
-
 
 	def resetLogfile(self, canstart=True):
 		if not canstart:
@@ -572,11 +559,9 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 				return
 			self.changedEntry()
 
-
 	def changedEntry(self):
 		self.createConfigList()
 		self["config"].setList(self.configlist)
-
 
 	def saveSettings(self):
 		self.togglePopUp(True)
@@ -609,7 +594,6 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 
 		self.close()
 
-
 	def killDatabaseUpdate(self):
 		try:
 			if SkyGetTvGuide.instance:
@@ -625,7 +609,6 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 			self.session.open(MessageBox, _("{0}\n{1}".format(pluginName, e)), MessageBox.TYPE_ERROR, timeout=-1)
 			sys.exc_clear()
 
-		
 	def tryToStopDatabseUpdate(self, retval=True):
 		if retval:
 			self.killDatabaseUpdate()
@@ -649,7 +632,6 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 			mymsg = "{0}\nSoll die Datenbank jetzt aktualisiert werden?".format(pluginName)
 		self.session.openWithCallback(self.updateDatabase, MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=True)
 	
-	
 	def updateDatabase(self, canstart=True):
 		if not canstart:
 			return
@@ -667,33 +649,28 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 			SkyGetTvGuide(self.session, oneShot=False, no_after_event=True)
 			SkyGetTvGuide.instance.start(oneShot=True, no_after_event=True)
 
-	
 	def askAddRecordimerNow(self):
 		self.togglePopUp(True)
 		mymsg = "{0}\nSollen alle automatischen Timer jetzt hinzugefügt werden?".format(pluginName)
 		self.session.openWithCallback(self.addRecordimerNow, MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=True)
-	
 	
 	def addRecordimerNow(self, canstart=True):
 		if not canstart:
 			return
 		SkyRunAutocheck(self.session, no_after_event=True)
 	
-
 	def askCleanUpDatabase(self):
 		self.togglePopUp(True)
 		self.includeAdded = False
 		mymsg = "{0}\nSky TV-Guide Datenbank aufräumen.\nSollen auch alle gemerkten Timereinträge aus der Datenbank entfernt werden?".format(pluginName)
 		self.session.openWithCallback(self.askCleanUpDatabaseGo, MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=False)
 		
-
 	def askCleanUpDatabaseGo(self, includeAdded=False):
 		self.togglePopUp(True)
 		self.includeAdded = includeAdded
 		mymsg = "{0}\nSky TV-Guide Datenbank jetzt leeren?".format(pluginName)
 		self.session.openWithCallback(self.cleanUpDatabase, MessageBox, _(mymsg), MessageBox.TYPE_YESNO, timeout=-1, default=False)
 
-	
 	def cleanUpDatabase(self, cleanUp=False):
 		if cleanUp is not True:
 			return

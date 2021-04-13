@@ -43,6 +43,7 @@ from SkyTheMovieDB import SkyTheMovieDB
 #MEDIAFILES_MOVIE = ("ts", "avi", "divx", "mpg", "mpeg", "mkv", "mp4", "mov", "iso")
 MEDIAFILES_MOVIE = ("ts")
 
+
 class SkyRecorderArchiv(Screen):
 
 	def __init__(self, session):
@@ -253,7 +254,6 @@ class SkyRecorderArchiv(Screen):
 		self.onLayoutFinish.append(self.getGenreList)
 		self['movieselect'].onSelectionChanged.append(self.showDetails)
 	
-	
 	def ignoreKey(self):
 		return
 	
@@ -392,12 +392,10 @@ class SkyRecorderArchiv(Screen):
 			(eListboxPythonMultiContent.TYPE_TEXT, 840, 0, 220, 40, 0, RT_HALIGN_LEFT, entry[4])
 			]
 			
-	
 	def infoSelectSearchType(self, entry):
 		return [entry,
 			(eListboxPythonMultiContent.TYPE_TEXT, 5, 0, 1060, 40, 0, RT_HALIGN_CENTER, str(entry))
 			]
-
 
 	def showDetails(self):
 		self['handlung'].setText(" ")
@@ -472,7 +470,6 @@ class SkyRecorderArchiv(Screen):
 			self['handlung'].setText(filminfo)
 			self['name'].setText(title)
 	
-	
 	def ShowCover(self, image_path):
 		if fileExists(image_path):
 			#self.session.open(MessageBox, "show_cover", MessageBox.TYPE_INFO, timeout=3)
@@ -509,7 +506,6 @@ class SkyRecorderArchiv(Screen):
 				break
 		
 		self.loadFiles(my_dirs, my_group)
-
 
 	def loadFiles(self, my_dirs=None, my_group="A-Z"):
 		
@@ -619,7 +615,6 @@ class SkyRecorderArchiv(Screen):
 			self.showMovieList.setList(map(self.skyAnytimeMovieListEntry, self.movielist))
 			self.keySwitchList(set_list="movieselect")
 
-	
 	def getGenreList(self):
 		# get groupnames
 		self.groupnames = []
@@ -657,7 +652,6 @@ class SkyRecorderArchiv(Screen):
 				self["genreselect"].selectionEnabled(1)
 				self.currentList = "genreselect"
 
-		
 	def keyPageDown(self):
 		if len(self.movielist) < 1:
 			return
@@ -689,13 +683,11 @@ class SkyRecorderArchiv(Screen):
 			return	
 		self[self.currentList].up()
 
-
 	def keyDown(self):
 		exist = self[self.currentList].getCurrent()
 		if exist == None:
 			return	
 		self[self.currentList].down()
-
 
 	def popUpLeft(self):
 		exist = self["searchlist"].getCurrent()
@@ -715,7 +707,6 @@ class SkyRecorderArchiv(Screen):
 			return	
 		self["searchlist"].up()
 
-
 	def popUpDown(self):
 		exist = self["searchlist"].getCurrent()
 		if exist == None:
@@ -728,7 +719,6 @@ class SkyRecorderArchiv(Screen):
 	def movieinfoUp(self):
 		self['movieinfo'].up()
 		
-	
 	def keyBackTo(self):
 		if not self.searchResultListSerien or not self.sTitle:
 			return
@@ -800,7 +790,6 @@ class SkyRecorderArchiv(Screen):
 		self.toggleSearchList(True, "result")
 		self.getEpisodenListeSerien(sUrl=url, sTitle=title)
 
-	
 	def getSearchResultListSerien(self, title=None, searchResultListSerien=None):
 		if not title:
 			return
@@ -829,7 +818,6 @@ class SkyRecorderArchiv(Screen):
 				self.toggleSearchList(True, "result")
 				self.getEpisodenListeSerien(sUrl=url, sTitle=title)
 		return
-	
 	
 	def getEpisodenListeSerien(self, sUrl=None, sTitle=None, episodenListeSerien=None):
 		if sTitle:
@@ -876,7 +864,6 @@ class SkyRecorderArchiv(Screen):
 			self.toggleSearchList(False)
 		return
 
-	
 	def searchSerienInfo(self):
 		exist = self['movieselect'].getCurrent()
 		if exist == None:
@@ -953,7 +940,6 @@ class SkyRecorderArchiv(Screen):
 		info_title = "Episodenname anpassen für:\n{0}".format(title)
 		self.session.openWithCallback(self.doEditResultList, VirtualKeyBoard, title=info_title, text=desc)
 			
-	
 	def doEditResultList(self, newdesc=None):
 		if not newdesc or len(newdesc) < 1:
 			return
@@ -989,7 +975,6 @@ class SkyRecorderArchiv(Screen):
 			self.local_glob_list[self.searchlist_idx][3] = newdesc
 			self.getEpisodenListeSerien(episodenListeSerien=self.episodenListeSerien)
 			self['searchlist'].moveToIndex(self.searchlist_idx)
-	
 	
 	def updateMetadata(self, datatext=None, datafield=None, moviefile=None):
 		if not datatext or len(datatext) < 1:
@@ -1044,10 +1029,8 @@ class SkyRecorderArchiv(Screen):
 		self.searchList.setList(map(self.infoResultListEntry, self.resultlist))
 		self['searchlist'].moveToIndex(idx)
 		
-	
 	def doRename(self):
 		self.session.openWithCallback(self.gotDestination, MessageBox, "Sollen die ausgewählten Dateien jetzt umbenannt werden?", default=True)
-	
 	
 	def gotDestination(self, res):
 		if res:
@@ -1083,7 +1066,6 @@ class SkyRecorderArchiv(Screen):
 			self['movieselect'].moveToIndex(idx)
 			self.toggleSearchList(False)
 	
-	
 	def keyBlue(self):
 		self.close(self.return_state)
 
@@ -1108,7 +1090,6 @@ class SkyRecorderArchiv(Screen):
 				print "Aufnahme nicht vorhanden."
 				message = self.session.open(MessageBox, _("Die Aufnahme ist noch nicht vorhanden.\n'{0}'".format(file)), MessageBox.TYPE_INFO, timeout=-1)
 			
-			
 	def play(self, title, file):
 		sref = eServiceReference(1, 0, file)
 		sref.setName(title)
@@ -1117,7 +1098,6 @@ class SkyRecorderArchiv(Screen):
 	
 	def leavePlayerForced(self):
 		self.mp.leavePlayerConfirmed([True, "quit"])
-	
 	
 	def movieinfoCancel(self):
 		self['movieinfo_bg'].hide()
@@ -1137,7 +1117,6 @@ class SkyRecorderArchiv(Screen):
 		else:
 			self.close(self.return_state)
 		
-	
 	def deleteFile(self):
 		if self.currentList == "movieselect":
 			self.service = self['movieselect'].getCurrent()[0][4]
@@ -1194,7 +1173,6 @@ class SkyRecorderArchiv(Screen):
 		else:
 			self.getMyDirs(self.anytimefolder, 3, self.genre_auswahl)
 
-	
 	def checkTimerState(self, service):
 		if not service:
 			return None
@@ -1210,8 +1188,8 @@ class SkyRecorderArchiv(Screen):
 							return timer
 		return None
 	
-	
 	# alternate infoscreen taken from MovieSelection
+
 	def showEventInformation(self):
 		from Screens.EventView import EventViewSimple
 		from ServiceReference import ServiceReference
@@ -1229,7 +1207,6 @@ class SkyRecorderArchiv(Screen):
 		if evt:
 			self.session.open(EventViewSimple, evt, ServiceReference(self.service))
 			
-	
 	def movieinfoListEntry(self, entry):		
 		return [entry,
 			(eListboxPythonMultiContent.TYPE_TEXT, 5, 0, 880, 40, 0, RT_HALIGN_LEFT, entry[2]),
@@ -1313,7 +1290,6 @@ class SkyRecorderArchiv(Screen):
 		self.getMovieSearchList(searchlist=res, id_events=self.id_events, sky_title=title)
 		return
 			
-	
 	def getMovieSearchList(self, searchlist=None, id_events=0, sky_title=""):
 		#if not searchlist or len(searchlist) < 1:
 		#	return
@@ -1340,7 +1316,6 @@ class SkyRecorderArchiv(Screen):
 		if myList and len(myList) > 0:
 			self['movieinfo'].moveToIndex(sel_idx)
 		
-
 	def getMovieInfo(self, movieURL=None, movieTitle="", posterUrl="", id_events=0, sky_title=""):
 		if not movieURL:
 			return False
@@ -1420,8 +1395,6 @@ class SkyRecorderArchiv(Screen):
 		self['handlung'].setText("%s" % error)
 		print error
 		
-	
-	
 	def renameFile(self, filepath=None, serviceref=None, title=None, year=None):
 		if not filepath or not serviceref or not title:
 			exist = self['movieselect'].getCurrent()

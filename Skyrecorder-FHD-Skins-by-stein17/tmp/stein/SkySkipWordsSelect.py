@@ -18,6 +18,7 @@ import sys
 from SkyMainFunctions import getPluginPath
 from SkySql import *
 
+
 class SkySkipWordsSelect(Screen):
 	
 	def __init__(self, session):
@@ -51,7 +52,6 @@ class SkySkipWordsSelect(Screen):
 	
 		self.onLayoutFinish.append(self.readSkipWords)
 	
-	
 	def skySkipWordSelectListEntry(self, entry):
 		if entry[1] == "True":
 			plus = "/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/plus.png"
@@ -82,7 +82,6 @@ class SkySkipWordsSelect(Screen):
 		print "[skyrecorder] reload skips."
 		self.skipwordliste.sort()
 		self.streamMenuList.setList(map(self.skySkipWordSelectListEntry, self.skipwordliste))
-	
 	
 	def keyOK(self):
 		exist = self['skipwordselect'].getCurrent()

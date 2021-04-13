@@ -137,7 +137,6 @@ class SkyRecorderMainScreen(Screen):
 		self["popup_actions"].setEnabled(False)
 		self["movieinfo_actions"].setEnabled(False)
 
-				
 		self['title'] = Label(self.pluginName)
 		
 		self['name'] = Label("lade Sky TV-Guide ...")
@@ -233,12 +232,10 @@ class SkyRecorderMainScreen(Screen):
 			if not re.match('^/usr/.*', skydb_path, re.I) and not (skydb_path == (self.path_to_me + "/skydb.db")):
 				self.show_skydb_warning = False
 
-	
 	def delayedGetMainEventList(self, infotext="lade ..."):
 		self['title'].setText(infotext)
 		self.tempTimer.start(50, True)
 
-	
 	def getTimerlist(self):
 	
 		self.timerList = SkyTimerRec.getTimersList()
@@ -320,7 +317,6 @@ class SkyRecorderMainScreen(Screen):
 			self.listtype = 1
 			self.streamMenuList.l.setFont(1, gFont('Regular', 28))
 			self.streamMenuList.l.setItemHeight(65)
-		
 		
 		# events.id_events, events.title, events.description,
 		# events.id_channel, genre.genre, genre.id_genre, events.status,channel.channel,
@@ -464,7 +460,6 @@ class SkyRecorderMainScreen(Screen):
 			
 		self.keyLocked = False
 
-
 	def skyAnytimeListEntry(self, entry):
 		icon = None
 		new = None
@@ -508,7 +503,6 @@ class SkyRecorderMainScreen(Screen):
 			(eListboxPythonMultiContent.TYPE_TEXT, 900, 0, 270, 40, 0, RT_HALIGN_LEFT, desc)
 			]
 	
-	
 	def dataError(self, error):
 		self.clearFilmInfoScreen()
 		self['name'].setText("Konnte Sky TV-Guide nicht laden.")
@@ -529,7 +523,6 @@ class SkyRecorderMainScreen(Screen):
 			star = "star{0}".format(n)
 			self[star].hide()
 
-				
 	def loadDetailsAndCover(self):
 		try:
 			id_events = self['filmliste'].getCurrent()[0][0]
@@ -659,7 +652,6 @@ class SkyRecorderMainScreen(Screen):
 				if int(is_ut) > 0:
 					self['sub'].show()
 
-		
 	def downloadImage(self, data, imagedata, id_events):
 		if id_events:
 			#time.sleep(0.123)
@@ -696,8 +688,8 @@ class SkyRecorderMainScreen(Screen):
 				self["poster"].instance.setPixmap(ptr)
 				self["poster"].show()
 		
-
 	# button actions
+
 	def nextGroup(self):
 		self.current_group_idx += 1
 		if self.current_group_idx > len(self.groupnames) - 1:
@@ -783,7 +775,6 @@ class SkyRecorderMainScreen(Screen):
 				
 		self.delayedGetMainEventList()
 
-
 	def deleteEvent(self):
 		if self.keyLocked:
 			return
@@ -809,7 +800,6 @@ class SkyRecorderMainScreen(Screen):
 				sql.addAdded(title, desc, id_channel, id_genre, 0, 0, '-', '-', 'Hidden', 0, 0)
 			self.delayedGetMainEventList()
 			
-			
 	def refreshCover(self, id_events=None, coverurl=None):
 		if self.keyLocked:
 			return
@@ -828,7 +818,6 @@ class SkyRecorderMainScreen(Screen):
 		sql.deleteEventCoverByIdEvents(id_events)
 		self.delayedGetMainEventList("lade Bild neu ...")
 
-
 	def toggleIsNew(self):
 		if self.keyLocked:
 			return
@@ -843,7 +832,6 @@ class SkyRecorderMainScreen(Screen):
 		self.current_page_number = 1
 		self.delayedGetMainEventList()
 		
-	
 	def addToWhitelist(self):
 		if self.keyLocked:
 			return
@@ -867,10 +855,8 @@ class SkyRecorderMainScreen(Screen):
 			return
 		self.session.openWithCallback(self.delayedGetMainEventList, SkyWhitelist)
 	
-
 	def skipListe(self):
 		self.session.openWithCallback(self.delayedGetMainEventList, SkySkipWordsSelect)
-
 
 	def skysettings(self):
 		self.read_system_timers = True
@@ -907,7 +893,6 @@ class SkyRecorderMainScreen(Screen):
 		self.current_page_number += 1
 		self.delayedGetMainEventList()
 		
-		
 	def keyUp(self):
 		if self.keyLocked:
 			return
@@ -919,7 +904,6 @@ class SkyRecorderMainScreen(Screen):
 			return
 		self['filmliste'].down()
 		self.last_index = self['filmliste'].getSelectionIndex()
-	
 	
 	def popUpPageDown(self):
 		self['filmliste_event'].pageDown()
@@ -990,7 +974,6 @@ class SkyRecorderMainScreen(Screen):
 		self.popUpIsVisible = True
 		self.getTimerEventList()
 
-	
 	def timerCallback(self, status=True):
 		self.read_system_timers = status
 		self.delayedGetMainEventList()
@@ -1018,7 +1001,6 @@ class SkyRecorderMainScreen(Screen):
 		else:
 			self.close()
 			
-	
 	def skyAnytimerListEntry(self, entry):		
 		if entry[5] == "True":
 			icon = "/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/neu_timer.png"
@@ -1044,7 +1026,6 @@ class SkyRecorderMainScreen(Screen):
 			(eListboxPythonMultiContent.TYPE_TEXT, 830, 0, 350, 40, 0, RT_HALIGN_LEFT, entry[4])
 			] 
 					
-			
 	def getTimerEventList(self):
 		# eventslist.dayname,eventslist.datum, eventslist.starttime, eventslist.endtime,
 		# channel.channel, eventslist.status, events.title, events.description, eventslist.id_eventslist
@@ -1074,7 +1055,6 @@ class SkyRecorderMainScreen(Screen):
 		for (channelname, channelref) in self.sky_chlist:
 			if channelname.lower() == channel.lower():
 				return channelref
-	
 	
 	def getEPGevent(self, query, channeref, title, starttime):
 		if not query or len(query) != 2:
@@ -1225,7 +1205,6 @@ class SkyRecorderMainScreen(Screen):
 			else:
 				message = self.session.open(MessageBox, _("Fehler!\n%s") % (result["message"]), MessageBox.TYPE_INFO, timeout=-1)
 				
-	
 	def customSearchMovieInfo(self):
 		pass
 		#exist = self['filmliste'].getCurrent()
@@ -1235,7 +1214,6 @@ class SkyRecorderMainScreen(Screen):
 		#	title = ""
 		#info_title = "Film suchen"
 		#self.session.openWithCallback(self.gotMovieSearchName, VirtualKeyBoard, title = info_title, text = title)
-	
 	
 	def gotMovieSearchName(self, title):
 		if not title or len(title) < 3:
@@ -1326,7 +1304,6 @@ class SkyRecorderMainScreen(Screen):
 		self.getMovieSearchList(searchlist=res, id_events=self.id_events, sky_title=title)
 		return
 			
-	
 	def getMovieSearchList(self, searchlist=None, id_events=0, sky_title=""):
 		#if not searchlist or len(searchlist) < 1:
 		#	return
@@ -1337,7 +1314,6 @@ class SkyRecorderMainScreen(Screen):
 			myList.append([t_row["m_movie_url"], t_row["m_title_org"], t_row["m_title"], t_row["m_date"], t_row["m_id_movie"], t_row["m_poster_url"], id_events, sky_title])
 		self.movieinfoSelectList.setList(map(self.movieinfoListEntry, myList))
 		
-
 	def getMovieInfo(self, movieURL=None, movieTitle="", posterUrl="", id_events=0, sky_title=""):
 		if not movieURL:
 			return

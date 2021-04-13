@@ -53,7 +53,6 @@ class SkyGenreSelect(Screen, ConfigListScreen):
 			#"red" : self.keyDel,
 		}, -1)
 
-
 		self.channelliste = []
 		self.streamMenuList = MenuList([], enableWrapAround=True, content=eListboxPythonMultiContent)
 		self.streamMenuList.l.setFont(0, gFont('Regular', 30))
@@ -61,7 +60,6 @@ class SkyGenreSelect(Screen, ConfigListScreen):
 		self['channelselect'] = self.streamMenuList
 		
 		self.onLayoutFinish.append(self.readGenre)
-
 
 	def skyGenreSelectListEntry(self, entry):
 		if entry[1] == "True":
@@ -110,20 +108,17 @@ class SkyGenreSelect(Screen, ConfigListScreen):
 		self["config"].setList(self.configlist)
 		self.streamMenuList.setList(map(self.skyGenreSelectListEntry, self.genreliste))
 
-	
 	def keyLeft(self):
 		self["config"].handleKey(KEY_LEFT)
 		id_genregroup = self['channelselect'].getCurrent()[0][2]
 		id_groups_selected = (self["config"].getCurrent()[1]).value		
 		sql.updateGenregroup(id_genregroup, id_groups_selected, True)
 		
-	
 	def keyRight(self):
 		self["config"].handleKey(KEY_RIGHT)
 		id_genregroup = self['channelselect'].getCurrent()[0][2]
 		id_groups_selected = (self["config"].getCurrent()[1]).value
 		sql.updateGenregroup(id_genregroup, id_groups_selected, True)
-	
 	
 	def keyOK(self):
 		exist = self['channelselect'].getCurrent()
@@ -138,7 +133,6 @@ class SkyGenreSelect(Screen, ConfigListScreen):
 		sql.changeGenre(genre_auswahl)
 		
 		self.readGenre()
-
 
 	def keyPageDown(self):
 		self['channelselect'].pageDown()

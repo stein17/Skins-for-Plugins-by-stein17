@@ -18,6 +18,7 @@ import sys
 from SkyMainFunctions import getPluginPath
 from SkySql import *
 
+
 class SkyWhitelist(Screen):
 	
 	def __init__(self, session):
@@ -50,7 +51,6 @@ class SkyWhitelist(Screen):
 			
 		self.onLayoutFinish.append(self.readWhitelist)
 	
-	
 	def skyWhitelistListEntry(self, entry):
 		if entry[4] == "True":
 			pic = "/usr/lib/enigma2/python/Plugins/Extensions/skyrecorder/images/plus.png"
@@ -63,7 +63,6 @@ class SkyWhitelist(Screen):
 				(eListboxPythonMultiContent.TYPE_TEXT, 50, 0, 850, 25, 0, RT_HALIGN_LEFT, str(entry[2]))
 				]
 
-	
 	def readWhitelist(self):
 		try:
 			sql.cur.execute('SELECT SQLITE_VERSION()')
@@ -83,7 +82,6 @@ class SkyWhitelist(Screen):
 		if self.last_index < len(self.whitelistliste):
 			self['whitelist'].moveToIndex(self.last_index)
 	
-	
 	def keyOK(self):
 		exist = self['whitelist'].getCurrent()
 		if exist == None:
@@ -93,7 +91,6 @@ class SkyWhitelist(Screen):
 		sql.changeWhitelistStatus(id_whitelist)
 		self.readWhitelist()
 		
-
 	def keyEdit(self):
 		exist = self['whitelist'].getCurrent()
 		if exist == None:
@@ -128,7 +125,6 @@ class SkyWhitelist(Screen):
 		sql.delFromWhitelistById(id_whitelist)
 		self.readWhitelist()
 		
-			
 	def keyCancel(self):
 		self.close()
 
