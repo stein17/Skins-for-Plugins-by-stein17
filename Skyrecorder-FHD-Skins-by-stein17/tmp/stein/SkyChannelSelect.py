@@ -35,9 +35,9 @@ class SkyChannelSelect(Screen):
 		contentSize = config.plugins.skyrecorder.contentsize.value
 		
 		self["actions"]  = ActionMap(["OkCancelActions", "ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions"], {
-			"ok"    : self.keyOK,
+			"ok": self.keyOK,
 			"cancel": self.keyCancel,
-			"green" : self.keyChange
+			"green": self.keyChange
 		}, -1)
 				
 		self.channelliste = []

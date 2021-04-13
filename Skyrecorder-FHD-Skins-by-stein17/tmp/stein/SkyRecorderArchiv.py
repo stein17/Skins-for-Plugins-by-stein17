@@ -74,80 +74,80 @@ class SkyRecorderArchiv(Screen):
 		self.mInfo = SkyTheMovieDB(timeout=10)
 		
 		self["mainscreen_actions"] = ActionMap(["OkCancelActions", "ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions"], {
-			"ok" : self.keyOK,
-			"cancel" : self.keyCancel,
-			"up" : self.keyUp,
-			"down" : self.keyDown,
-			"right" : self.keyRight,
-			"left" : self.keyLeft,
+			"ok": self.keyOK,
+			"cancel": self.keyCancel,
+			"up": self.keyUp,
+			"down": self.keyDown,
+			"right": self.keyRight,
+			"left": self.keyLeft,
 			"red": self.keyRed,
 			"green": self.keyGreen,
 			"yellow": self.selectSearchType,
-			"prevBouquet" : self.keyPageDown,
-			"nextBouquet" : self.keyPageUp,
-			"nextService" : self.keySwitchList,
-			"prevService" : self.keySwitchList,
-			"info" : self.selectSearchType
+			"prevBouquet": self.keyPageDown,
+			"nextBouquet": self.keyPageUp,
+			"nextService": self.keySwitchList,
+			"prevService": self.keySwitchList,
+			"info": self.selectSearchType
 			#"info" : self.showEventInformation
 			#"info" : self.searchMovieInfo
 		}, -1)
 		
 		self["popup_actions_result"] = ActionMap(["OkCancelActions", "ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions"], {
-			"ok" : self.enableRename,
-			"cancel" : self.keyCancel,
-			"up" : self.popUpUp,
-			"down" : self.popUpDown,
-			"right" : self.popUpRight,
-			"left" : self.popUpLeft,
+			"ok": self.enableRename,
+			"cancel": self.keyCancel,
+			"up": self.popUpUp,
+			"down": self.popUpDown,
+			"right": self.popUpRight,
+			"left": self.popUpLeft,
 			"red": self.keyBackTo,
 			"green": self.doRename,
 			"yellow": self.editResultList,
-			"prevBouquet" : self.ignoreKey,
-			"nextBouquet" : self.ignoreKey,
-			"nextService" : self.ignoreKey,
-			"prevService" : self.ignoreKey,
-			"info" : self.ignoreKey
+			"prevBouquet": self.ignoreKey,
+			"nextBouquet": self.ignoreKey,
+			"nextService": self.ignoreKey,
+			"prevService": self.ignoreKey,
+			"info": self.ignoreKey
 		}, -1)
 		
 		self["popup_actions_search"] = ActionMap(["OkCancelActions", "ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions"], {
-			"ok" : self.gotSerienUrl,
-			"cancel" : self.keyCancel,
-			"up" : self.popUpUp,
-			"down" : self.popUpDown,
-			"right" : self.popUpRight,
-			"left" : self.popUpLeft,
+			"ok": self.gotSerienUrl,
+			"cancel": self.keyCancel,
+			"up": self.popUpUp,
+			"down": self.popUpDown,
+			"right": self.popUpRight,
+			"left": self.popUpLeft,
 			"red": self.keyCancel,
 			"green": self.ignoreKey,
 			"yellow": self.ignoreKey,
-			"prevBouquet" : self.ignoreKey,
-			"nextBouquet" : self.ignoreKey,
-			"nextService" : self.ignoreKey,
-			"prevService" : self.ignoreKey,
-			"info" : self.ignoreKey
+			"prevBouquet": self.ignoreKey,
+			"nextBouquet": self.ignoreKey,
+			"nextService": self.ignoreKey,
+			"prevService": self.ignoreKey,
+			"info": self.ignoreKey
 		}, -1)
 		
 		self["movieinfo_actions"] = ActionMap(["OkCancelActions", "ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions"],
 		{
 			"ok": self.movieinfoOk,
 			"cancel": self.movieinfoCancel,
-			"up" : self.movieinfoUp,
-			"down" : self.movieinfoDown,
-			"right" : self.ignoreKey,
-			"left" : self.ignoreKey,
+			"up": self.movieinfoUp,
+			"down": self.movieinfoDown,
+			"right": self.ignoreKey,
+			"left": self.ignoreKey,
 			"red": self.unmatchMovieInfo,
 			"green": self.customSearchMovieInfo,
-			"nextBouquet" : self.ignoreKey,
-			"prevBouquet" : self.ignoreKey
+			"nextBouquet": self.ignoreKey,
+			"prevBouquet": self.ignoreKey
 		}, -1)
 		
 		self["searchtype_actions"] = ActionMap(["OkCancelActions", "ShortcutActions", "EPGSelectActions", "WizardActions", "NumberActions", "MenuActions", "MoviePlayerActions"],
 		{
 			"ok": self.searchTypeOk,
 			"cancel": self.searchTypeCancel,
-			"up" : self.popUpUp,
-			"down" : self.popUpDown,
-			"right" : self.ignoreKey,
-			"left" : self.ignoreKey
+			"up": self.popUpUp,
+			"down": self.popUpDown,
+			"right": self.ignoreKey,
+			"left": self.ignoreKey
 		}, -1)
 		
 		self["searchtype_actions"].setEnabled(False)
@@ -514,7 +514,7 @@ class SkyRecorderArchiv(Screen):
 	def loadFiles(self, my_dirs=None, my_group="A-Z"):
 		
 		self['handlung'].setText(" ")
-		self.movielist = [ ]
+		self.movielist = []
 		if not my_dirs:
 			return
 		my_list = None
@@ -606,7 +606,7 @@ class SkyRecorderArchiv(Screen):
 				
 		if len(self.movielist) < 1:
 			self.keySwitchList(set_list="genreselect")
-			self.showMovieList.setList([ ])
+			self.showMovieList.setList([])
 		else:
 			if my_group != "A-Z":
 				if my_group.lower() == "serie":
@@ -906,7 +906,7 @@ class SkyRecorderArchiv(Screen):
 		# build list with all matching titles of a given event.
 		# maybe we are dealing with a single episode and need to fetch the entire season infos
 		self.local_glob_list = None
-		self.local_glob_list = [ ]
+		self.local_glob_list = []
 		
 		glob_root = eServiceReference("2:0:1:0:0:0:0:0:0:0:" + file_dir)
 		globed = serviceHandler.list(glob_root)

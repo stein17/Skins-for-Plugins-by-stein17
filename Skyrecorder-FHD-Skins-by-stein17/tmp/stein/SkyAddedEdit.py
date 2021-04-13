@@ -35,8 +35,8 @@ class SkyAddedEdit(Screen):
 
 		self["actions"]  = ActionMap(["OkCancelActions", "ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions"], {
 			"cancel": self.keyCancel,
-			"green" : self.keyDel,
-			"red" : self.askDelAll,
+			"green": self.keyDel,
+			"red": self.askDelAll,
 		}, -1)
 		
 		

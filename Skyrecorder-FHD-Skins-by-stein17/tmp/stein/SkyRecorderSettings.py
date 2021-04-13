@@ -165,28 +165,28 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 		self["actions"]  = ActionMap(["OkCancelActions","ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions","HelpActions"], {
 			"ok": self.keyOK,
 			"cancel": self.keyCancel,
-			"nextBouquet" : self.log_up,
-			"prevBouquet" : self.log_down,
-			"blue" : self.askAddRecordimerNow,
-			"menu" : self.fullLog,
-			"yellow" : self.readAdded,
-			"green" : self.saveSettings,
-			"red" : self.askCleanUpDatabase,
-			"info" : self.askUpdateDatabase,
-			"displayHelp" : self.togglePopUp
+			"nextBouquet": self.log_up,
+			"prevBouquet": self.log_down,
+			"blue": self.askAddRecordimerNow,
+			"menu": self.fullLog,
+			"yellow": self.readAdded,
+			"green": self.saveSettings,
+			"red": self.askCleanUpDatabase,
+			"info": self.askUpdateDatabase,
+			"displayHelp": self.togglePopUp
 		}, -1)
 		
 		self["disabled_actions"] = ActionMap(["OkCancelActions","ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions","HelpActions"],
 		{
 			"ok": self.keyCancel,
 			"cancel": self.keyCancel,
-			"up" : self.help_page_up,
-			"down" : self.help_page_down,
-			"right" : self.ignoreKey,
-			"left" : self.ignoreKey,
-			"nextBouquet" : self.help_page_up,
-			"prevBouquet" : self.help_page_down,
-			"displayHelp" : self.togglePopUp
+			"up": self.help_page_up,
+			"down": self.help_page_down,
+			"right": self.ignoreKey,
+			"left": self.ignoreKey,
+			"nextBouquet": self.help_page_up,
+			"prevBouquet": self.help_page_down,
+			"displayHelp": self.togglePopUp
 		}, -1)
 
 		self["disabled_actions"].setEnabled(False)
@@ -224,7 +224,7 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 		self.configlist.append(self.get_skydbfolder)
 		
 		self.configlist.append(getConfigListEntry("----- Timereinstellungen -----", config.plugins.skyrecorder.fake_entry))
-		self.configlist.append(getConfigListEntry("Timer automatisch hinzufügen:", config.plugins.skyrecorder.auto_recordtimer_entries ))
+		self.configlist.append(getConfigListEntry("Timer automatisch hinzufügen:", config.plugins.skyrecorder.auto_recordtimer_entries))
 		self.configlist.append(getConfigListEntry("Timermodus:", config.plugins.skyrecorder.timer_mode))
 		self.configlist.append(getConfigListEntry("Timereinträge erlaubt für:", config.plugins.skyrecorder.timerdays_allowed))
 		self.configlist.append(getConfigListEntry("Zeitspanne von:", config.plugins.skyrecorder.fromtime))
@@ -417,7 +417,7 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 		if not canstart:
 			return
 		print "[skyrecorder] reset logfile."
-		with open(self.sky_log_path , "w") as f:
+		with open(self.sky_log_path, "w") as f:
 			f.write('')
 		self.changedEntry()
 		self.startReadLog()
@@ -726,7 +726,7 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 
 		lt = time.localtime()
 		datum = time.strftime("%d.%m.%Y - %H:%M:%S", lt)
-		with open(self.sky_log_path , "a") as write_log:
+		with open(self.sky_log_path, "a") as write_log:
 			write_log.write('"%s - %s"\n' % (datum,text))
 	
 	def keyCancel(self):

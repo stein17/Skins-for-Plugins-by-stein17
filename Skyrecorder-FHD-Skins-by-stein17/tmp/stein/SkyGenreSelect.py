@@ -39,14 +39,14 @@ class SkyGenreSelect(Screen, ConfigListScreen):
 		contentSize = config.plugins.skyrecorder.contentsize.value
 
 		self["actions"]  = ActionMap(["OkCancelActions", "ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions"], {
-			"ok"    : self.keyOK,
+			"ok": self.keyOK,
 			"cancel": self.keyCancel,
 			"up": self.keyUp,
 			"down": self.keyDown,
 			"left": self.keyLeft,
 			"right": self.keyRight,
-			"prevBouquet" : self.keyPageDown,
-			"nextBouquet" : self.keyPageUp
+			"prevBouquet": self.keyPageDown,
+			"nextBouquet": self.keyPageUp
 			#"nextService" : self.keyLeft,
 			#"prevService" : self.keyRight
 			#"green" : self.keyAdd,

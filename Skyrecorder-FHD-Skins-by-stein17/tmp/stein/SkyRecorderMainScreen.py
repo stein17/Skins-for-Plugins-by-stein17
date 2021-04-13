@@ -84,54 +84,54 @@ class SkyRecorderMainScreen(Screen):
 		self.mInfo = SkyTheMovieDB(timeout=10)
 
 		self["mainscreen_actions"]  = ActionMap(["OkCancelActions", "ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions"], {
-			"ok"    : self.keyOK,
+			"ok": self.keyOK,
 			"cancel": self.keyCancel,
-			"up" : self.keyUp,
-			"down" : self.keyDown,
-			"right" : self.keyRight,
-			"left" : self.keyLeft,
-			"nextBouquet" : self.keyPageUp,
-			"prevBouquet" : self.keyPageDown,
-			"red" : self.skipListe, 
-			"green" : self.openWhitelist,
-			"yellow" : self.toggleIsNew,
+			"up": self.keyUp,
+			"down": self.keyDown,
+			"right": self.keyRight,
+			"left": self.keyLeft,
+			"nextBouquet": self.keyPageUp,
+			"prevBouquet": self.keyPageDown,
+			"red": self.skipListe, 
+			"green": self.openWhitelist,
+			"yellow": self.toggleIsNew,
 			"blue"	: self.skyarchive, 
-			"menu" : self.skysettings,			
-			"0" : self.toggleEventIgnored,
-			"2" : self.addToWhitelist,
-			"5" : self.refreshCover,
-			"8" : self.deleteEvent,
-			"9" : self.nextSort,
-			"7" : self.previousSort,
-			"nextService" : self.nextGroup,
-			"prevService" : self.prevGroup,
-			"info" : self.searchMovieInfo,
+			"menu": self.skysettings,			
+			"0": self.toggleEventIgnored,
+			"2": self.addToWhitelist,
+			"5": self.refreshCover,
+			"8": self.deleteEvent,
+			"9": self.nextSort,
+			"7": self.previousSort,
+			"nextService": self.nextGroup,
+			"prevService": self.prevGroup,
+			"info": self.searchMovieInfo,
 		}, -1)
 		
 		self["popup_actions"] = ActionMap(["OkCancelActions", "ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions"],
 		{
 			"ok": self.setTimerOnOff,
 			"cancel": self.keyCancel,
-			"up" : self.popUpUp,
-			"down" : self.popUpDown,
-			"right" : self.ignoreKey,
-			"left" : self.ignoreKey,
-			"nextBouquet" : self.popUpPageUp,
-			"prevBouquet" : self.popUpPageDown
+			"up": self.popUpUp,
+			"down": self.popUpDown,
+			"right": self.ignoreKey,
+			"left": self.ignoreKey,
+			"nextBouquet": self.popUpPageUp,
+			"prevBouquet": self.popUpPageDown
 		}, -1)
 		
 		self["movieinfo_actions"] = ActionMap(["OkCancelActions", "ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions"],
 		{
 			"ok": self.movieinfoOk,
 			"cancel": self.keyCancel,
-			"up" : self.movieinfoUp,
-			"down" : self.movieinfoDown,
-			"right" : self.ignoreKey,
-			"left" : self.ignoreKey,
+			"up": self.movieinfoUp,
+			"down": self.movieinfoDown,
+			"right": self.ignoreKey,
+			"left": self.ignoreKey,
 			"red": self.unmatchMovieInfo,
 			"green": self.customSearchMovieInfo,
-			"nextBouquet" : self.ignoreKey,
-			"prevBouquet" : self.ignoreKey
+			"nextBouquet": self.ignoreKey,
+			"prevBouquet": self.ignoreKey
 		}, -1)
 		
 		self["popup_actions"].setEnabled(False)
@@ -1086,7 +1086,7 @@ class SkyRecorderMainScreen(Screen):
 		
 		for serviceref, eit, name, begin, duration, shortdesc, extdesc in allevents:
 			if channeref == serviceref and name.lower() == title.lower() and begin == starttime:
-				epgmatches.append( (serviceref, eit, name, begin, duration, shortdesc, extdesc) )
+				epgmatches.append((serviceref, eit, name, begin, duration, shortdesc, extdesc))
 		return epgmatches
 				
 	def setTimerOnOff(self):

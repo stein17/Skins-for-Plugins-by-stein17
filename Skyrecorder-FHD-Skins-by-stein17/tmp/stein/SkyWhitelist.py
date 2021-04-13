@@ -35,11 +35,11 @@ class SkyWhitelist(Screen):
 		contentSize = config.plugins.skyrecorder.contentsize.value
 
 		self["actions"]  = ActionMap(["OkCancelActions", "ShortcutActions", "EPGSelectActions", "WizardActions", "ColorActions", "NumberActions", "MenuActions", "MoviePlayerActions"], {
-			"ok"    : self.keyOK,
+			"ok": self.keyOK,
 			"cancel": self.keyCancel,
-			"green" : self.keyEdit,
-			"yellow" : self.keyAdd,
-			"red" : self.keyDel,
+			"green": self.keyEdit,
+			"yellow": self.keyAdd,
+			"red": self.keyDel,
 		}, -1)
 				
 		self.whitelistliste = []

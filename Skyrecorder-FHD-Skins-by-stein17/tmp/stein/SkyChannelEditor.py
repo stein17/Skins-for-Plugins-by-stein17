@@ -38,7 +38,7 @@ class SkyChannelEditor(Screen):
 		self.sky_chlist = buildSkyChannellist()
 
 		self["actions"]  = ActionMap(["OkCancelActions", "ShortcutActions", "ColorActions", "MenuActions"], {
-			"ok"    : self.keyOK,
+			"ok": self.keyOK,
 			"cancel": self.keyCancel,
 			"red": self.askDeleteChannels,
 			"green": self.askDeleteChannel
