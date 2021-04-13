@@ -488,7 +488,7 @@ class SkyRecorderArchiv(Screen):
 					self['image'].show()
 					del self.picload
 
-	def getMyDirs(self, my_folder = None, max_depth = 3, my_group="A-Z"):
+	def getMyDirs(self, my_folder=None, max_depth=3, my_group="A-Z"):
 		self.need_reload = False
 		self.movielist = []
 		
@@ -511,7 +511,7 @@ class SkyRecorderArchiv(Screen):
 		self.loadFiles(my_dirs, my_group)
 
 
-	def loadFiles(self, my_dirs = None, my_group="A-Z"):
+	def loadFiles(self, my_dirs=None, my_group="A-Z"):
 		
 		self['handlung'].setText(" ")
 		self.movielist = [ ]
@@ -951,7 +951,7 @@ class SkyRecorderArchiv(Screen):
 		title = self['searchlist'].getCurrent()[0][2]
 		desc = self['searchlist'].getCurrent()[0][3]
 		info_title = "Episodenname anpassen für:\n{0}".format(title)
-		self.session.openWithCallback(self.doEditResultList, VirtualKeyBoard, title = info_title, text = desc)
+		self.session.openWithCallback(self.doEditResultList, VirtualKeyBoard, title=info_title, text=desc)
 			
 	
 	def doEditResultList(self,newdesc=None):
@@ -1267,7 +1267,7 @@ class SkyRecorderArchiv(Screen):
 		else:
 			title = ""
 		info_title = "Film suchen"
-		self.session.openWithCallback(self.gotMovieSearchName, VirtualKeyBoard, title = info_title, text = title)
+		self.session.openWithCallback(self.gotMovieSearchName, VirtualKeyBoard, title=info_title, text=title)
 		
 	def gotMovieSearchName(self,title):
 		if not title or len(title) < 3:

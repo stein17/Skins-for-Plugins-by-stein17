@@ -33,7 +33,7 @@ class SkyGenreSelect(Screen, ConfigListScreen):
 		Screen.__init__(self, session)
 		
 		self.configlist = []
-		ConfigListScreen.__init__(self, self.configlist, session = self.session)
+		ConfigListScreen.__init__(self, self.configlist, session=self.session)
 		
 		pluginName = config.plugins.skyrecorder.pluginname.value
 		contentSize = config.plugins.skyrecorder.contentsize.value

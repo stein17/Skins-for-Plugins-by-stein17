@@ -45,20 +45,20 @@ anytimefolder = defaultmoviefolder  #+ recordings_base_folder + "/"
 
 ### start config
 config.plugins.skyrecorder = ConfigSubsection()
-config.plugins.skyrecorder.auto_recordtimer_entries = ConfigYesNo(default = False)
+config.plugins.skyrecorder.auto_recordtimer_entries = ConfigYesNo(default=False)
 config.plugins.skyrecorder.pluginname = ConfigText(pluginName)
 config.plugins.skyrecorder.version = ConfigText(pluginVersion)
 config.plugins.skyrecorder.contentsize = ConfigInteger(20)
 config.plugins.skyrecorder.timerdays_allowed = ConfigSelection(
-			default = "['all']",
-			choices = [
+			default="['all']",
+			choices=[
 				("['all']", _("jeden Wochentag")),
 				("['Mon','Tue','Wed','Thu','Fri']", _("Montag bis Freitag")),
 				("['Sun','Sat']", _("Samstag und Sonntag")),
 				("['Sun','Fri','Sat']", _("Freitag, Samstag und Sonntag"))])
 config.plugins.skyrecorder.guide_days_to_scan = ConfigSelection(
-			default = "1",
-			choices = [
+			default="1",
+			choices=[
 				("1", _("einen Tag (empfohlen)")),
 				("2", _("zwei Tage")),
 				("3", _("drei Tage")),
@@ -69,11 +69,11 @@ config.plugins.skyrecorder.guide_days_to_scan = ConfigSelection(
 				("14", _("zwei Wochen"))])
 config.plugins.skyrecorder.fromtime = ConfigInteger(00, (00,23))
 config.plugins.skyrecorder.totime = ConfigInteger(23, (00,23))
-config.plugins.skyrecorder.autoupdate_database = ConfigYesNo(default = False)
-config.plugins.skyrecorder.database_update_time = ConfigClock(default = ((9 * 60 + 0) * 60))
+config.plugins.skyrecorder.autoupdate_database = ConfigYesNo(default=False)
+config.plugins.skyrecorder.database_update_time = ConfigClock(default=((9 * 60 + 0) * 60))
 config.plugins.skyrecorder.anytime_skin = ConfigSelection(
-			default = "original",
-			choices = [
+			default="original",
+			choices=[
 				("elgato", _("elgato")),
 				("metrix", _("metrix")),
 				("original", _("original")),
@@ -85,10 +85,10 @@ config.plugins.skyrecorder.anytime_skin = ConfigSelection(
 # store our last check-timestamp. needed for our wakeMeUp function (see below at the end of this script)
 config.plugins.skyrecorder.lastchecked = ConfigInteger(0)
 config.plugins.skyrecorder.next_update = ConfigInteger(-1)
-config.plugins.skyrecorder.wakeup = ConfigYesNo(default = False)
+config.plugins.skyrecorder.wakeup = ConfigYesNo(default=False)
 config.plugins.skyrecorder.after_update = ConfigSelection(
-			default = "none",
-			choices = [
+			default="none",
+			choices=[
 				("none", ("nichts")),
 				("standby", ("Standby")),
 				("deepstandby", ("STB herunterfahren"))])
@@ -96,14 +96,14 @@ config.plugins.skyrecorder.after_update = ConfigSelection(
 config.plugins.skyrecorder.fake_entry = NoSave(ConfigNothing())
 config.plugins.skyrecorder.anytimefolder = ConfigText(default=anytimefolder)
 config.plugins.skyrecorder.anytimefolder3d = ConfigText(default=anytimefolder)
-config.plugins.skyrecorder.create_dirtree = ConfigYesNo(default = True)
+config.plugins.skyrecorder.create_dirtree = ConfigYesNo(default=True)
 #config.plugins.skyrecorder.skydb = ConfigText(default=defaultmoviefolder + "skydb.db")
 config.plugins.skyrecorder.skydb = ConfigText(default=pluginfolder + "/skydb.db")
-config.plugins.skyrecorder.silent_timer_mode = ConfigYesNo(default = False)
-config.plugins.skyrecorder.timer_mode = ConfigSelection(default = "0", choices = [("0", _("Aufnahme")),("1", _("Erinnerung"))])
+config.plugins.skyrecorder.silent_timer_mode = ConfigYesNo(default=False)
+config.plugins.skyrecorder.timer_mode = ConfigSelection(default="0", choices=[("0", _("Aufnahme")),("1", _("Erinnerung"))])
 config.plugins.skyrecorder.msgtimeout = ConfigInteger(3)
 config.plugins.skyrecorder.max_per_page = ConfigInteger(10,(1,9999))
-config.plugins.skyrecorder.mainlisttype = ConfigSelection(default = "0", choices = [("0", _("einfach")),("1", _("erweitert"))])
+config.plugins.skyrecorder.mainlisttype = ConfigSelection(default="0", choices=[("0", _("einfach")),("1", _("erweitert"))])
 # let us set maring_before and margin_after in the plugin itself
 # so we have better control of this values if the user change the system margins after adding timers
 try:
@@ -116,8 +116,8 @@ config.plugins.skyrecorder.margin_before = ConfigInteger(default_before, (00,99)
 config.plugins.skyrecorder.margin_after = ConfigInteger(default_after, (00,99))
 # let us choose from a list of ordering options for the main screen
 config.plugins.skyrecorder.main_list_order = ConfigSelection(
-			default = "channel",
-			choices = [
+			default="channel",
+			choices=[
 				("channel", ("Sender gruppiert von A-Z")),
 				("status", ("nach Status")),
 				("begin_asc", ("Startzeit aufsteigend")),
@@ -125,20 +125,20 @@ config.plugins.skyrecorder.main_list_order = ConfigSelection(
 				("title", ("Sendungstitel von A-Z")),
 				("genre", ("Nach Genre"))])
 
-config.plugins.skyrecorder.short_record_filenames = ConfigYesNo(default = False)
-config.plugins.skyrecorder.only_active_genres = ConfigYesNo(default = False)
-config.plugins.skyrecorder.only_new_events = ConfigYesNo(default = True)
-config.plugins.skyrecorder.only_active_channels = ConfigYesNo(default = True)
+config.plugins.skyrecorder.short_record_filenames = ConfigYesNo(default=False)
+config.plugins.skyrecorder.only_active_genres = ConfigYesNo(default=False)
+config.plugins.skyrecorder.only_new_events = ConfigYesNo(default=True)
+config.plugins.skyrecorder.only_active_channels = ConfigYesNo(default=True)
 config.plugins.skyrecorder.max_parallel_timers = ConfigSelection(
-			default = "1000",
-			choices = [
+			default="1000",
+			choices=[
 				("1000", _("automatisch")),
 				("1", _("eine Aufnahme gleichzeitig")),
 				("2", _("zwei Aufnahmen gleichzeitig")),
 				("3", _("drei Aufnahmen gleichzeitig")),
 				("4", _("vier Aufnahmen gleichzeitig"))])
-config.plugins.skyrecorder.rename_matched_movies = ConfigYesNo(default = True)
-config.plugins.skyrecorder.autoupdate_tmdb = ConfigYesNo(default = True)
+config.plugins.skyrecorder.rename_matched_movies = ConfigYesNo(default=True)
+config.plugins.skyrecorder.autoupdate_tmdb = ConfigYesNo(default=True)
 config.plugins.skyrecorder.apikey = ConfigText("00000000000000000000000000000000")
 ### end config
 
@@ -157,7 +157,7 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 		Screen.__init__(self, session)
 		
 		self.createConfigList()
-		ConfigListScreen.__init__(self, self.configlist, session = self.session)
+		ConfigListScreen.__init__(self, self.configlist, session=self.session)
 		
 		self.popUpScreen = self.session.instantiateDialog(SkyHelpAll)
 		self.popUpIsVisible = False
@@ -220,7 +220,7 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 		self.configlist.append(getConfigListEntry("Nur aktivierte Sender suchen:", config.plugins.skyrecorder.only_active_channels))
 		self.configlist.append(getConfigListEntry("Wie weit im Voraus laden:", config.plugins.skyrecorder.guide_days_to_scan))
 		
-		self.get_skydbfolder = getConfigListEntry("Datenbank:", NoSave(ConfigSelection(default="0", choices = [("0", config.plugins.skyrecorder.skydb.value)])))
+		self.get_skydbfolder = getConfigListEntry("Datenbank:", NoSave(ConfigSelection(default="0", choices=[("0", config.plugins.skyrecorder.skydb.value)])))
 		self.configlist.append(self.get_skydbfolder)
 		
 		self.configlist.append(getConfigListEntry("----- Timereinstellungen -----", config.plugins.skyrecorder.fake_entry))
@@ -243,9 +243,9 @@ class SkyRecorderSettings(Screen, ConfigListScreen):
 		self.configlist.append(getConfigListEntry("Nur aktivierte Genre in Hauptliste anzeigen:", config.plugins.skyrecorder.only_active_genres))
 		self.configlist.append(getConfigListEntry("Deep Standby beenden für Timerupdates:", config.plugins.skyrecorder.wakeup))
 		self.configlist.append(getConfigListEntry("Aktion nach Timerupdates:", config.plugins.skyrecorder.after_update))
-		self.get_anytimefolder = getConfigListEntry("Aufnahmeordner (Basis):", NoSave(ConfigSelection(default="0", choices = [("0", config.plugins.skyrecorder.anytimefolder.value)])))
+		self.get_anytimefolder = getConfigListEntry("Aufnahmeordner (Basis):", NoSave(ConfigSelection(default="0", choices=[("0", config.plugins.skyrecorder.anytimefolder.value)])))
 		self.configlist.append(self.get_anytimefolder)
-		self.get_anytimefolder3d = getConfigListEntry("Aufnahmeordner (3D):", NoSave(ConfigSelection(default="0", choices = [("0", config.plugins.skyrecorder.anytimefolder3d.value)])))
+		self.get_anytimefolder3d = getConfigListEntry("Aufnahmeordner (3D):", NoSave(ConfigSelection(default="0", choices=[("0", config.plugins.skyrecorder.anytimefolder3d.value)])))
 		self.configlist.append(self.get_anytimefolder3d)
 		self.configlist.append(getConfigListEntry("SkyRecorder Ordnerstruktur für Aufnahmen verwenden:", config.plugins.skyrecorder.create_dirtree))
 		#self.configlist.append(getConfigListEntry("kurze Dateinamen für Aufnahmen verwenden:", config.plugins.skyrecorder.short_record_filenames))

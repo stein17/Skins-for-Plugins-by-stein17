@@ -99,9 +99,9 @@ class SkySkipWordsSelect(Screen):
 
 	def keyAdd(self):
 		print "add"
-		self.session.openWithCallback(self.addSkipWord, VirtualKeyBoard, title = ("Skip word eintragen:"))
+		self.session.openWithCallback(self.addSkipWord, VirtualKeyBoard, title=("Skip word eintragen:"))
 
-	def addSkipWord(self, word = None):
+	def addSkipWord(self, word=None):
 		if word != None or word == "":
 			sql.addSkip(word)
 			print "[skyrecorder] add skip: %s" % word

@@ -117,7 +117,7 @@ class SkyChannelEditor(Screen):
 		self.last_index = self['channeledit'].getSelectionIndex()
 		if not channel_stb:
 			return
-		self.session.openWithCallback(self.changeChannelName, VirtualKeyBoard, title = ("Sendername eingeben, wie er\nin der STB-Kanalliste benannt ist:"), text = channel_stb)
+		self.session.openWithCallback(self.changeChannelName, VirtualKeyBoard, title=("Sendername eingeben, wie er\nin der STB-Kanalliste benannt ist:"), text=channel_stb)
 
 
 	def changeChannelName(self, word):

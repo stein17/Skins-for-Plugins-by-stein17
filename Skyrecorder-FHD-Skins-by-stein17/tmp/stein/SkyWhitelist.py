@@ -101,20 +101,20 @@ class SkyWhitelist(Screen):
 		self.id_whitelist = self['whitelist'].getCurrent()[0][0]
 		self.last_index = self['whitelist'].getSelectionIndex()
 		word = self['whitelist'].getCurrent()[0][2]
-		self.session.openWithCallback(self.editWord, VirtualKeyBoard, title = ("Titel bearbeiten:"),text = word)
+		self.session.openWithCallback(self.editWord, VirtualKeyBoard, title=("Titel bearbeiten:"),text=word)
 		
 	def keyAdd(self):
 		exist = self['whitelist'].getCurrent()
 		if exist:
 			self.last_index = self['whitelist'].getSelectionIndex()
-		self.session.openWithCallback(self.addWord, VirtualKeyBoard, title = ("Neuer Eintrag:"),text = "")
+		self.session.openWithCallback(self.addWord, VirtualKeyBoard, title=("Neuer Eintrag:"),text="")
 
-	def addWord(self, word = None):
+	def addWord(self, word=None):
 		if word != None or word != "":
 			check_state = sql.addToWhitelist(None,word,None, status="True")
 		self.readWhitelist()
 	
-	def editWord(self, word = None):
+	def editWord(self, word=None):
 		if word != None or word != "":
 			sql.updateWhitelistEntry(self.id_whitelist,word)
 		self.readWhitelist()
