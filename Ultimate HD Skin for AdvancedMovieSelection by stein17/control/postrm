@@ -1,0 +1,31 @@
+#!/bin/sh
+
+mv /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/skin/skin.xml_orig /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/skin/skin.xml
+
+echo "syncing disk"
+sync
+echo ""
+echo ""
+echo "*********************************************************"
+echo "* Ultimate HD Skin for AdvancedMovieSelection by stein17 "
+echo "*********************************************************"
+echo ""
+echo ""
+echo ""
+echo "Ultimate HD Skin for AdvancedMovieSelection by stein17 successfully removed!"
+echo ""
+echo ""
+echo "GUI restart."
+echo ""
+echo ""
+echo ""
+echo "Ultimate HD Skin for AdvancedMovieSelection by stein17 wurde erfolgreich entfernt!"
+echo ""
+echo ""
+echo ""
+echo "GUI Neustart."
+echo ""
+echo ""
+echo ""
+exit 0
+  
