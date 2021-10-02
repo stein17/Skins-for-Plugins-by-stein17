@@ -6,12 +6,21 @@
   <!-- <color name="white" value="#00ffffff"/> -->
   <!-- <color name="black" value="#00000000"/> -->
   <!-- <color name="yellow" value="#00fcc000"/> -->
-<screen name="MovieContextMenu" position="880,0" size="400,723" title="Movielist menu" flags="wfNoBorder" backgroundColor="transparent">
-	<ePixmap position="0,35" zPosition="-20" size="400,623" pixmap="BG-Pixmaps/Center/Center_Org.png" />
-    <eLabel text="Select a movie" position="12,36" size="800,50" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
-    <eLabel text="Movielist menu" position="31,105" size="700,28" font="Regular;23" backgroundColor="background" transparent="1" />
-    <widget name="menu" position="14,150" size="370,500" zPosition="3" itemHeight="30" scrollbarSliderBorderWidth="1" scrollbarSliderBorderColor="green" scrollbarMode="showOnDemand" enableWrapAround="1" sliderPixmap="menu/Scrollbar.png" alphatest="blend" backgroundColor="background" transparent="1" />
-  </screen>
+<screen name="MovieContextMenu" position="0,0" size="1280,720" title="Movielist menu" flags="wfNoBorder" backgroundColor="background">
+  <eLabel text="Select a movie" position="160,4" size="600,44" font="Regular;32" halign="left" valign="center" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="2" transparent="1" zPosition="1" />
+  <eLabel text="Movielist menu" position="30,60" size="440,30" font="Regular;27" foregroundColor="selectedFG" backgroundColor="background" borderColor="black" borderWidth="1" transparent="1" zPosition="1" />
+  <widget name="menu" position="30,100" size="440,570" itemHeight="30" font="Regular; 20" backgroundColor="background" transparent="1" scrollbarMode="showOnDemand" sliderPixmap="menu/Scrollbar.png" alphatest="blend" enableWrapAround="1" />
+  <ePixmap pixmap="BG-Pixmaps/Scrollbar/Overlay_top_Org.png" position="455,93" size="20,543" zPosition="5" transparent="1" alphatest="blend" />
+  <ePixmap pixmap="BG-Pixmaps/Scrollbar/Overlay_bot_Org.png" position="455,620" size="20,51" zPosition="6" transparent="1" alphatest="blend" />
+  <ePixmap pixmap="BG-Pixmaps/Line_Hor/Line_Hor_Org.png" position="25,94" zPosition="2" size="450,5" alphatest="blend" transparent="1" />
+  <panel name="template_pig_large" />
+  <panel name="template_pixmap_pig_large" />
+  <panel name="template_date" />
+  <panel name="template_digitalclock_widget" />
+  <panel name="template_pixmap_rahmen" />
+  <panel name="template_pixmap_Userlogo" />
+  <panel name="template_pixmap_center" />
+</screen>
 <screen name="RecordPathsSettings" position="0,0" size="1280,720" title="Recording paths..." flags="wfNoBorder" backgroundColor="background">
   <widget name="config" position="30,60" size="700,510" itemHeight="30" scrollbarMode="showOnDemand" sliderPixmap="menu/Scrollbar.png" alphatest="blend" backgroundColor="background" transparent="1" />
   <ePixmap position="870,390" size="280,280" zPosition="2" pixmap="icons/menu_recording_setup.png" transparent="1" alphatest="blend" />
@@ -26,7 +35,6 @@
   <panel name="template_pixmap_pig_menu" />
   <panel name="template_pixmap_line_ServiceName_pig_menu" />
 </screen>
-
   <screen name="PopupInputDialog" position="center,545" size="390,30" title="Input" flags="wfNoBorder">
     <widget source="Title" render="Label" position="10,2" size="100,25" font="Regular;20" foregroundColor="foreground" backgroundColor="background" transparent="1" />
     <widget name="input" position="100,2" size="380,25" font="Regular;20" />
