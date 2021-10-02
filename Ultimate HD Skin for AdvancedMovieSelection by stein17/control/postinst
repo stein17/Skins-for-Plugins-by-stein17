@@ -1,7 +1,5 @@
 #!/bin/sh
 
-mv /tmp/stein17/skin.xml /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/skin/skin.xml
-
 echo "                                                          						"
 echo "  "
 echo "                                                                               "

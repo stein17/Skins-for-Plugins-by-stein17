@@ -1,5 +1,4 @@
 #!/bin/sh
-rm -rf /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/skin/skin.xml
 
 mv /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/skin/skin.xml /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/skin/skin.xml_orig
 
