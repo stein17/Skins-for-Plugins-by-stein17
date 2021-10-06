@@ -1,0 +1,19 @@
+#!/bin/sh
+
+mv /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/skin/skin.xml /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/skin/skin.xml_orig
+mv /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/images/nocover_de.png /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/images/nocover_de.png_orig
+mv /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/images/starsbar_empty.png /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/images/starsbar_empty.png_orig
+mv /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/images/starsbar_filled.png /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/images/starsbar_filled.png_orig
+
+echo "                                                                                   "
+echo "                                                                          		 "
+echo "                                                                         			 "
+echo "                                                                           		 "
+echo "                                                                         			 "
+echo "                                                                           		 "
+echo "                                                                          		 "
+echo "  Steampunk HD Skin for AdvancedMovieSelection by stein17 is now being installed... "
+echo "                                                                          		 " 
+echo "                                                                          		 "
+echo "                                                                          		 "
+exit 0

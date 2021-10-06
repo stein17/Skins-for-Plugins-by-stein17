@@ -1,0 +1,16 @@
+#!/bin/sh
+
+mv /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/skin/skin.xml /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/skin/skin.xml_orig
+
+echo "                                                                                   "
+echo "                                                                          		 "
+echo "                                                                         			 "
+echo "                                                                           		 "
+echo "                                                                         			 "
+echo "                                                                           		 "
+echo "                                                                          		 "
+echo "  Ultimate HD Skin for AdvancedMovieSelection by stein17 is now being installed... "
+echo "                                                                          		 " 
+echo "                                                                          		 "
+echo "                                                                          		 "
+exit 0

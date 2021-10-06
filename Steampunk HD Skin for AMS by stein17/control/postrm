@@ -1,0 +1,34 @@
+#!/bin/sh
+
+mv /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/skin/skin.xml_orig /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/skin/skin.xml
+mv /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/images/nocover_de.png_orig /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/images/nocover_de.png
+mv /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/images/starsbar_empty.png_orig /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/images/starsbar_empty.png
+mv /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/images/starsbar_filled.png_orig /usr/lib/enigma2/python/Plugins/Extensions/AdvancedMovieSelection/images/starsbar_filled.png
+
+echo "syncing disk"
+sync
+echo ""
+echo ""
+echo "*********************************************************"
+echo "* Steampunk HD Skin for AdvancedMovieSelection by stein17 "
+echo "*********************************************************"
+echo ""
+echo ""
+echo ""
+echo "Steampunk HD Skin for AdvancedMovieSelection by stein17 successfully removed!"
+echo ""
+echo ""
+echo "GUI restart."
+echo ""
+echo ""
+echo ""
+echo "Steampunk HD Skin for AdvancedMovieSelection by stein17 wurde erfolgreich entfernt!"
+echo ""
+echo ""
+echo ""
+echo "GUI Neustart."
+echo ""
+echo ""
+echo ""
+exit 0
+  
